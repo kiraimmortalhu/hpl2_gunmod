@@ -1,9 +1,8 @@
+#include "quartz_guncode.hps"
+#include "quartz_travelcode.hps"
+
 void OnStart()
 {
-	// gun setup
-	if (!HasItem("gunLantern")) {
-		GiveItemFromFile("gunLantern", "gun_steampunk.ent");
-	}
 	GUNFUNCTION_Load();
 	
 	// demo deactivates
@@ -68,9 +67,9 @@ void OnStart()
 
 void OnEnter()
 {
-	RespawnSelector();
-	NormalizePlayerSpeed();
-	RepositionAndRespawnEnemies();
+	Travel_RespawnSelector();
+	Travel_NormalizePlayerSpeed();
+	Travel_RepositionAndRespawnEnemies();
 	SetEntityActive("Zone_*", true);
 	SetLocalVarInt("ActiveMonsters", 0);
 	

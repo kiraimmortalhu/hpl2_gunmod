@@ -1,0 +1,248 @@
+// Global functions
+
+void Travel_NormalizePlayerSpeed() {
+	SetPlayerRunSpeedMul(1.2f);
+	SetPlayerMoveSpeedMul(1.1f);
+	SetPlayerJumpForceMul(1.2f);
+}
+
+bool Travel_DistanceCalculate(string &in asObject) {
+	return MathAbs(GetPlayerPosX() - GetEntityPosX(asObject)) < 5 && MathAbs(GetPlayerPosZ() - GetEntityPosZ(asObject)) < 5;
+}
+
+void FastTravelHub_Setup() {
+	SetGlobalVarInt("bonfireLit", 0);
+	SetLightVisible("jb_PointLight", false);
+	SetLightVisible("jb_PointLight_2", false);
+	SetEntityInteractionDisabled("Teleport_save_*_bonfire", true);
+	SetEntityInteractionDisabled("save_*_bonfire", true);
+}
+
+void FastTravel_OnEnterResetter() {
+	if (GetGlobalVarInt("bonfireLit") == 1) {
+		SetEntityActive("fountain_Activate", true);
+		SetLightVisible("jb_PointLight_2", true);
+	}
+}
+
+void FastTravel_UnlockBonfires() {
+	for (int i = 1; i <= 7; i++) {
+		string bonfireName = "save_" + i;
+		string bonfireId = bonfireName + "Unlocked";
+		if (GetGlobalVarInt(bonfireId) == 1) {
+			AddDebugMessage("Bonfire is lit: " + i, false);
+			SetLampLit("Teleport_" + bonfireName + "_bonfire", true, true);
+			SetEntityActive("TeleportArea_" + bonfireName + "_bonfire", true);
+			SetEntityActive("TeleportArea_" + bonfireName + "_bonfire_sign", true);
+		}
+		else {
+			AddDebugMessage("Bonfire is unlit: " + bonfireId, false);
+			AddDebugMessage("Bonfire is unlit with id: " + i, false);
+		}
+	}
+}
+
+/// Checkpoints
+
+void ActivateFountain(string &in asEntity) {
+	SetEntityPlayerInteractCallback("fountain_Activate", "EnterFastTravelHub", false);
+	if (GetGlobalVarInt("bonfireLit") == 0) {
+		SetEntityActive("fountain_Activate", false);
+		SetLightVisible("jb_PointLight_2", false);
+	} else 
+	{
+		SetLightVisible("jb_PointLight_2", true);
+	}
+	
+	SetPropActiveAndFade("fountain_bloodflow", true, 2);
+	
+	SetEntityCustomFocusCrossHair("fountain_Heal", "Push");
+	SetEntityPlayerLookAtCallback("fountain_Heal", "SetHealIcon", false);
+	SetEntityCustomFocusCrossHair("fountain_Activate", "LevelDoor");
+	SetEntityPlayerLookAtCallback("fountain_Activate", "SetTravelIcon", false);
+	
+	PlayGuiSound("boom_hallucination_disappear", 1.0f);
+	PlaySoundAtEntity("foundtainBloodDrip", "16_water_stream_med", "fountain_Heal", 2, true);
+	AddTimer("fountainActivationTimer", 2.0f, "FountainActivationTimer");
+}
+
+void FountainActivationTimer(string &in asTimer) {
+	SetLightVisible("jb_PointLight", true);
+	SetEntityActive("fountain_Heal", true);
+}
+
+void SetFountainIcon(string &in asEntity, int alState)
+{
+	SetEntityCustomFocusCrossHair("fountain_Activate", "Pick");
+}
+
+void SetHealIcon(string &in asEntity, int alState)
+{
+	SetEntityCustomFocusCrossHair("fountain_Heal", "Push");
+}
+
+void SetTravelIcon(string &in asEntity, int alState)
+{
+	SetEntityCustomFocusCrossHair(asEntity, "LevelDoor");
+}
+
+void SetBonfireIcon(string &in asEntity, int alState)
+{
+	SetEntityCustomFocusCrossHair(asEntity, "Ignite");
+}
+
+// use bonfires
+
+void SetBonfireHealIcon(string &in asEntity, int alState)
+{
+	SetEntityCustomFocusCrossHair(asEntity, "Push");
+}
+
+void BonfireLit(string &in asEntity) {	
+	CheckPoint ("checkpointBonfire", "PS_TeleportArea_" + asEntity + "_bonfire", "RespawnBonfire", "", "");
+	string varName = asEntity + "Unlocked";
+	SetGlobalVarInt(varName, 1);
+	AddDebugMessage("Name and Value of bonfire id: " + varName + ", " + GetGlobalVarInt(varName), false);
+	
+	SetEntityPlayerLookAtCallback(asEntity, "SetBonfireHealIcon", false);
+	SetEntityPlayerInteractCallback(asEntity, "UseBonfire", false);
+	
+	AddTimer(asEntity, 3.0f, "ReactivateBonfire");
+	SetEntityActive(asEntity, false);
+	SetGlobalVarInt("bonfireLit", 1);
+	
+	SetEntityActive("fountain_Activate", true);
+	SetLightVisible("jb_PointLight_2", true);
+	
+	PlayGuiSound("ui_use_tinderbox", 1.5f);
+	SetLampLit(asEntity + "_bonfire", true, true);
+	SetLampLit("Teleport_" + asEntity + "_bonfire", true, true);
+	SetEntityActive("TeleportArea_" + asEntity + "_bonfire", true);
+	SetEntityActive("TeleportArea_" + asEntity + "_bonfire_sign", true);
+	if (GetPlayerSanity() >= 1.5f) {
+		GiveSanityDamage(1, false);
+	}
+	GiveSanityBoostSmall();
+}
+
+void ReactivateBonfire(string &in asTimer) {
+	SetEntityCustomFocusCrossHair(asTimer, "Push");
+	SetEntityActive(asTimer, true);
+}
+
+void UseBonfire(string &in asEntity) {
+	//RepositionAndRespawnEnemies();
+	CheckPoint ("checkpointBonfire", "PS_TeleportArea_" + asEntity + "_bonfire", "RespawnBonfire", "", "");
+	DestroyParticleSystem("bonfireEffect");
+	CreateParticleSystemAtEntity("bonfireEffect", "ps_dust_whirl_bonfire", asEntity, false);
+	AddPlayerHealth(100);
+	SetPlayerLampOil(100);
+	PlayGuiSound("insanity_monster_roar01.ogg", 0.5f);
+	AutoSave();
+}
+
+//// fountain fast travel
+
+void UseFountain(string &in asEntity) {
+	
+	UseBonfire(asEntity);
+	
+	if (GetPlayerSanity() >= 1.5f) {
+		GiveSanityDamage(1, false);
+	}
+	GiveSanityBoost();
+	PlayGuiSound("04_water_puff.snt", 3.0f);
+}
+
+void EnterFastTravelHub(string &in asEntity) {
+	PlayGuiSound("blackbox_start", 2.0f);
+	SetGlobalVarInt("GunEffectsOn", 0);
+	FadeOut(3);
+	FadePlayerFOVMulTo(0.5, 3);
+	AddTimer("teleportPlayerToHub", 4.0f, "TeleportPlayerToHub");
+}
+
+void TeleportPlayerToHub(string &in asTimer) {
+	
+	SetSkyBoxColor(1, 1, 1, 1);
+	SetSkyBoxTexture("skybox_fleshWall_ceiling_doctordolor.dds");
+	SetFogActive(false);
+	
+	SetLanternDisabled(true);
+	TeleportPlayer("PlayerStartArea_FastTravel");
+	FadeIn(2);
+	FastTravelFrom();
+	FadePlayerFOVMulTo(1.5, 1);
+}
+
+void FastTravelFrom() {
+	
+	SetGlobalVarInt("GunEffectsOn", 0);
+	
+	SetPlayerMoveSpeedMul(0);
+	SetPlayerRunSpeedMul(0);
+	SetPlayerLookSpeedMul(0.4f);
+	SetPlayerJumpDisabled(true);
+	SetPlayerCrouching(true);
+	SetPlayerCrouchDisabled(true);
+	StopMusic(2, 0);
+	StopMusic(2, 1);
+	StopMusic(2, 2);
+}
+
+void FastTravel(string &in asEntity) {
+	FadeOut(2);
+	FadePlayerFOVMulTo(2, 2);
+	PlayGuiSound("blackbox_end", 2.0f);
+	AddTimer(asEntity, 3.0f, "TeleportPlayerToWorld");
+}
+
+void TeleportPlayerToWorld(string &in asTimer) {
+	
+	string destination = "PS_" + asTimer;
+	FastTravelTo(destination);
+	SetBackLevelProperties();
+	
+	SetLanternDisabled(false);
+	FadePlayerFOVMulTo(1, 2);
+	
+	SetPlayerMoveSpeedMul(1.1f);
+	SetPlayerRunSpeedMul(1.2f);
+	SetPlayerLookSpeedMul(1.0f);
+	SetPlayerJumpDisabled(false);
+	SetPlayerCrouchDisabled(false);
+	
+	SetGlobalVarInt("GunEffectsOn", 1);
+	//RepositionAndRespawnEnemies();
+}
+
+void FastTravelTo(string &in bonfireName) {
+	
+	int id = StringToInt(StringSub(bonfireName, 21, 1));
+	SetGlobalVarInt("GunEffectsOn", 1);
+	switch (id) {
+		case 2:
+			ChangeMap("rock-hewn_vault.map", bonfireName, "", "");
+		break;
+		case 3:
+			ChangeMap("battered_clockworks.map", bonfireName, "", "");
+		break;
+		case 4:
+		case 5:
+			ChangeMap("exhedra_fortalice.map", bonfireName, "", "");
+		break;
+		case 6:
+			ChangeMap("cove_on_the_gorge.map", bonfireName, "", "");
+		break;
+		case 7:
+			ChangeMap("slad_silo.map", bonfireName, "", "");
+		break;
+		default:
+			TeleportPlayer(bonfireName);
+			FadeIn(3);
+			PlayMusic("amberlight_burgh_forestamb", true, 0.8f, 2.0f, 0, true);
+	}
+}
+
+void RespawnFountain(string &in asName, int alCount) {
+}

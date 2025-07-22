@@ -1,0 +1,329 @@
+//	# Message by AMN - This is the code for the gun.
+// This is KiraImmortal's version of Amn's gun script.
+// Special thanks to DNaLange!
+//  If you wish to use it, feel free, but credit all three people involved!
+
+const float GUN_COOLDOWN_TIME = 0.7f;
+
+const int GUN_DEFAULT_KILL_CHANCE = 5;
+const int GUN_EASY_KILL_CHANCE = 2;
+const int GUN_MEDIUM_KILL_CHANCE = 4; // 6
+const int GUN_HARD_KILL_CHANCE = 7; // 8
+
+const float GUN_RADIUS = 20.0f;
+
+bool isCooldownTime = false;
+int KillChance = GUN_DEFAULT_KILL_CHANCE;
+float diffCenterAndPoint = 0.0f;
+float shotPositionX = 0.0f;
+float shotPositionY = 0.0f;
+float shotPositionZ = 0.0f;
+
+string GUN_Target = "";
+
+// You need to name each enemy, breakable and you want the gun to hit along the following guidelines
+// ex: Enemy_Easy_1, Enemy_Easy_2, etc.
+// check the level for more references
+
+string GUN_EasyEnemyFormat = "Enemy_Easy_";
+string GUN_MediumEnemyFormat = "Enemy_Medium_";
+string GUN_HardEnemyFormat = "Enemy_Hard_";
+string GUN_BreakablesFormat = "Breakable_Object_";
+string GUN_DoorsFormat = "Door_";
+
+int Level_EasyEnemyCount = 5;
+int Level_MediumEnemyCount = 5;
+int Level_HardEnemyCount = 5;
+int Level_BreakablesCount = 50;
+int Level_DoorsCount = 5;
+
+void AcquireGun(string &in asEntity) {
+	GUNFUNCTION_Load();
+	SetGlobalVarInt("GunEffectsOn", 1);
+}
+
+void GUNFUNCTION_Load()
+{	
+	if (!HasItem("gunLantern")) {
+		GiveItemFromFile("gunLantern", "gun_steampunk.ent");
+	}
+	SetLanternLitCallback( "GUNFUNCTION_Shoot" );
+
+	int i=0;
+	while(i<=Level_EasyEnemyCount) {
+		i=i+1;
+		GUNFUNCTION_AddTarget(GUN_EasyEnemyFormat+i);
+		SetEnemySanityDecreaseActive(GUN_EasyEnemyFormat+i, false);
+				// adding the possibility for enemies to be larger, hence needing a larger particle
+		GUNFUNCTION_AddTarget(GUN_EasyEnemyFormat+"Large_"+i);
+		SetEnemySanityDecreaseActive(GUN_EasyEnemyFormat+"Large_"+i, false);
+	}
+	
+	i=0;
+	while(i<=Level_MediumEnemyCount) {
+		i=i+1;
+		GUNFUNCTION_AddTarget(GUN_MediumEnemyFormat+i);
+		SetEnemySanityDecreaseActive(GUN_MediumEnemyFormat+i, false);
+		GUNFUNCTION_AddTarget(GUN_MediumEnemyFormat+"Large_"+i);
+		SetEnemySanityDecreaseActive(GUN_MediumEnemyFormat+"Large_"+i, false);
+	}
+	
+	i=0;
+	while(i<=Level_HardEnemyCount) {
+		i=i+1;
+		GUNFUNCTION_AddTarget(GUN_HardEnemyFormat+i);
+		SetEnemySanityDecreaseActive(GUN_HardEnemyFormat+i, false);
+		
+		GUNFUNCTION_AddTarget(GUN_HardEnemyFormat+"Large_"+i);
+		SetEnemySanityDecreaseActive(GUN_HardEnemyFormat+"Large_"+i, false);
+	}
+
+	i=0;
+	while(i<=Level_BreakablesCount)
+	{
+		i=i+1;
+		GUNFUNCTION_AddTarget(GUN_BreakablesFormat+i );
+	}
+	
+	i=0;
+	while(i<=Level_DoorsCount)
+	{
+		i=i+1;
+		GUNFUNCTION_AddTarget(GUN_DoorsFormat+i );
+	}
+}
+
+////////////////////// W E A P O N ///////////////////////////
+
+void GUNFUNCTION_AddTarget ( string &in asTarget )
+{
+	SetEntityPlayerLookAtCallback( asTarget, "GUNFUNCTION_TargetAcquired", false);
+}
+
+void GUNFUNCTION_TargetAcquired ( string &in asTarget, int iState )
+{
+	if (iState==1)
+	{
+		AddDebugMessage ("target(" + asTarget + ")", false );
+		GUN_Target=asTarget;
+		if (StringContains(GUN_Target, "Enemy_")) {
+			GUNFUNCTION_CenterAim( asTarget );
+		}
+		RemoveTimer( "GUNTIMER" );
+	}
+ 
+	if (iState==-1)
+	{
+		//GUNFUNCTION_LoseTargetTimed( 1.0f );
+		GUN_Target="";
+		AddDebugMessage ("Target is lost", false );
+	}
+}
+
+void GUNFUNCTION_LoseTargetTimed ( float fDelay )
+{
+	AddTimer ( "GUNTIMER", fDelay, "GUNFUNCTION_LoseTarget" ); 
+}
+
+void GUNFUNCTION_LoseTarget ( string &in t )
+{
+	GUN_Target="";
+}
+
+void GUNFUNCTION_Shoot ( bool isOn )
+{
+  if (!isCooldownTime && GetGlobalVarInt("GunEffectsOn") == 1) {	
+  	if (isOn) { return; }
+	
+	GUNFUNCTION_UseBullet(!ScriptDebugOn());	
+	GUNFUNCTION_UseShootEffects();	
+	GUNFUNCTION_CooldownTimed( GUN_COOLDOWN_TIME );
+	
+	if (GUN_Target=="") {
+		return;
+	}
+
+	// distance calculation, if target is further your shoot will miss
+	
+	if (fittingPlayerAndTargetDistance() == true) {
+	  bool isEnemy = StringContains( GUN_Target, "Enemy_" );
+	  if ( isEnemy )
+	  {		
+		// decision about the kill possibility by enemy type
+		
+		if (StringContains( GUN_Target, GUN_EasyEnemyFormat )) {
+			AddDebugMessage( "Target is easy enemy", false );
+			KillChance = GUN_EASY_KILL_CHANCE;
+		}
+		else if (StringContains( GUN_Target, GUN_MediumEnemyFormat )) {
+			AddDebugMessage( "Target is medium enemy", false );
+			KillChance = GUN_MEDIUM_KILL_CHANCE;
+		}
+		else if (StringContains( GUN_Target, GUN_HardEnemyFormat )) {
+			AddDebugMessage( "Target is hard enemy", false );
+			KillChance = GUN_HARD_KILL_CHANCE;
+		}
+		
+		if (StringContains( GUN_Target, "Large_" )) {
+			AddDebugMessage( "Target is also large", false );
+			CreateParticleSystemAtEntity("", "ps_blood_splash_large.ps", GUN_Target, false);
+		}
+		// else if contains "_Immune", unique particle for ghosts maybe?
+		else {
+			CreateParticleSystemAtEntity("", "ps_blood_splash.ps", GUN_Target, false);
+		}
+		
+		
+		int randKillChance = RandInt(1, KillChance);     //Damage
+		AddDebugMessage( "Killchance is " + randKillChance, false );
+		
+		RemoveTimer("alertEnemies");
+		AddTimer("alertEnemies", 1.5f, "GUNFUNCTION_AlertEnemies");
+
+		if (randKillChance <= 1) //Killing blow
+		{           
+			KillBasicEnemy(GUN_Target);
+			
+			//AddBestiaryEntry(GUN_Target);  // adds bestiary entry based on type, and previous kills
+			AddQuest("bestiaryQuest", "Bestiary");
+			RemoveTimer("removeBestiaryQuest");
+			AddTimer("removeBestiaryQuest", 8.0f, "RemoveBestiaryQuest");
+			
+			GUN_Target="";
+			KillChance=GUN_DEFAULT_KILL_CHANCE;
+		}
+	  }
+	
+	  bool isBreakable = StringContains( GUN_Target, GUN_BreakablesFormat );
+	  if ( isBreakable )
+	  {
+		AddDebugMessage( "Target is breakable", false );
+		SetPropHealth(GUN_Target, 0);
+		GUN_Target="";
+	  }
+	  
+	  bool isDoor = StringContains( GUN_Target, GUN_DoorsFormat );
+	  if ( isDoor )
+	  {
+		AddDebugMessage( "Target is door", false );
+		SetPropHealth(GUN_Target, GetPropHealth(GUN_Target) - 25.0f);
+	  }
+    }
+	else AddDebugMessage( "Target is too far, it's this far: " +  MathSqrt(diffCenterAndPoint), false );
+  }
+}
+
+void KillBasicEnemy(string &in asEntity) {
+	FadeEnemyToSmoke( asEntity, true );
+	SetEntityActive("Zone_" + asEntity, false);
+	if (GetLocalVarInt("ActiveMonsters") > 0) {
+		SetLocalVarInt("ActiveMonsters", GetLocalVarInt("ActiveMonsters") - 1);
+	}
+}
+
+void GUNFUNCTION_AlertEnemies(string &in asTimer)
+{
+	ShowEnemyPlayerPosition( GUN_Target );
+}
+
+void GUNFUNCTION_UseBullet(bool consumeBullets) {
+	// calculates 7 bullets clip
+	if (consumeBullets) {
+		SetPlayerLampOil(GetPlayerLampOil() - 14.28571428571429f);
+		// if anything is lost on conversion to float, manually sets oil to 0 on last bullet
+		if (GetPlayerLampOil() < 5) {
+			SetPlayerLampOil(0);
+		}
+	}
+	PlayGuiSound("ui_shoot.ogg", 1.0f);
+}
+
+void GUNFUNCTION_UseShootEffects() {
+	//Flicker solution with attached spotlight with particles on gun itself
+	if (GetPlayerSpeed() < 1.5f) {
+		SetLightFlickerActive("PlayerHands_SpotLight_Gun", true);   
+	}
+	else {
+		SetLightFlickerActive("PlayerHands_SpotLight_Gun_Running", true);  
+	}
+	
+	AddTimer("", 0.1f, "StopGunFx");   
+	SetLanternActive( true, false );
+}
+
+void StopGunFx(string &in asTimer)
+{
+	SetLightFlickerActive("PlayerHands_SpotLight_Gun", false);
+	SetLightFlickerActive("PlayerHands_SpotLight_Gun_Running", false);
+}
+
+void CalculateEffectVector(float playerX, float playerY, float playerZ) {
+	//if (GetPlayerSpeed() < 1.2f) 
+	// needs also rotation check, that cannot be done on vanilla game
+		shotPositionX = playerX + 0.214f;
+		shotPositionY = playerY + 1.57f;
+		shotPositionZ = playerZ + 0.909f;
+	SetEntityPos("GunEffectArea", shotPositionX, shotPositionY, shotPositionZ);
+}
+
+void GUNFUNCTION_CooldownTimed ( float fDelay )
+{
+	SetPlayerActive(false);
+	//isCooldownTime = true;
+	AddTimer ( "GUNCOOLDOWNTIMER", fDelay, "GUNFUNCTION_CooldownPassed" ); 
+}
+
+void GUNFUNCTION_CooldownPassed(string &in asTimer)
+{
+	SetPlayerActive(true);
+	//isCooldownTime = false;
+}
+
+void GUNFUNCTION_CenterAim ( string &in asTarget )
+{
+	StartPlayerLookAt( asTarget, 2, 2, "" );
+	GUNFUNCTION_StopPlayerLookAtTimed( 0.2f );
+}
+
+void GUNFUNCTION_StopPlayerLookAtTimed ( float fDelay )
+{
+	AddTimer ( "", fDelay, "GUNFUNCTION_StopPlayerLookAt" );
+}
+
+void GUNFUNCTION_StopPlayerLookAt ( string &in t )
+{
+	StopPlayerLookAt();
+}
+
+bool fittingPlayerAndTargetDistance() {
+	// center is player position
+	float cx = GetPlayerPosX();
+	float cy = GetPlayerPosY();
+	float cz = GetPlayerPosZ();
+	
+	// point to intersect with is target position
+	float x = GetEntityPosX(GUN_Target);
+	float y = GetEntityPosY(GUN_Target);
+	float z = GetEntityPosZ(GUN_Target);
+	
+	// radius of the sphere of intersection
+	float radius = GUN_RADIUS;
+	
+	CheckDistanceSphereRadius(cx, cy, cz, x, y, z);
+	if (diffCenterAndPoint <= (radius * radius))
+		// point intersects with sphere
+		return true;
+	else return false;
+}
+
+void CheckDistanceSphereRadius(float &in cx, float &in cy, float &in cz, float &in x, float &in y, float &in z) {
+	float x1 = MathPow(x - cx, 2);
+	float y1 = MathPow(y - cy, 2);
+	float z1 = MathPow(z - cz, 2);
+	diffCenterAndPoint = x1 + y1 + z1;
+}
+
+
+//////////////////
+/// END of Gunscript
+//////////////////
