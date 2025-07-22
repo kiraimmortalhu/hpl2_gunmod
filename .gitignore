@@ -1,0 +1,5 @@
+*.msh
+*.map_cache
+*.bak
+*.anm
+/wip
