@@ -1,2 +1,2 @@
 cd /d ..
-Lux.exe quartz_and_cordite/config/main_init.cfg
+Lux.exe hpl2_gunmod/config/main_init.cfg
