@@ -1,0 +1,82 @@
+<Entity>
+    <EditorSession>
+        <Performance CamClipPlanes="0.05 1000" LightsActive="true" PSActive="true" ShowFog="true" ShowSkybox="true" WorldReflection="true" />
+        <ViewportConfig BGColor="0.2 0.2 0.2 1" GAmbientLight="false" GPointLight="false" GridSnap="false" GridSnapSeparation="0.25" SelectedViewport="3" UsingEnlargedViewport="true">
+            <Viewport CameraPosition="0.1 0.5 20" CameraTarget="0.1 0.5 0" CameraZoom="0.916291" GridHeight="0" GridPlane="2" Preset="0" RenderMode="1" ShowAxes="true" ShowGrid="true" UsingLTCam="true" />
+            <Viewport CameraPosition="20 0.661985 0.415045" CameraTarget="0 0.661985 0.415045" CameraZoom="0.916291" GridHeight="0" GridPlane="0" Preset="1" RenderMode="1" ShowAxes="true" ShowGrid="true" UsingLTCam="true" />
+            <Viewport CameraPosition="0 20 0.4" CameraTarget="0 0 0.4" CameraZoom="0.916291" GridHeight="0" GridPlane="1" Preset="2" RenderMode="1" ShowAxes="true" ShowGrid="true" UsingLTCam="true" />
+            <Viewport CameraPosition="2.27953 1.92412 0.322962" CameraTarget="-0.128746 0.75 0.629104" CameraZoom="2.92" GridHeight="0.75" GridPlane="1" Preset="3" RenderMode="0" ShowAxes="true" ShowGrid="true" UsingLTCam="true" />
+        </ViewportConfig>
+    </EditorSession>
+    <ModelData>
+        <Entities>
+            <Sound Active="true" ID="7" MaxDistance="6.5" MinDistance="1.25" Name="Sound_1" Rotation="0 0 0" Scale="1 1 1" SoundEntityFile="../../../../../../../../../../../../../../../../../../../../_12GHOSTS/sounds/amb_global/torch_fire_new.snt" Tag="" UseDefault="false" Volume="0.2" WorldPos="-0.007311 0.910236 0.510046" />
+            <PointLight Active="true" CastShadows="false" DiffuseColor="0.59375 0.375732 0.157715 0.7" FalloffMap="" FlickerActive="true" FlickerFade="true" FlickerOffColor="0.503906 0.315925 0.127945 0.7" FlickerOffFadeMaxLength="0.3" FlickerOffFadeMinLength="0" FlickerOffMaxLength="0" FlickerOffMinLength="0" FlickerOffPS="" FlickerOffRadius="1.2" FlickerOffSound="" FlickerOnFadeMaxLength="0.1" FlickerOnFadeMinLength="0" FlickerOnMaxLength="0" FlickerOnMinLength="0" FlickerOnPS="" FlickerOnSound="" Gobo="" GoboAnimFrameTime="0" GoboAnimMode="None" ID="8" Name="PointLight_1" Radius="1.2" Rotation="0 0 0" Scale="1 1 1" ShadowResolution="High" ShadowsAffectDynamic="true" ShadowsAffectStatic="true" Tag="" WorldPos="0 0.782128 0.545354" />
+            <PointLight Active="true" CastShadows="false" DiffuseColor="0.402344 0.201172 0 1" FalloffMap="" FlickerActive="true" FlickerFade="true" FlickerOffColor="0.347656 0.173828 0 1" FlickerOffFadeMaxLength="0.2" FlickerOffFadeMinLength="0" FlickerOffMaxLength="0" FlickerOffMinLength="0" FlickerOffPS="" FlickerOffRadius="3.5" FlickerOffSound="" FlickerOnFadeMaxLength="0.2" FlickerOnFadeMinLength="0" FlickerOnMaxLength="0" FlickerOnMinLength="0" FlickerOnPS="" FlickerOnSound="" Gobo="" GoboAnimFrameTime="0" GoboAnimMode="None" ID="9" Name="PointLight_2" Radius="3.5" Rotation="0 0 0" Scale="1 1 1" ShadowResolution="High" ShadowsAffectDynamic="true" ShadowsAffectStatic="true" Tag="" WorldPos="0 0.978862 1.49696" />
+            <ParticleSystem Active="true" Color="1 0.665894 0.371094 0.804688" FadeAtDistance="true" File="D:/Program Files (x86)/Steam/steamapps/common/Amnesia The Dark Descent/particles/ps_light_dust_fire.ps" ID="12" MaxFadeDistanceEnd="110" MaxFadeDistanceStart="100" MinFadeDistanceEnd="1" MinFadeDistanceStart="2" Name="ParticleSystem_1" Rotation="0 0 0" Scale="1 1 1" Tag="" WorldPos="0 1.04862 0.879615" />
+            <ParticleSystem Active="true" Color="1 1 1 1" FadeAtDistance="true" File="D:/Program Files (x86)/Steam/steamapps/common/Amnesia The Dark Descent/particles/ps_dust_falling_torch.ps" ID="13" MaxFadeDistanceEnd="110" MaxFadeDistanceStart="100" MinFadeDistanceEnd="1" MinFadeDistanceStart="2" Name="ParticleSystem_2" Rotation="0 0 0" Scale="1 1 1" Tag="" WorldPos="0 2.47503 1.689" />
+            <Billboard Active="true" BillboardColor="0.1 0.06 0 1" BillboardOffset="0" BillboardSize="10 10" BillboardType="Point" ConnectLight="" HaloSourceSize="0.5 0.5 0.5" ID="14" IsHalo="true" MaterialFile="billboards/halo_torch.mat" Name="halo_1" Rotation="0 0 0" Tag="" WorldPos="0 0.917711 0.512959" />
+            <Billboard Active="true" BillboardColor="1 1 1 1" BillboardOffset="0" BillboardSize="0.4 1" BillboardType="Axis" ConnectLight="" HaloSourceSize="0.3 0.3 0.3" ID="15" IsHalo="false" MaterialFile="C:/Program Files (x86)/Steam/steamapps/common/Amnesia The Dark Descent/Dreadscape/billboards/torch_flame/torch_flame_32fps.mat" Name="Billboard_1" Rotation="0 0 3.14159" Tag="" WorldPos="0.00968927 1.08538 0.443454" />
+            <ParticleSystem Active="true" Color="1 1 1 1" FadeAtDistance="true" File="ps_fire_embers_sabatu.ps" ID="16" MaxFadeDistanceEnd="110" MaxFadeDistanceStart="100" MinFadeDistanceEnd="1" MinFadeDistanceStart="2" Name="ParticleSystem_3" Rotation="0 0 0" Scale="1 1 1" Tag="" WorldPos="0 0.742708 0.465854" />
+            <ParticleSystem Active="true" Color="1 1 1 1" FadeAtDistance="true" File="ps_fire_embers_sabatu.ps" ID="17" MaxFadeDistanceEnd="110" MaxFadeDistanceStart="100" MinFadeDistanceEnd="1" MinFadeDistanceStart="2" Name="ParticleSystem_4" Rotation="0 0 0" Scale="0.647932 0.647932 0.647932" Tag="" WorldPos="0 0.757661 0.483999" />
+            <ParticleSystem Active="true" Color="0.394531 0.254288 0.114044 0.390625" FadeAtDistance="true" File="ps_smokestack_smallsmoke.ps" ID="18" MaxFadeDistanceEnd="55" MaxFadeDistanceStart="50" MinFadeDistanceEnd="1" MinFadeDistanceStart="2" Name="ParticleSystem_5" Rotation="0 0 0" Scale="0.5 0.5 0.5" Tag="" WorldPos="0 0.661535 0.402097" />
+            <ParticleSystem Active="true" Color="1 1 1 1" FadeAtDistance="false" File="ps_area_fog_falling_sabatu_torch.ps" ID="19" MaxFadeDistanceEnd="110" MaxFadeDistanceStart="100" MinFadeDistanceEnd="1" MinFadeDistanceStart="2" Name="ParticleSystem_6" Rotation="0 0 0" Scale="1 1 1" Tag="" WorldPos="0 1.80639 1.70872" />
+            <ParticleSystem Active="true" Color="0.640625 0.318905 0.0350342 0.804688" FadeAtDistance="true" File="ps_light_dust_large.ps" ID="22" MaxFadeDistanceEnd="110" MaxFadeDistanceStart="100" MinFadeDistanceEnd="1" MinFadeDistanceStart="2" Name="ParticleSystem_9" Rotation="0 0 0.00998395" Scale="1 1 1" Tag="" WorldPos="0 0.975299 0.823459" />
+            <ParticleSystem Active="true" Color="1 1 1 1" FadeAtDistance="false" File="ps_area_fog_falling_sabatu_torch.ps" ID="23" MaxFadeDistanceEnd="110" MaxFadeDistanceStart="100" MinFadeDistanceEnd="1" MinFadeDistanceStart="2" Name="ParticleSystem_7" Rotation="0 1.54353 0" Scale="1 1 1" Tag="" WorldPos="0 0.704231 2.28597" />
+            <ParticleSystem Active="true" Color="1 1 1 1" FadeAtDistance="false" File="ps_area_fog_falling_sabatu_torch.ps" ID="24" MaxFadeDistanceEnd="110" MaxFadeDistanceStart="100" MinFadeDistanceEnd="1" MinFadeDistanceStart="2" Name="ParticleSystem_8" Rotation="3.14159 -0.345508 3.14159" Scale="1 1 1" Tag="" WorldPos="0 -0.455552 2.36875" />
+            <ParticleSystem Active="true" Color="1 1 1 0.804688" FadeAtDistance="false" File="ps_torch_fire_sabatu.ps" ID="25" MaxFadeDistanceEnd="110" MaxFadeDistanceStart="100" MinFadeDistanceEnd="1" MinFadeDistanceStart="2" Name="ParticleSystem_10" Rotation="0 0 0" Scale="1 1 1" Tag="" WorldPos="0 0.719219 0.449817" />
+        </Entities>
+        <Mesh Filename="entities/lamp/torch_static01/torch_static01.dae">
+            <SubMesh Active="true" ID="0" Material="" Name="pCylinder1" Rotation="0 0 0" Scale="0.8 0.8 0.8" SubMeshID="0" Tag="" WorldPos="0 0 0" />
+        </Mesh>
+        <Bones />
+        <Shapes>
+            <BodyShape Active="true" ID="5" Name="BodyShape_1" RelativeRotation="0 -0 0" RelativeScale="0.5 1.25 1" RelativeTranslation="0 3.01663e-009 5.91795e-009" Rotation="0 0 0" Scale="0.5 0.75 0.6" ShapeType="Box" Tag="" WorldPos="0 0.424084 0.35107" />
+        </Shapes>
+        <Bodies>
+            <Body Active="true" AngularDamping="0" BlocksSound="false" BuoyancyDensityMul="1" CanAttachCharacter="true" CollideCharacter="true" CollideNonCharacter="true" ContinuousCollision="true" HasGravity="true" ID="6" LinearDamping="0" Mass="0" Material="Metal" MaxAngularSpeed="0" MaxLinearSpeed="0" Name="Body_1" PushedByCharacterGravity="true" Rotation="0 0 0" Scale="1 0.6 0.6" Tag="" UseSurfaceEffects="true" Volatile="false" WorldPos="0 0.424084 0.35107">
+                <Children>
+                    <Child ID="0" />
+                    <Child ID="7" />
+                    <Child ID="14" />
+                    <Child ID="12" />
+                    <Child ID="17" />
+                    <Child ID="19" />
+                    <Child ID="13" />
+                    <Child ID="9" />
+                    <Child ID="8" />
+                    <Child ID="22" />
+                    <Child ID="23" />
+                    <Child ID="24" />
+                    <Child ID="25" />
+                </Children>
+                <Shape ID="5" />
+            </Body>
+        </Bodies>
+        <Joints />
+        <Animations />
+    </ModelData>
+    <UserDefinedVariables EntitySubType="" EntityType="Lamp">
+        <Var Name="Health" Value="100" />
+        <Var Name="Toughness" Value="0" />
+        <Var Name="MaxFocusDistance" Value="0" />
+        <Var Name="MainPhysicsBody" Value="" />
+        <Var Name="ShowMesh" Value="true" />
+        <Var Name="DissolveOnDestruction" Value="false" />
+        <Var Name="DissolveTime" Value="1.0" />
+        <Var Name="EffectsOnSound" Value="" />
+        <Var Name="EffectsOffSound" Value="" />
+        <Var Name="EffectsOnTime" Value="1" />
+        <Var Name="EffectsOffTime" Value="1" />
+        <Var Name="EffectsOffLightColor" Value="0 0 0 0" />
+        <Var Name="EffectsOffLightRadius" Value="-1" />
+        <Var Name="ShowHints" Value="true" />
+        <Var Name="StaticMoveCheckCollision" Value="false" />
+        <Var Name="StaticMoveStartSound" Value="" />
+        <Var Name="StaticMoveStopSound" Value="" />
+        <Var Name="StaticMoveLoopSound" Value="" />
+        <Var Name="RandomizeAnimationStart" Value="true" />
+        <Var Name="CanBeLitByPlayer" Value="true" />
+        <Var Name="CanBeGrabbed" Value="true" />
+    </UserDefinedVariables>
+</Entity>

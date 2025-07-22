@@ -1,0 +1,9 @@
+<Material>
+    <Main BlendMode="Add" DepthTest="true" PhysicsMaterial="Book" Type="soliddiffuse" UVSubDivs="1 1" UseAlpha="false" />
+    <TextureUnits>
+        <Diffuse AnimFrameTime="1" AnimMode="None" AnimStartTime="0" Compress="false" File="tuxturmup.png" MipMaps="true" Type="2D" Wrap="Repeat" />
+		<NMap AnimFrameTime="" AnimMode="" File="nermulmup.png" Mipmaps="true" Type="2D" Wrap="Repeat" />
+        
+    </TextureUnits>
+    
+</Material>

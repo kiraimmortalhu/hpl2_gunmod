@@ -1,0 +1,123 @@
+<Level>
+    <MapData FogActive="true" FogColor="0.40625 0.212101 0.192017 1" FogCulling="false" FogEnd="200" FogFalloffExp="0.7" FogStart="20" GlobalDecalMaxTris="300" Name="" SkyBoxActive="true" SkyBoxColor="1 1 1 1" SkyBoxTexture="../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../custom_stories/Amanita exitialis/textures/skybox/red_day.dds">
+        <MapContents>
+            <FileIndex_StaticObjects NumOfFiles="29">
+                <File Id="0" Path="static_objects/debris/rock/stone_small01.dae" />
+                <File Id="1" Path="static_objects/debris/rock/stone_med02.dae" />
+                <File Id="2" Path="EDIT/quartz_and_cordite/static_objects/forest_assets_florian/stones_brown_remastered/stone_large01_brown_rem.dae" />
+                <File Id="3" Path="static_objects/outside/foliage/grass01.DAE" />
+                <File Id="4" Path="static_objects/outside/foliage/zimmarman_grass02_brown_2sided.dae" />
+                <File Id="5" Path="EDIT/quartz_and_cordite/static_objects/vegetation_soma/shrub_cinnamon_fern_soma/shrub_cinnamon_fern01.DAE" />
+                <File Id="6" Path="EDIT/quartz_and_cordite/static_objects/forest_assets_florian/tree_pine_remastered/pine_remastered.dae" />
+                <File Id="7" Path="static_objects/debris/rock/stone_med01.dae" />
+                <File Id="8" Path="static_objects/castlebase/pillar/roman_short.dae" />
+                <File Id="9" Path="static_objects/castlebase/floor/castlebase_floor_hex_ring.dae" />
+                <File Id="10" Path="EDIT/quartz_and_cordite/static_objects/vegetation_soma/shrub_cinnamon_fern_soma/shrub_cinnamon_fern02.DAE" />
+                <File Id="11" Path="EDIT/quartz_and_cordite/static_objects/vegetation_soma/tree_large_soma/tree_large01.dae" />
+                <File Id="12" Path="EDIT/quartz_and_cordite/static_objects/forest_assets_florian/floor_dirt_mould_remastered/dirt_mould_remastered_pile.dae" />
+                <File Id="13" Path="EDIT/quartz_and_cordite/static_objects/forest_assets_florian/stones_brown_remastered/stone_large02_brown_rem.dae" />
+                <File Id="14" Path="static_objects/dungeonbase/wall/door_frame_large_entrance.dae" />
+                <File Id="15" Path="static_objects/dungeonbase/ceiling/concave.dae" />
+                <File Id="16" Path="static_objects/dungeonbase/pillar/gigantic.dae" />
+                <File Id="17" Path="static_objects/dungeonbase/pillar/hub_pillar.dae" />
+                <File Id="18" Path="static_objects/dungeonbase/special/hub_top.dae" />
+                <File Id="19" Path="static_objects/dungeonbase/wall/corridor_arched_fence_metal.dae" />
+                <File Id="20" Path="static_objects/dungeonbase/special/tree_pillar.dae" />
+                <File Id="21" Path="static_objects/debris/rock/stone_med01_brown.dae" />
+                <File Id="22" Path="EDIT/quartz_and_cordite/entities/custom/carriage_digitalgoblin/drozka2.dae" />
+                <File Id="23" Path="static_objects/castlebase/wall/door_frame_elevator.dae" />
+                <File Id="24" Path="static_objects/castlebase/pillar/tall_stone.dae" />
+                <File Id="25" Path="static_objects/castlebase/wall/door_frame_large_ornate_arched.dae" />
+                <File Id="26" Path="static_objects/castlebase/wall/prisonbars.dae" />
+                <File Id="27" Path="EDIT/quartz_and_cordite/static_objects/house_improved_umbakarna/house_02_highres_umbakarna.dae" />
+                <File Id="28" Path="EDIT/quartz_and_cordite/static_objects/vegetation_soma/tree_large_soma/tree_pillar_mangrove.dae" />
+            </FileIndex_StaticObjects>
+            <FileIndex_Entities NumOfFiles="15">
+                <File Id="0" Path="entities/organic/bone_pile_human/bone_pile_human1.ent" />
+                <File Id="1" Path="entities/debris/rock_debris/rock_debris02.ent" />
+                <File Id="2" Path="EDIT/quartz_and_cordite/entities/a_quartz/jb_glassfountain/jb_blood_overflow.ent" />
+                <File Id="3" Path="EDIT/quartz_and_cordite/entities/a_quartz/table_castle_round/table_castle_round.ent" />
+                <File Id="4" Path="EDIT/quartz_and_cordite/entities/a_quartz/bonfire_save_kiraimmortal/save_bonfire.ent" />
+                <File Id="5" Path="EDIT/quartz_and_cordite/entities/a_quartz/jb_glassfountain/jb_blood.ent" />
+                <File Id="6" Path="entities/door/level_orb_room_door/level_orb_room_door.ent" />
+                <File Id="7" Path="entities/ornament/banner01/banner01.ent" />
+                <File Id="8" Path="EDIT/quartz_and_cordite/entities/a_quartz/generic_items/generic_item_bulletclip.ent" />
+                <File Id="9" Path="entities/ptest/graveyard_corpse/graveyard_corpse01.ent" />
+                <File Id="10" Path="EDIT/quartz_and_cordite/entities/custom/zasranejkun_headlesscyborg/zasranejkun_dead.ent" />
+                <File Id="11" Path="entities/ptest/graveyard_corpse/graveyard_corpse02.ent" />
+                <File Id="12" Path="EDIT/quartz_and_cordite/entities/a_quartz/generic_items/generic_item_bloodinjector.ent" />
+                <File Id="13" Path="entities/door/level_hub/level_hub.ent" />
+                <File Id="14" Path="entities/technical/block_box/block_box.ent" />
+            </FileIndex_Entities>
+            <FileIndex_Decals NumOfFiles="0" />
+            <StaticObjects />
+            <Primitives />
+            <Decals />
+            <Entities>
+                <PointLight Active="true" CastShadows="false" DiffuseColor="0.511719 0.34581 0.34581 1" FalloffMap="" FlickerActive="false" FlickerFade="false" FlickerOffColor="0 0 0 1" FlickerOffFadeMaxLength="0" FlickerOffFadeMinLength="0" FlickerOffMaxLength="0" FlickerOffMinLength="0" FlickerOffPS="" FlickerOffRadius="0" FlickerOffSound="" FlickerOnFadeMaxLength="0" FlickerOnFadeMinLength="0" FlickerOnMaxLength="0" FlickerOnMinLength="0" FlickerOnPS="" FlickerOnSound="" Gobo="" GoboAnimFrameTime="0" GoboAnimMode="None" Group="0" ID="6937" Name="jb_PointLight_2" Radius="0.5" Rotation="3.14159 1.5708 3.14159" Scale="1 1 1" ShadowResolution="High" ShadowsAffectDynamic="true" ShadowsAffectStatic="true" Tag="" WorldPos="31.599 1.54648 2.19494" />
+                <Billboard Active="true" BillboardColor="1 1 1 1" BillboardOffset="0" BillboardSize="0.5 0.5" BillboardType="Point" ConnectLight="jb_PointLight_2" Group="0" HaloSourceSize="0.3 0.3 0.3" ID="6938" IsHalo="false" MaterialFile="D:/Program Files (x86)/Amnesia Modding/billboards/bb_white_halo.mat" Name="Billboard_1" Rotation="0 0 0" Tag="" WorldPos="31.6498 1.53978 2.20863" />
+                <Area Active="true" AreaType="Script" Group="0" ID="4942" Mesh="" Name="fountain_Activate" Rotation="3.14159 1.5708 3.14159" Scale="0.5 0.5 0.5" Tag="" WorldPos="31.5334 1.3391 2.21165">
+                    <UserVariables>
+                        <Var Name="PlayerLookAtCallback" Value="" />
+                        <Var Name="PlayerLookAtCallbackAutoRemove" Value="true" />
+                        <Var Name="PlayerInteractCallback" Value="ActivateFountain" />
+                        <Var Name="PlayerInteractCallbackAutoRemove" Value="true" />
+                        <Var Name="ItemInteraction" Value="false" />
+                        <Var Name="MaxFocusDistance" Value="-1" />
+                    </UserVariables>
+                </Area>
+                <PointLight Active="true" CastShadows="false" DiffuseColor="0.625 0.0878906 0.0878906 1" FalloffMap="" FlickerActive="false" FlickerFade="false" FlickerOffColor="0 0 0 1" FlickerOffFadeMaxLength="0" FlickerOffFadeMinLength="0" FlickerOffMaxLength="0" FlickerOffMinLength="0" FlickerOffPS="" FlickerOffRadius="0" FlickerOffSound="" FlickerOnFadeMaxLength="0" FlickerOnFadeMinLength="0" FlickerOnMaxLength="0" FlickerOnMinLength="0" FlickerOnPS="" FlickerOnSound="" Gobo="" GoboAnimFrameTime="0" GoboAnimMode="None" Group="0" ID="4943" Name="jb_PointLight" Radius="1" Rotation="3.14159 1.5708 3.14159" Scale="1 1 1" ShadowResolution="High" ShadowsAffectDynamic="true" ShadowsAffectStatic="true" Tag="" WorldPos="30.728 1.05312 2.19484" />
+                <Area Active="false" AreaType="Script" Group="0" ID="4939" Mesh="" Name="fountain_Heal" Rotation="3.14159 1.5708 3.14159" Scale="1.5 0.25 1.5" Tag="" WorldPos="31.902 0.225396 2.20918">
+                    <UserVariables>
+                        <Var Name="PlayerLookAtCallback" Value="" />
+                        <Var Name="PlayerLookAtCallbackAutoRemove" Value="true" />
+                        <Var Name="PlayerInteractCallback" Value="UseFountain" />
+                        <Var Name="PlayerInteractCallbackAutoRemove" Value="false" />
+                        <Var Name="ItemInteraction" Value="false" />
+                        <Var Name="MaxFocusDistance" Value="-1" />
+                    </UserVariables>
+                </Area>
+                <Entity Active="true" FileIndex="5" Group="0" ID="4940" Name="jb_fountain" Rotation="-0.514366 -1.5708 0.514363" Scale="0.5 0.5 0.5" Tag="" WorldPos="31.9941 0 2.20918">
+                    <UserVariables>
+                        <Var Name="CastShadows" Value="true" />
+                        <Var Name="StaticPhysics" Value="false" />
+                        <Var Name="IsAffectedByDecal" Value="false" />
+                        <Var Name="CallbackFunc" Value="" />
+                        <Var Name="ConnectedProps" Value="" />
+                        <Var Name="ConnectionStateChangeCallback" Value="" />
+                        <Var Name="FullGameSave" Value="false" />
+                        <Var Name="PlayerLookAtCallback" Value="" />
+                        <Var Name="PlayerLookAtCallbackAutoRemove" Value="false" />
+                        <Var Name="PlayerInteractCallback" Value="" />
+                        <Var Name="PlayerInteractCallbackAutoRemove" Value="false" />
+                        <Var Name="ContainedItem" Value="None" />
+                        <Var Name="DisableBreakable" Value="false" />
+                        <Var Name="IsInsanityVision" Value="false" />
+                        <Var Name="VisionMaxSanity" Value="30" />
+                    </UserVariables>
+                </Entity>
+                <Entity Active="false" FileIndex="2" Group="0" ID="4941" Name="fountain_bloodflow" Rotation="3.14159 -3.6637e-006 3.14159" Scale="1 1 1" Tag="" WorldPos="31.6252 -1.14981 2.20151">
+                    <UserVariables>
+                        <Var Name="CastShadows" Value="true" />
+                        <Var Name="StaticPhysics" Value="false" />
+                        <Var Name="IsAffectedByDecal" Value="false" />
+                        <Var Name="CallbackFunc" Value="" />
+                        <Var Name="ConnectedProps" Value="" />
+                        <Var Name="ConnectionStateChangeCallback" Value="" />
+                        <Var Name="FullGameSave" Value="true" />
+                        <Var Name="PlayerLookAtCallback" Value="" />
+                        <Var Name="PlayerLookAtCallbackAutoRemove" Value="false" />
+                        <Var Name="PlayerInteractCallback" Value="" />
+                        <Var Name="PlayerInteractCallbackAutoRemove" Value="false" />
+                        <Var Name="ContainedItem" Value="None" />
+                        <Var Name="DisableBreakable" Value="false" />
+                        <Var Name="IsInsanityVision" Value="false" />
+                        <Var Name="VisionMaxSanity" Value="30" />
+                    </UserVariables>
+                </Entity>
+            </Entities>
+            <Misc />
+            <StaticObjectCombos />
+        </MapContents>
+    </MapData>
+</Level>

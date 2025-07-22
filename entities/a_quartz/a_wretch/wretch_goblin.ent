@@ -1,0 +1,399 @@
+<Entity>
+    <EditorSession>
+        <Performance CamClipPlanes="0.05 1000" LightsActive="true" PSActive="true" ShowFog="true" ShowSkybox="true" WorldReflection="true" />
+        <ViewportConfig BGColor="0.2 0.2 0.2 1" GAmbientLight="true" GPointLight="true" GridSnap="false" GridSnapSeparation="0.25" SelectedViewport="3" UsingEnlargedViewport="true">
+            <Viewport CameraPosition="0 0 180" CameraTarget="0 0 0" CameraZoom="0" GridHeight="0" GridPlane="2" Preset="0" RenderMode="1" ShowAxes="true" ShowGrid="true" UsingLTCam="false" />
+            <Viewport CameraPosition="180 0 0" CameraTarget="0 0 0" CameraZoom="0" GridHeight="0" GridPlane="0" Preset="1" RenderMode="1" ShowAxes="true" ShowGrid="true" UsingLTCam="false" />
+            <Viewport CameraPosition="0 180 0" CameraTarget="0 0 0" CameraZoom="0" GridHeight="0" GridPlane="1" Preset="2" RenderMode="1" ShowAxes="true" ShowGrid="true" UsingLTCam="false" />
+            <Viewport CameraPosition="10 10 10" CameraTarget="0 0 0" CameraZoom="1.06013" GridHeight="0" GridPlane="1" Preset="3" RenderMode="0" ShowAxes="true" ShowGrid="true" UsingLTCam="false" />
+        </ViewportConfig>
+    </EditorSession>
+    <ModelData>
+        <Entities />
+        <Mesh Filename="entities/amfp_enemy/wretch/wretch.FBX">
+            <SubMesh Active="true" ID="0" Material="" Name="manpig" Rotation="0 0 0" Scale="1 1 1" SubMeshID="0" Tag="" WorldPos="0 0 0" />
+        </Mesh>
+        <Bones>
+            <Bone ID="1" Name="Bip001" />
+            <Bone ID="2" Name="Bip001_Pelvis" />
+            <Bone ID="3" Name="Bip001_Spine" />
+            <Bone ID="4" Name="Bip001_L_Thigh" />
+            <Bone ID="5" Name="Bip001_L_Calf" />
+            <Bone ID="6" Name="Bip001_L_HorseLink" />
+            <Bone ID="7" Name="Bip001_L_Foot" />
+            <Bone ID="8" Name="Bip001_L_Toe0" />
+            <Bone ID="9" Name="Bip001_L_Toe0Nub" />
+            <Bone ID="10" Name="Bip001_R_Thigh" />
+            <Bone ID="11" Name="Bip001_R_Calf" />
+            <Bone ID="12" Name="Bip001_R_HorseLink" />
+            <Bone ID="13" Name="Bip001_R_Foot" />
+            <Bone ID="14" Name="Bip001_R_Toe0" />
+            <Bone ID="15" Name="Bip001_R_Toe0Nub" />
+            <Bone ID="16" Name="Bip001_Spine1" />
+            <Bone ID="17" Name="Bip001_Neck" />
+            <Bone ID="18" Name="Bip001_Head" />
+            <Bone ID="19" Name="Bip001_HeadNub" />
+            <Bone ID="20" Name="Bip001_L_EAR" />
+            <Bone ID="21" Name="Bip001 Xtra01Nub" />
+            <Bone ID="22" Name="Bip001_Snout" />
+            <Bone ID="23" Name="Bip001 Xtra02Nub" />
+            <Bone ID="24" Name="Bip001_Jaw" />
+            <Bone ID="25" Name="Bip001 Xtra03Nub" />
+            <Bone ID="26" Name="Bip001_R_EAR" />
+            <Bone ID="27" Name="Bip001 Xtra01OppNub" />
+            <Bone ID="28" Name="Bip001_L_Clavicle" />
+            <Bone ID="29" Name="Bip001_L_UpperArm" />
+            <Bone ID="30" Name="Bip001_L_Forearm" />
+            <Bone ID="31" Name="Bip001_L_Hand" />
+            <Bone ID="32" Name="Bip001_L_Finger0" />
+            <Bone ID="33" Name="Bip001_L_Finger01" />
+            <Bone ID="34" Name="Bip001_ L_Finger02" />
+            <Bone ID="35" Name="Bip001_L_Finger0Nub" />
+            <Bone ID="36" Name="Bip001_L_ Finger1" />
+            <Bone ID="37" Name="Bip001_L_Finger11" />
+            <Bone ID="38" Name="Bip001_L_Finger12" />
+            <Bone ID="39" Name="Bip001_L_Finger1Nub" />
+            <Bone ID="40" Name="Bip001_L_Finger2" />
+            <Bone ID="41" Name="Bip001_L_Finger21" />
+            <Bone ID="42" Name="Bip001_L_Finger22" />
+            <Bone ID="43" Name="Bip001_L_Finger2Nub" />
+            <Bone ID="44" Name="Bip001_R_Clavicle" />
+            <Bone ID="45" Name="Bip001_R_UpperArm" />
+            <Bone ID="46" Name="Bip001_R_Forearm" />
+            <Bone ID="47" Name="Bip001_R_Hand" />
+            <Bone ID="48" Name="Bip001_R_Finger0" />
+            <Bone ID="49" Name="Bip001_R_Finger01" />
+            <Bone ID="50" Name="Bip001_R_Finger02" />
+            <Bone ID="51" Name="Bip001_R_Finger0Nub" />
+            <Bone ID="52" Name="Bip001_R_Finger1" />
+            <Bone ID="53" Name="Bip001_R_Finger11" />
+            <Bone ID="54" Name="Bip001_R_Finger12" />
+            <Bone ID="55" Name="Bip001_R_Finger1Nub" />
+            <Bone ID="56" Name="Bip001_R_Finger2" />
+            <Bone ID="57" Name="Bip001_R_Finger21" />
+            <Bone ID="58" Name="Bip001_R_Finger22" />
+            <Bone ID="59" Name="Bip001_R_Finger2Nub" />
+        </Bones>
+        <Shapes />
+        <Bodies />
+        <Joints />
+        <Animations>
+            <Animation File="wretch/animations/qp_walk.FBX" Name="WalkQuadruped" SpecialEventTime="0" Speed="1.35">
+                <Event Time="0.15" Type="PlaySound" Value="engineer_tunnels_step_fist" />
+                <Event Time="0.55" Type="PlaySound" Value="engineer_tunnels_step_biped" />
+                <Event Time="1.2" Type="PlaySound" Value="engineer_tunnels_step_biped" />
+            </Animation>
+            <Animation File="wretch/animations/bp_walk.FBX" Name="WalkBiped" SpecialEventTime="0" Speed="1.1">
+                <Event Time="0.88" Type="PlaySound" Value="engineer_tunnels_step_biped.snt" />
+                <Event Time="0.37" Type="PlaySound" Value="engineer_tunnels_step_biped.snt" />
+            </Animation>
+            <Animation File="wretch/animations/qp_idle_01.FBX" Name="IdleQuadruped" SpecialEventTime="0" Speed="1">
+                <Event Time="0.01" Type="PlaySound" Value="wretchpens_IdleQuadruped01_01" />
+                <Event Time="0.65" Type="PlaySound" Value="wretchpens_IdleQuadruped01_02" />
+                <Event Time="1.52" Type="PlaySound" Value="wretchpens_IdleQuadruped01_03" />
+                <Event Time="2.02" Type="PlaySound" Value="wretchpens_IdleQuadruped01_04" />
+                <Event Time="3.22" Type="PlaySound" Value="wretchpens_IdleQuadruped01_05" />
+                <Event Time="4.52" Type="PlaySound" Value="wretchpens_IdleQuadruped01_06" />
+            </Animation>
+            <Animation File="wretch/animations/qp_idle_02.FBX" Name="IdleQuadrupedExtra1" SpecialEventTime="0" Speed="1">
+                <Event Time="0.01" Type="PlaySound" Value="wretchpens_IdleQuadruped02_01.snt" />
+                <Event Time="0.4" Type="PlaySound" Value="wretchpens_IdleQuadruped02_02.snt" />
+                <Event Time="0.83" Type="PlaySound" Value="wretchpens_IdleQuadruped02_03.snt" />
+                <Event Time="1.17" Type="PlaySound" Value="wretchpens_IdleQuadruped02_04.snt" />
+                <Event Time="1.63" Type="PlaySound" Value="wretchpens_IdleQuadruped02_05.snt" />
+                <Event Time="2.3" Type="PlaySound" Value="wretchpens_IdleQuadruped02_06.snt" />
+                <Event Time="3.27" Type="PlaySound" Value="wretchpens_IdleQuadruped02_07.snt" />
+                <Event Time="4.3" Type="PlaySound" Value="wretchpens_IdleQuadruped02_08.snt" />
+                <Event Time="5.47" Type="PlaySound" Value="wretchpens_IdleQuadruped02_09.snt" />
+            </Animation>
+            <Animation File="wretch/animations/qp_idle_03.FBX" Name="IdleQuadrupedExtra2" SpecialEventTime="0" Speed="1">
+                <Event Time="0.01" Type="PlaySound" Value="wretchpens_IdleQuadruped03_01" />
+                <Event Time="0.45" Type="PlaySound" Value="wretchpens_IdleQuadruped03_02" />
+                <Event Time="1.45" Type="PlaySound" Value="wretchpens_IdleQuadruped03_03" />
+                <Event Time="2.13" Type="PlaySound" Value="wretchpens_IdleQuadruped03_04" />
+            </Animation>
+            <Animation File="wretch/animations/bp_idle_01.FBX" Name="IdleBiped" SpecialEventTime="0" Speed="1">
+                <Event Time="0" Type="PlaySound" Value="wretchpens_IdleBiped01_01.snt" />
+                <Event Time="1.1" Type="PlaySound" Value="wretchpens_IdleBiped01_02.snt" />
+                <Event Time="2.2" Type="PlaySound" Value="wretchpens_IdleBiped01_03.snt" />
+                <Event Time="3.25" Type="PlaySound" Value="wretchpens_IdleBiped01_04.snt" />
+                <Event Time="4.9" Type="PlaySound" Value="wretchpens_IdleBiped01_05.snt" />
+            </Animation>
+            <Animation File="wretch/animations/bp_idle_02.FBX" Name="IdleBipedExtra1" SpecialEventTime="0" Speed="1">
+                <Event Time="0.01" Type="PlaySound" Value="wretchpens_IdleBiped02_01.snt" />
+                <Event Time="0.8" Type="PlaySound" Value="wretchpens_IdleBiped02_02.snt" />
+                <Event Time="2.63" Type="PlaySound" Value="wretchpens_IdleBiped02_03.snt" />
+                <Event Time="4.9" Type="PlaySound" Value="wretchpens_IdleBiped02_04.snt" />
+            </Animation>
+            <Animation File="wretch/animations/bp_idle_02.FBX" Name="IdleBipedExtra2" SpecialEventTime="0" Speed="1">
+                <Event Time="0.01" Type="PlaySound" Value="wretchpens_IdleBiped02_01.snt" />
+                <Event Time="0.8" Type="PlaySound" Value="wretchpens_IdleBiped02_02.snt" />
+                <Event Time="2.63" Type="PlaySound" Value="wretchpens_IdleBiped02_03.snt" />
+                <Event Time="4.9" Type="PlaySound" Value="wretchpens_IdleBiped02_04.snt" />
+            </Animation>
+            <Animation File="wretch/animations/bp_charge.FBX" Name="ChargeBiped" SpecialEventTime="0.2" Speed="1">
+                <Event Time="0.04" Type="PlaySound" Value="engineer_tunnels_stomp.snt" />
+                <Event Time="0.1" Type="PlaySound" Value="" />
+                <Event Time="0.31" Type="PlaySound" Value="engineer_tunnels_stomp.snt" />
+            </Animation>
+            <Animation File="wretch/animations/bp_charge.FBX" Name="ChargeQuadruped" SpecialEventTime="0.2" Speed="1">
+                <Event Time="0.04" Type="PlaySound" Value="engineer_tunnels_stomp.snt" />
+                <Event Time="0.1" Type="PlaySound" Value="" />
+                <Event Time="0.31" Type="PlaySound" Value="engineer_tunnels_stomp.snt" />
+            </Animation>
+            <Animation File="wretch/animations/bp_run.FBX" Name="FleeBiped" SpecialEventTime="0" Speed="0.151975">
+                <Event Time="0.08" Type="PlaySound" Value="engineer_tunnels_stomp.snt" />
+                <Event Time="0.01" Type="PlaySound" Value="" />
+                <Event Time="0.3" Type="PlaySound" Value="engineer_tunnels_stomp.snt" />
+                <Event Time="0.39" Type="PlaySound" Value="null" />
+            </Animation>
+            <Animation File="wretch/animations/qp_run.FBX" Name="FleeQuadruped" SpecialEventTime="0" Speed="0.151975">
+                <Event Time="0.08" Type="PlaySound" Value="engineer_tunnels_stomp.snt" />
+                <Event Time="0.01" Type="PlaySound" Value="" />
+                <Event Time="0.3" Type="PlaySound" Value="engineer_tunnels_stomp.snt" />
+                <Event Time="0.39" Type="PlaySound" Value="null" />
+            </Animation>
+            <Animation File="wretch/animations/bp_vomit.FBX" Name="VomitBiped" SpecialEventTime="0.6" Speed="1">
+                <Event Time="0.2" Type="PlaySound" Value="wretchpens_vomit_attack" />
+                <Event Time="0.01" Type="PlaySound" Value="wretchpens_VomitBiped_foley" />
+                <Event Time="1.91" Type="PlaySound" Value="wretchpens_step_fist" />
+                <Event Time="2.91" Type="PlaySound" Value="wretchpens_step_fist" />
+            </Animation>
+            <Animation File="wretch/animations/bp_vomit.FBX" Name="BreakDoor" SpecialEventTime="0.6" Speed="1">
+                <Event Time="0.5" Type="PlaySound" Value="player/footsteps/metal/step_run_metal" />
+            </Animation>
+            <Animation File="wretch/animations/qp_vomit.FBX" Name="VomitQuadruped" SpecialEventTime="0.6" Speed="1">
+                <Event Time="0.01" Type="PlaySound" Value="wretchpens_vomit_attack.snt" />
+                <Event Time="0.01" Type="PlaySound" Value="wretchpens_VomitQuadruped_foley.snt" />
+                <Event Time="0.05" Type="PlaySound" Value="null.snt" />
+                <Event Time="1.8" Type="PlaySound" Value="engineer_tunnels_step_fist" />
+                <Event Time="2.91" Type="PlaySound" Value="engineer_tunnels_step_fist" />
+                <Event Time="0.2" Type="PlaySound" Value="engineer_tunnels_step_biped.snt" />
+                <Event Time="0.46" Type="PlaySound" Value="engineer_tunnels_step_biped.snt" />
+                <Event Time="2.53" Type="PlaySound" Value="engineer_tunnels_step_biped.snt" />
+                <Event Time="2.9" Type="PlaySound" Value="engineer_tunnels_step_biped.snt" />
+            </Animation>
+            <Animation File="wretch/animations/qp_idle_turn90_c.FBX" Name="IdleTurn90CWQuadruped" SpecialEventTime="0" Speed="1">
+                <Event Time="0.01" Type="PlaySound" Value="wretchpens_IdleTurnQuadruped" />
+                <Event Time="0.01" Type="PlaySound" Value="wretchpens_IdleTurnQuadruped_vo" />
+                <Event Time="0.38" Type="PlaySound" Value="engineer_tunnels_step_biped" />
+            </Animation>
+            <Animation File="wretch/animations/qp_idle_turn90_ac.FBX" Name="IdleTurn90CCWQuadruped" SpecialEventTime="0" Speed="1">
+                <Event Time="0.01" Type="PlaySound" Value="wretchpens_IdleTurnQuadruped" />
+                <Event Time="0.01" Type="PlaySound" Value="wretchpens_IdleTurnQuadruped_vo" />
+                <Event Time="0.29" Type="PlaySound" Value="engineer_tunnels_step_biped" />
+                <Event Time="0.75" Type="PlaySound" Value="engineer_tunnels_step_biped" />
+            </Animation>
+            <Animation File="wretch/animations/bp_idle_turn90_c.FBX" Name="IdleTurn90CWBiped" SpecialEventTime="0" Speed="1">
+                <Event Time="0.01" Type="PlaySound" Value="wretchpens_IdleTurnBiped" />
+                <Event Time="0.01" Type="PlaySound" Value="wretchpens_IdleTurnBiped_vo" />
+                <Event Time="0.18" Type="PlaySound" Value="engineer_tunnels_step_biped" />
+                <Event Time="0.55" Type="PlaySound" Value="engineer_tunnels_step_biped" />
+            </Animation>
+            <Animation File="wretch/animations/bp_idle_turn90_ac.FBX" Name="IdleTurn90CCWBiped" SpecialEventTime="0" Speed="1">
+                <Event Time="0.01" Type="PlaySound" Value="wretchpens_IdleTurnBiped" />
+                <Event Time="0.01" Type="PlaySound" Value="wretchpens_IdleTurnBiped_vo" />
+                <Event Time="0.25" Type="PlaySound" Value="engineer_tunnels_step_biped" />
+                <Event Time="0.6" Type="PlaySound" Value="engineer_tunnels_step_biped" />
+            </Animation>
+            <Animation File="wretch/animations/qp_threat_start.FBX" Name="NoticeQuadruped" SpecialEventTime="0" Speed="1">
+                <Event Time="0.01" Type="PlaySound" Value="wretchpens_ThreatStartQuadruped_foley.snt" />
+                <Event Time="0.36" Type="PlaySound" Value="wretchpens_threatstart_vocal.snt" />
+            </Animation>
+            <Animation File="wretch/animations/qp_threat_start.FBX" Name="ThreatStartQuadruped" SpecialEventTime="0" Speed="1">
+                <Event Time="0.01" Type="PlaySound" Value="wretchpens_ThreatStartQuadruped_foley.snt" />
+                <Event Time="0.36" Type="PlaySound" Value="wretchpens_threatstart_vocal.snt" />
+            </Animation>
+            <Animation File="wretch/animations/qp_threat_end.FBX" Name="ThreatEndQuadruped" SpecialEventTime="0" Speed="1">
+                <Event Time="0" Type="PlaySound" Value="wretchpens_ThreatQuadruped_end" />
+            </Animation>
+            <Animation File="wretch/animations/qp_threat_loop.FBX" Name="ThreatLoop" SpecialEventTime="0" Speed="1">
+                <Event Time="0.15" Type="PlaySound" Value="wretchpens_ThreatLoop_Highend_01" />
+                <Event Time="0.15" Type="PlaySound" Value="wretchpens_ThreatLoop_LowEnd_01" />
+                <Event Time="1.58" Type="PlaySound" Value="wretchpens_ThreatLoop_Highend_02" />
+                <Event Time="1.58" Type="PlaySound" Value="wretchpens_ThreatLoop_LowEnd_02" />
+            </Animation>
+            <Animation File="wretch/animations/qp_bp_idletrans.FBX" Name="IdleQuadrupedToBiped" SpecialEventTime="0" Speed="1">
+                <Event Time="0" Type="PlaySound" Value="wretchpens_IdleQuadrupedtoBiped" />
+            </Animation>
+            <Animation File="wretch/animations/bp_qp_idletrans.FBX" Name="IdleBipedToQuadruped" SpecialEventTime="0" Speed="1">
+                <Event Time="0.01" Type="PlaySound" Value="wretchpens_IdleBipedtoQuadruped_01" />
+                <Event Time="0.5" Type="PlaySound" Value="wretchpens_IdleBipedtoQuadruped_vo" />
+            </Animation>
+            <Animation File="wretch/animations/bp_walk_start.FBX" Name="WalkStartBiped" SpecialEventTime="0" Speed="1" />
+            <Animation File="wretch/animations/bp_walk_stop.FBX" Name="WalkStopBiped" SpecialEventTime="0" Speed="1" />
+            <Animation File="wretch/animations/qp_walk_start.FBX" Name="WalkStartQuadruped" SpecialEventTime="0" Speed="1" />
+            <Animation File="wretch/animations/qp_walk_stop.FBX" Name="WalkStopQuadruped" SpecialEventTime="0" Speed="1" />
+            <Animation File="wretch/animations/bp_flee_turn180_idle.FBX" Name="FleeTurn180IdleBiped" SpecialEventTime="0" Speed="1">
+                <Event Time="0" Type="PlaySound" Value="wretchpens_FleeTurn180Biped_clothing.snt" />
+                <Event Time="0.08" Type="PlaySound" Value="engineer_tunnels_stomp.snt" />
+                <Event Time="0.22" Type="PlaySound" Value="engineer_tunnels_stomp.snt" />
+                <Event Time="0.45" Type="PlaySound" Value="null.snt" />
+                <Event Time="0.71" Type="PlaySound" Value="engineer_tunnels_step_biped" />
+            </Animation>
+            <Animation File="wretch/animations/bp_idle_turn180_c.FBX" Name="IdleTurn180CWBiped" SpecialEventTime="0" Speed="1">
+                <Event Time="0" Type="PlaySound" Value="wretchpens_IdleTurn180CWBiped.snt" />
+                <Event Time="0.36" Type="PlaySound" Value="null.snt" />
+                <Event Time="0.77" Type="PlaySound" Value="null.snt" />
+                <Event Time="0.61" Type="PlaySound" Value="engineer_tunnels_step_biped.snt" />
+            </Animation>
+            <Animation File="wretch/animations/bp_run.FBX" Name="RunBiped" SpecialEventTime="0" Speed="0.17452">
+                <Event Time="0.05" Type="PlaySound" Value="wretchpens_breath_hard" />
+                <Event Time="0.11" Type="PlaySound" Value="engineer_tunnels_stomp" />
+                <Event Time="0.4" Type="PlaySound" Value="engineer_tunnels_stomp" />
+                <Event Time="0.25" Type="PlaySound" Value="null" />
+                <Event Time="0.57" Type="PlaySound" Value="null" />
+            </Animation>
+            <Animation File="wretch/animations/bp_threat_start.FBX" Name="NoticeBiped" SpecialEventTime="0" Speed="1">
+                <Event Time="0.31" Type="PlaySound" Value="wretchpens_threatstart_vocal.snt" />
+            </Animation>
+            <Animation File="wretch/animations/bp_threat_start.FBX" Name="ThreatStartBiped" SpecialEventTime="0" Speed="1">
+                <Event Time="0.31" Type="PlaySound" Value="wretchpens_threatstart_vocal.snt" />
+            </Animation>
+            <Animation File="wretch/animations/bp_threat_end.FBX" Name="ThreatEndBiped" SpecialEventTime="0" Speed="1" />
+            <Animation File="wretch/animations/bp_threat_turn180_flee.FBX" Name="ThreatTurn180FleeBiped" SpecialEventTime="0" Speed="1">
+                <Event Time="0.1" Type="PlaySound" Value="engineer_tunnels_step_biped" />
+                <Event Time="0.15" Type="PlaySound" Value="null.snt" />
+            </Animation>
+            <Animation File="wretch/animations/qp_idle_turn180_c.FBX" Name="IdleTurn180CWQuadruped" SpecialEventTime="0" Speed="1">
+                <Event Time="0" Type="PlaySound" Value="wretch_IdleTurn180CWQuadruped_foley.snt" />
+                <Event Time="0.25" Type="PlaySound" Value="wretchpens_step_fist.snt" />
+                <Event Time="0.35" Type="PlaySound" Value="engineer_tunnels_step_biped" />
+                <Event Time="0.73" Type="PlaySound" Value="null.snt" />
+                <Event Time="0.78" Type="PlaySound" Value="wretchpens_step_fist.snt" />
+                <Event Time="0.85" Type="PlaySound" Value="engineer_tunnels_step_biped" />
+            </Animation>
+            <Animation File="wretch/animations/qp_jog.FBX" Name="JogQuadruped" SpecialEventTime="0" Speed="0.89285">
+                <Event Time="0.4" Type="PlaySound" Value="engineer_tunnels_step_fist_louder" />
+                <Event Time="0.35" Type="PlaySound" Value="wretchpens_breath_hard" />
+                <Event Time="0.55" Type="PlaySound" Value="engineer_tunnels_step_biped" />
+                <Event Time="0.33" Type="PlaySound" Value="engineer_tunnels_step_biped" />
+                <Event Time="0.03" Type="PlaySound" Value="null" />
+                <Event Time="0.4" Type="PlaySound" Value="null" />
+            </Animation>
+            <Animation File="wretch/animations/qp_run.FBX" Name="RunQuadruped" SpecialEventTime="0" Speed="0.338983">
+                <Event Time="0.35" Type="PlaySound" Value="wretchpens_breath_hard" />
+                <Event Time="0.5" Type="PlaySound" Value="engineer_tunnels_step_fist_louder" />
+                <Event Time="0.55" Type="PlaySound" Value="engineer_tunnels_step_biped" />
+                <Event Time="0.33" Type="PlaySound" Value="engineer_tunnels_step_biped" />
+                <Event Time="0.03" Type="PlaySound" Value="null" />
+                <Event Time="0.4" Type="PlaySound" Value="null" />
+            </Animation>
+        </Animations>
+    </ModelData>
+    <UserDefinedVariables EntitySubType="" EntityType="Enemy_ManPig">
+        <Var Name="Health" Value="100" />
+        <Var Name="Toughness" Value="0" />
+        <Var Name="AutoRemoveAtPathEnd" Value="true" />
+        <Var Name="SightRange" Value="20" />
+        <Var Name="DarknessSightRange" Value="5" />
+        <Var Name="HearVolume" Value="0.55" />
+        <Var Name="FOV" Value="120" />
+        <Var Name="FOVXMul" Value="1" />
+        <Var Name="ActivationDistance" Value="999" />
+        <Var Name="MaxRegenHealth" Value="100" />
+        <Var Name="RegenHealthSpeed" Value="5" />
+        <Var Name="DangerMusic" Value="" />
+        <Var Name="DangerMusicPrio" Value="0" />
+        <Var Name="SearchMusic" Value="" />
+        <Var Name="SearchMusicPrio" Value="5" />
+        <Var Name="AttackMusic" Value="" />
+        <Var Name="AttackMusicPrio" Value="5" />
+        <Var Name="PlayerSearchMaxAngle" Value="45" />
+        <Var Name="PlayerSearchMinDistMul" Value="0.5" />
+        <Var Name="PlayerSearchMaxDistMul" Value="2" />
+        <Var Name="PlayerSearchTime" Value="10" />
+        <Var Name="PlayerPatrolMaxAngle" Value="110" />
+        <Var Name="PlayerPatrolMinDist" Value="8" />
+        <Var Name="PlayerPatrolMaxDist" Value="18" />
+        <Var Name="Body_Size" Value="1.2 1.85 1.2" />
+        <Var Name="Body_Mass" Value="50" />
+        <Var Name="Body_AccurateClimbing" Value="true" />
+        <Var Name="Body_MaxNoSlideSlopeAngle" Value="45" />
+        <Var Name="Body_MaxPushMass" Value="40" />
+        <Var Name="Body_PushForce" Value="200" />
+        <Var Name="Body_CharacterMaxPushMass" Value="20" />
+        <Var Name="Body_CharacterPushForce" Value="100" />
+        <Var Name="Body_MaxStepSize" Value="0.5" />
+        <Var Name="Body_StepClimbSpeed" Value="6.0" />
+        <Var Name="Body_OffsetRot" Value="0 180 0" />
+        <Var Name="Body_OffsetTrans" Value="0 0 0" />
+        <Var Name="Walk_ForwardSpeed" Value="1.0" />
+        <Var Name="Walk_BackwardSpeed" Value="1.0" />
+        <Var Name="Walk_ForwardAcc" Value="2.0" />
+        <Var Name="Walk_ForwardDeacc" Value="8.0" />
+        <Var Name="Run_ForwardSpeed" Value="3.0" />
+        <Var Name="Run_BackwardSpeed" Value="2.0" />
+        <Var Name="Run_ForwardAcc" Value="4.0" />
+        <Var Name="Run_ForwardDeacc" Value="8.0" />
+        <Var Name="TurnSpeedMul" Value="6" />
+        <Var Name="TurnMaxSpeed" Value="12" />
+        <Var Name="TurnMinBreakAngle" Value="100" />
+        <Var Name="TurnBreakMul" Value="2" />
+        <Var Name="MoveSpeedAnimMul" Value="1.0" />
+        <Var Name="StoppedToWalkSpeed" Value="0.05" />
+        <Var Name="WalkToStoppedSpeed" Value="0.02" />
+        <Var Name="WalkToRunSpeed" Value="1.2" />
+        <Var Name="RunToWalkSpeed" Value="1.0" />
+        <Var Name="WaterStepSpeedWalk" Value="3.0" />
+        <Var Name="WaterStepSpeedRun" Value="5.0" />
+        <Var Name="WaterStepSpeedMisc" Value="3.0" />
+        <Var Name="HitPS_Sword" Value="hit/blood.ps" />
+        <Var Name="HitSound_Sword" Value="grunt/hit_generic" />
+        <Var Name="HitPS_Club" Value="hit/blood.ps" />
+        <Var Name="HitSound_Club" Value="grunt/hit_generic" />
+        <Var Name="HitPS_Bullet" Value="hit/blood.ps" />
+        <Var Name="HitSound_Bullet" Value="grunt/hit_generic" />
+        <Var Name="HitPS_Dud" Value="" />
+        <Var Name="HitSound_Dud" Value="" />
+        <Var Name="AmbientSound_Idle" Value="wretch_tunnels_amb_idle" />
+        <Var Name="AmbientMinTime_Idle" Value="1" />
+        <Var Name="AmbientMaxTime_Idle" Value="3" />
+        <Var Name="AmbientSound_Alert" Value="wretch_tunnels_amb_alert" />
+        <Var Name="AmbientMinTime_Alert" Value="1" />
+        <Var Name="AmbientMaxTime_Alert" Value="3" />
+        <Var Name="AmbientSound_Hunt" Value="wretch_tunnels_amb_hunt" />
+        <Var Name="AmbientMinTime_Hunt" Value="1" />
+        <Var Name="AmbientMaxTime_Hunt" Value="3" />
+        <Var Name="NormalAttackDistance" Value="1.9" />
+        <Var Name="NormalDamageSize" Value="1 1.6 1.75" />
+        <Var Name="NormalDamageOffset" Value="0 0 1.2" />
+        <Var Name="NormalAttackHitSound" Value="grunt/attack_claw_hit" />
+        <Var Name="NormalAttackDamage" Value="10 20" />
+        <Var Name="NormalAttackForce" Value="30 5" />
+        <Var Name="NormalAttackStrength" Value="1" />
+        <Var Name="NormalDamageType" Value="Claws" />
+        <Var Name="BreakDoorAttackDamage" Value="26 26" />
+        <Var Name="BreakDoorAttackForce" Value="30 5" />
+        <Var Name="BreakDoorAttackStrength" Value="6" />
+        <Var Name="BreakDoorAttackHitSound" Value="grunt/attack_claw_hit" />
+        <Var Name="BreakDoorDamageType" Value="BloodSplat" />
+        <Var Name="Quadruped_Walk_ForwardSpeed" Value="1.0" />
+        <Var Name="Quadruped_Walk_BackwardSpeed" Value="1.0" />
+        <Var Name="Quadruped_Walk_ForwardAcc" Value="2.0" />
+        <Var Name="Quadruped_Walk_ForwardDeacc" Value="8.0" />
+        <Var Name="Quadruped_Run_ForwardSpeed" Value="3.0" />
+        <Var Name="Quadruped_Run_BackwardSpeed" Value="2.0" />
+        <Var Name="Quadruped_Run_ForwardAcc" Value="4.0" />
+        <Var Name="Quadruped_Run_ForwardDeacc" Value="8.0" />
+        <Var Name="Quadruped_StoppedToWalkSpeed" Value="0.05" />
+        <Var Name="Quadruped_WalkToStoppedSpeed" Value="0.02" />
+        <Var Name="Quadruped_WalkToRunSpeed" Value="2.0" />
+        <Var Name="Quadruped_RunToWalkSpeed" Value="0.9" />
+        <Var Name="NoticeSound" Value="wretch_tunnels_amb_notice" />
+        <Var Name="GiveUpNoticeSound" Value="" />
+        <Var Name="EnabledSound" Value="" />
+        <Var Name="GroggyDamageCount" Value="1" />
+        <Var Name="AlertToHuntDistance" Value="9" />
+        <Var Name="AlertToInstantHuntDistance" Value="2.5" />
+        <Var Name="HuntPauseMinTime" Value="2.0" />
+        <Var Name="HuntPauseMaxTime" Value="4.5" />
+        <Var Name="IncreaseAlertSpeedDistance" Value="6" />
+        <Var Name="IncreasedAlertSpeedMul" Value="1.25" />
+        <Var Name="AlertRunTowardsToHuntLimit" Value="30" />
+        <Var Name="AlertRunTowardsCheckDistance" Value="6" />
+        <Var Name="IsTelsa" Value="false" />
+        <Var Name="TeslaSoundLoop" Value="" />
+        <Var Name="ChaseSound" Value="" />
+    </UserDefinedVariables>
+</Entity>

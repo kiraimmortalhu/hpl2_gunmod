@@ -1,0 +1,476 @@
+<AINodes>
+    <Node Name="PathNodeArea_1" ID="2274">
+        <Edge Node="PathNodeArea_2" Distance="0.25000000000000000000" />
+        <Edge Node="PathNodeArea_3" Distance="1.03077638149261470000" />
+        <Edge Node="PathNodeArea_4" Distance="1.76776695251464840000" />
+        <Edge Node="PathNodeArea_6" Distance="2.61007666587829590000" />
+        <Edge Node="PathNodeArea_5" Distance="2.76134014129638670000" />
+        <Edge Node="Spawn_Enemy_Medium_1" Distance="2.78440093994140620000" />
+    </Node>
+    <Node Name="PathNodeArea_2" ID="2275">
+        <Edge Node="PathNodeArea_1" Distance="0.25000000000000000000" />
+        <Edge Node="PathNodeArea_3" Distance="0.79056942462921143000" />
+        <Edge Node="PathNodeArea_4" Distance="1.52069067955017090000" />
+        <Edge Node="PathNodeArea_6" Distance="2.37170815467834470000" />
+        <Edge Node="PathNodeArea_5" Distance="2.51246881484985350000" />
+        <Edge Node="Spawn_Enemy_Medium_1" Distance="3.03440093994140630000" />
+    </Node>
+    <Node Name="PathNodeArea_3" ID="2276">
+        <Edge Node="PathNodeArea_4" Distance="0.75000000000000000000" />
+        <Edge Node="PathNodeArea_2" Distance="0.79056942462921143000" />
+        <Edge Node="PathNodeArea_5" Distance="1.75000000000000000000" />
+        <Edge Node="PathNodeArea_6" Distance="1.80277562141418460000" />
+        <Edge Node="PathNodeArea_7" Distance="2.35849523544311520000" />
+        <Edge Node="PathNodeArea_8" Distance="3.48209714889526370000" />
+    </Node>
+    <Node Name="PathNodeArea_4" ID="2277">
+        <Edge Node="PathNodeArea_3" Distance="0.75000000000000000000" />
+        <Edge Node="PathNodeArea_5" Distance="1.00000000000000000000" />
+        <Edge Node="PathNodeArea_6" Distance="1.25000000000000000000" />
+        <Edge Node="PathNodeArea_2" Distance="1.52069067955017090000" />
+        <Edge Node="PathNodeArea_7" Distance="2.06155276298522950000" />
+        <Edge Node="PathNodeArea_8" Distance="3.28823661804199220000" />
+    </Node>
+    <Node Name="PathNodeArea_5" ID="2278">
+        <Edge Node="PathNodeArea_4" Distance="1.00000000000000000000" />
+        <Edge Node="PathNodeArea_6" Distance="1.03077638149261470000" />
+        <Edge Node="PathNodeArea_3" Distance="1.75000000000000000000" />
+        <Edge Node="PathNodeArea_7" Distance="2.06155276298522950000" />
+        <Edge Node="PathNodeArea_2" Distance="2.51246881484985350000" />
+        <Edge Node="PathNodeArea_1" Distance="2.76134014129638670000" />
+    </Node>
+    <Node Name="PathNodeArea_6" ID="2279">
+        <Edge Node="PathNodeArea_5" Distance="1.03077638149261470000" />
+        <Edge Node="PathNodeArea_7" Distance="1.03077638149261470000" />
+        <Edge Node="PathNodeArea_4" Distance="1.25000000000000000000" />
+        <Edge Node="PathNodeArea_3" Distance="1.80277562141418460000" />
+        <Edge Node="PathNodeArea_8" Distance="2.26384639739990230000" />
+        <Edge Node="PathNodeArea_2" Distance="2.37170815467834470000" />
+    </Node>
+    <Node Name="PathNodeArea_7" ID="2280">
+        <Edge Node="PathNodeArea_6" Distance="1.03077638149261470000" />
+        <Edge Node="PathNodeArea_8" Distance="1.25000000000000000000" />
+        <Edge Node="PathNodeArea_4" Distance="2.06155276298522950000" />
+        <Edge Node="PathNodeArea_5" Distance="2.06155276298522950000" />
+        <Edge Node="PathNodeArea_9" Distance="2.15058135986328120000" />
+        <Edge Node="PathNodeArea_3" Distance="2.35849523544311520000" />
+    </Node>
+    <Node Name="PathNodeArea_8" ID="2281">
+        <Edge Node="PathNodeArea_7" Distance="1.25000000000000000000" />
+        <Edge Node="PathNodeArea_9" Distance="1.34629118442535400000" />
+        <Edge Node="PathNodeArea_6" Distance="2.26384639739990230000" />
+        <Edge Node="PathNodeArea_10" Distance="2.69258236885070800000" />
+        <Edge Node="PathNodeArea_4" Distance="3.28823661804199220000" />
+        <Edge Node="PathNodeArea_5" Distance="3.28823661804199220000" />
+    </Node>
+    <Node Name="PathNodeArea_9" ID="2282">
+        <Edge Node="PathNodeArea_8" Distance="1.34629118442535400000" />
+        <Edge Node="PathNodeArea_10" Distance="1.34629118442535400000" />
+        <Edge Node="PathNodeArea_7" Distance="2.15058135986328120000" />
+        <Edge Node="PathNodeArea_11" Distance="2.85043859481811520000" />
+        <Edge Node="PathNodeArea_6" Distance="2.92617487907409670000" />
+        <Edge Node="PathNodeArea_12" Distance="3.12595272064208980000" />
+    </Node>
+    <Node Name="PathNodeArea_10" ID="2283">
+        <Edge Node="PathNodeArea_9" Distance="1.34629118442535400000" />
+        <Edge Node="PathNodeArea_11" Distance="1.52069067955017090000" />
+        <Edge Node="PathNodeArea_12" Distance="1.79521119594573970000" />
+        <Edge Node="PathNodeArea_22" Distance="2.20765900611877440000" />
+        <Edge Node="PathNodeArea_8" Distance="2.69258236885070800000" />
+        <Edge Node="PathNodeArea_21" Distance="2.87949109077453610000" />
+    </Node>
+    <Node Name="PathNodeArea_11" ID="2284">
+        <Edge Node="PathNodeArea_12" Distance="0.73629760742187500000" />
+        <Edge Node="PathNodeArea_22" Distance="0.87055021524429321000" />
+        <Edge Node="PathNodeArea_10" Distance="1.52069067955017090000" />
+        <Edge Node="PathNodeArea_21" Distance="1.85080277919769290000" />
+        <Edge Node="PathNodeArea_23" Distance="2.22759389877319340000" />
+        <Edge Node="PathNodeArea_13" Distance="2.31105113029479980000" />
+    </Node>
+    <Node Name="PathNodeArea_12" ID="2375">
+        <Edge Node="PathNodeArea_22" Distance="0.48020687699317932000" />
+        <Edge Node="PathNodeArea_11" Distance="0.73629760742187500000" />
+        <Edge Node="PathNodeArea_21" Distance="1.16981852054595950000" />
+        <Edge Node="PathNodeArea_13" Distance="1.60799920558929440000" />
+        <Edge Node="PathNodeArea_10" Distance="1.79521119594573970000" />
+        <Edge Node="PathNodeArea_23" Distance="2.10592412948608400000" />
+    </Node>
+    <Node Name="PathNodeArea_13" ID="2379">
+        <Edge Node="PathNodeArea_21" Distance="0.47442832589149475000" />
+        <Edge Node="PathNodeArea_20" Distance="1.01269066333770750000" />
+        <Edge Node="PathNodeArea_14" Distance="1.23921072483062740000" />
+        <Edge Node="PathNodeArea_22" Distance="1.51577675342559810000" />
+        <Edge Node="PathNodeArea_19" Distance="1.99204277992248540000" />
+        <Edge Node="PathNodeArea_15" Distance="2.09036326408386230000" />
+    </Node>
+    <Node Name="PathNodeArea_14" ID="2380">
+        <Edge Node="PathNodeArea_20" Distance="0.61264532804489136000" />
+        <Edge Node="PathNodeArea_19" Distance="0.75539743900299072000" />
+        <Edge Node="PathNodeArea_15" Distance="1.20610046386718750000" />
+        <Edge Node="PathNodeArea_13" Distance="1.23921072483062740000" />
+        <Edge Node="PathNodeArea_21" Distance="1.66927158832550050000" />
+        <Edge Node="PathNodeArea_18" Distance="2.24778866767883300000" />
+    </Node>
+    <Node Name="PathNodeArea_15" ID="2381">
+        <Edge Node="PathNodeArea_20" Distance="1.07822024822235110000" />
+        <Edge Node="PathNodeArea_19" Distance="1.16526818275451660000" />
+        <Edge Node="PathNodeArea_14" Distance="1.20610046386718750000" />
+        <Edge Node="PathNodeArea_18" Distance="1.55454814434051510000" />
+        <Edge Node="PathNodeArea_16" Distance="1.68029975891113280000" />
+        <Edge Node="PathNodeArea_13" Distance="2.09036326408386230000" />
+    </Node>
+    <Node Name="PathNodeArea_16" ID="2382">
+        <Edge Node="PathNodeArea_17" Distance="1.37059783935546870000" />
+        <Edge Node="PathNodeArea_15" Distance="1.68029975891113280000" />
+        <Edge Node="PathNodeArea_18" Distance="1.89587461948394780000" />
+        <Edge Node="Spawn_Enemy_Medium_2" Distance="2.08704495429992680000" />
+        <Edge Node="PathNodeArea_20" Distance="2.66632938385009770000" />
+        <Edge Node="PathNodeArea_19" Distance="2.70270299911499020000" />
+    </Node>
+    <Node Name="PathNodeArea_17" ID="2383">
+        <Edge Node="Spawn_Enemy_Medium_2" Distance="1.14874041080474850000" />
+        <Edge Node="PathNodeArea_18" Distance="1.19520342350006100000" />
+        <Edge Node="PathNodeArea_16" Distance="1.37059783935546870000" />
+        <Edge Node="PathNodeArea_15" Distance="2.16839694976806640000" />
+        <Edge Node="PathNodeArea_19" Distance="2.69376420974731450000" />
+        <Edge Node="PathNodeArea_14" Distance="3.19528484344482420000" />
+    </Node>
+    <Node Name="PathNodeArea_18" ID="2384">
+        <Edge Node="PathNodeArea_17" Distance="1.19520342350006100000" />
+        <Edge Node="PathNodeArea_15" Distance="1.55454814434051510000" />
+        <Edge Node="PathNodeArea_19" Distance="1.61574018001556400000" />
+        <Edge Node="PathNodeArea_16" Distance="1.89587461948394780000" />
+        <Edge Node="PathNodeArea_14" Distance="2.24778866767883300000" />
+        <Edge Node="Spawn_Enemy_Medium_2" Distance="2.28110337257385250000" />
+    </Node>
+    <Node Name="PathNodeArea_19" ID="2385">
+        <Edge Node="PathNodeArea_14" Distance="0.75539743900299072000" />
+        <Edge Node="PathNodeArea_15" Distance="1.16526818275451660000" />
+        <Edge Node="PathNodeArea_20" Distance="1.24949645996093750000" />
+        <Edge Node="PathNodeArea_18" Distance="1.61574018001556400000" />
+        <Edge Node="PathNodeArea_13" Distance="1.99204277992248540000" />
+        <Edge Node="PathNodeArea_21" Distance="2.42435383796691890000" />
+    </Node>
+    <Node Name="PathNodeArea_20" ID="2386">
+        <Edge Node="PathNodeArea_14" Distance="0.61264532804489136000" />
+        <Edge Node="PathNodeArea_13" Distance="1.01269066333770750000" />
+        <Edge Node="PathNodeArea_15" Distance="1.07822024822235110000" />
+        <Edge Node="PathNodeArea_19" Distance="1.24949645996093750000" />
+        <Edge Node="PathNodeArea_21" Distance="1.32279348373413090000" />
+        <Edge Node="PathNodeArea_18" Distance="2.47029280662536620000" />
+    </Node>
+    <Node Name="PathNodeArea_21" ID="2387">
+        <Edge Node="PathNodeArea_22" Distance="1.04164552688598630000" />
+        <Edge Node="PathNodeArea_14" Distance="1.66927158832550050000" />
+        <Edge Node="PathNodeArea_11" Distance="1.85080277919769290000" />
+        <Edge Node="PathNodeArea_15" Distance="2.36320543289184570000" />
+        <Edge Node="PathNodeArea_19" Distance="2.42435383796691890000" />
+        <Edge Node="PathNodeArea_10" Distance="2.87949109077453610000" />
+    </Node>
+    <Node Name="PathNodeArea_22" ID="2388">
+        <Edge Node="PathNodeArea_12" Distance="0.48020687699317932000" />
+        <Edge Node="PathNodeArea_11" Distance="0.87055021524429321000" />
+        <Edge Node="PathNodeArea_21" Distance="1.04164552688598630000" />
+        <Edge Node="PathNodeArea_13" Distance="1.51577675342559810000" />
+        <Edge Node="PathNodeArea_23" Distance="1.62579917907714840000" />
+        <Edge Node="PathNodeArea_10" Distance="2.20765900611877440000" />
+    </Node>
+    <Node Name="PathNodeArea_23" ID="2389">
+        <Edge Node="PathNodeArea_24" Distance="1.57358860969543460000" />
+        <Edge Node="PathNodeArea_22" Distance="1.62579917907714840000" />
+        <Edge Node="PathNodeArea_12" Distance="2.10592412948608400000" />
+        <Edge Node="PathNodeArea_54" Distance="2.14965629577636720000" />
+        <Edge Node="PathNodeArea_11" Distance="2.22759389877319340000" />
+        <Edge Node="PathNodeArea_25" Distance="3.17962265014648440000" />
+    </Node>
+    <Node Name="PathNodeArea_24" ID="2390">
+        <Edge Node="PathNodeArea_23" Distance="1.57358860969543460000" />
+        <Edge Node="PathNodeArea_25" Distance="1.65219879150390620000" />
+        <Edge Node="PathNodeArea_54" Distance="1.71261847019195560000" />
+        <Edge Node="PathNodeArea_53" Distance="2.66100168228149410000" />
+        <Edge Node="PathNodeArea_22" Distance="3.15358567237854000000" />
+        <Edge Node="PathNodeArea_26" Distance="3.45619964599609370000" />
+    </Node>
+    <Node Name="PathNodeArea_25" ID="2391">
+        <Edge Node="PathNodeArea_53" Distance="1.60654842853546140000" />
+        <Edge Node="PathNodeArea_24" Distance="1.65219879150390620000" />
+        <Edge Node="PathNodeArea_26" Distance="1.80400085449218750000" />
+        <Edge Node="PathNodeArea_54" Distance="2.88172864913940430000" />
+        <Edge Node="PathNodeArea_23" Distance="3.17962265014648440000" />
+        <Edge Node="PathNodeArea_27" Distance="3.50210189819335940000" />
+    </Node>
+    <Node Name="PathNodeArea_26" ID="2392">
+        <Edge Node="PathNodeArea_27" Distance="1.69810104370117190000" />
+        <Edge Node="PathNodeArea_25" Distance="1.80400085449218750000" />
+        <Edge Node="PathNodeArea_53" Distance="1.97550094127655030000" />
+        <Edge Node="PathNodeArea_52" Distance="2.27542710304260250000" />
+        <Edge Node="PathNodeArea_50" Distance="2.42620515823364260000" />
+        <Edge Node="PathNodeArea_30" Distance="2.53619241714477540000" />
+    </Node>
+    <Node Name="PathNodeArea_27" ID="2393">
+        <Edge Node="PathNodeArea_30" Distance="0.89281743764877319000" />
+        <Edge Node="PathNodeArea_52" Distance="1.51460266113281250000" />
+        <Edge Node="PathNodeArea_26" Distance="1.69810104370117190000" />
+        <Edge Node="PathNodeArea_50" Distance="1.73289489746093750000" />
+        <Edge Node="PathNodeArea_28" Distance="1.91589736938476560000" />
+        <Edge Node="PathNodeArea_29" Distance="1.91589736938476560000" />
+    </Node>
+    <Node Name="PathNodeArea_28" ID="2394">
+        <Edge Node="PathNodeArea_29" Distance="0.00000000000000000000" />
+        <Edge Node="PathNodeArea_30" Distance="1.16759014129638670000" />
+        <Edge Node="PathNodeArea_27" Distance="1.91589736938476560000" />
+        <Edge Node="PathNodeArea_52" Distance="2.44227027893066410000" />
+        <Edge Node="PathNodeArea_26" Distance="3.61399841308593750000" />
+    </Node>
+    <Node Name="PathNodeArea_29" ID="2395">
+        <Edge Node="PathNodeArea_28" Distance="0.00000000000000000000" />
+        <Edge Node="PathNodeArea_30" Distance="1.16759014129638670000" />
+        <Edge Node="PathNodeArea_27" Distance="1.91589736938476560000" />
+        <Edge Node="PathNodeArea_52" Distance="2.44227027893066410000" />
+        <Edge Node="PathNodeArea_26" Distance="3.61399841308593750000" />
+    </Node>
+    <Node Name="PathNodeArea_30" ID="2396">
+        <Edge Node="PathNodeArea_27" Distance="0.89281743764877319000" />
+        <Edge Node="PathNodeArea_28" Distance="1.16759014129638670000" />
+        <Edge Node="PathNodeArea_29" Distance="1.16759014129638670000" />
+        <Edge Node="PathNodeArea_52" Distance="1.39817440509796140000" />
+        <Edge Node="PathNodeArea_26" Distance="2.53619241714477540000" />
+        <Edge Node="PathNodeArea_53" Distance="3.94476532936096190000" />
+    </Node>
+    <Node Name="PathNodeArea_31" ID="3803">
+        <Edge Node="PathNodeArea_49" Distance="6.67083215713500980000" />
+        <Edge Node="PathNodeArea_48" Distance="7.90569400787353520000" />
+    </Node>
+    <Node Name="PathNodeArea_32" ID="3807">
+        <Edge Node="Spawn_Enemy_Easy_1" Distance="1.65099906921386720000" />
+        <Edge Node="PathNodeArea_33" Distance="3.50000000000000000000" />
+        <Edge Node="PathNodeArea_40" Distance="3.50000000000000000000" />
+    </Node>
+    <Node Name="PathNodeArea_33" ID="3808">
+        <Edge Node="PathNodeArea_34" Distance="2.85043859481811520000" />
+        <Edge Node="PathNodeArea_32" Distance="3.50000000000000000000" />
+        <Edge Node="PathNodeArea_35" Distance="4.45112323760986330000" />
+    </Node>
+    <Node Name="PathNodeArea_34" ID="3809">
+        <Edge Node="PathNodeArea_35" Distance="2.13600087165832520000" />
+        <Edge Node="PathNodeArea_33" Distance="2.85043859481811520000" />
+    </Node>
+    <Node Name="PathNodeArea_35" ID="3810">
+        <Edge Node="PathNodeArea_34" Distance="2.13600087165832520000" />
+        <Edge Node="PathNodeArea_36" Distance="3.16227769851684570000" />
+        <Edge Node="PathNodeArea_33" Distance="4.45112323760986330000" />
+        <Edge Node="PathNodeArea_37" Distance="4.80234336853027340000" />
+    </Node>
+    <Node Name="PathNodeArea_36" ID="3812">
+        <Edge Node="PathNodeArea_37" Distance="2.75000000000000000000" />
+        <Edge Node="PathNodeArea_35" Distance="3.16227769851684570000" />
+    </Node>
+    <Node Name="PathNodeArea_37" ID="3813">
+        <Edge Node="PathNodeArea_36" Distance="2.75000000000000000000" />
+        <Edge Node="PathNodeArea_38" Distance="3.25000000000000000000" />
+        <Edge Node="PathNodeArea_35" Distance="4.80234336853027340000" />
+    </Node>
+    <Node Name="PathNodeArea_38" ID="3814">
+        <Edge Node="PathNodeArea_37" Distance="3.25000000000000000000" />
+        <Edge Node="PathNodeArea_39" Distance="3.25000000000000000000" />
+    </Node>
+    <Node Name="PathNodeArea_39" ID="3815">
+        <Edge Node="PathNodeArea_38" Distance="3.25000000000000000000" />
+        <Edge Node="PathNodeArea_37" Distance="6.50000000000000000000" />
+    </Node>
+    <Node Name="PathNodeArea_40" ID="3816">
+        <Edge Node="Spawn_Enemy_Easy_1" Distance="1.84900093078613280000" />
+        <Edge Node="PathNodeArea_41" Distance="2.76134014129638670000" />
+        <Edge Node="PathNodeArea_43" Distance="3.00000000000000000000" />
+        <Edge Node="PathNodeArea_32" Distance="3.50000000000000000000" />
+    </Node>
+    <Node Name="PathNodeArea_41" ID="3817">
+        <Edge Node="PathNodeArea_42" Distance="2.50000000000000000000" />
+        <Edge Node="PathNodeArea_40" Distance="2.76134014129638670000" />
+    </Node>
+    <Node Name="PathNodeArea_42" ID="3819">
+        <Edge Node="PathNodeArea_41" Distance="2.50000000000000000000" />
+        <Edge Node="PathNodeArea_40" Distance="5.25594902038574220000" />
+    </Node>
+    <Node Name="PathNodeArea_43" ID="3820">
+        <Edge Node="PathNodeArea_40" Distance="3.00000000000000000000" />
+        <Edge Node="PathNodeArea_44" Distance="4.00000000000000000000" />
+        <Edge Node="Spawn_Enemy_Easy_1" Distance="4.84900093078613280000" />
+    </Node>
+    <Node Name="PathNodeArea_44" ID="3821">
+        <Edge Node="PathNodeArea_45" Distance="3.75000000000000000000" />
+        <Edge Node="PathNodeArea_43" Distance="4.00000000000000000000" />
+    </Node>
+    <Node Name="PathNodeArea_45" ID="3823">
+        <Edge Node="PathNodeArea_46" Distance="2.76134014129638670000" />
+        <Edge Node="PathNodeArea_44" Distance="3.75000000000000000000" />
+    </Node>
+    <Node Name="PathNodeArea_46" ID="3824">
+        <Edge Node="PathNodeArea_45" Distance="2.76134014129638670000" />
+        <Edge Node="PathNodeArea_44" Distance="6.50480604171752930000" />
+    </Node>
+    <Node Name="PathNodeArea_47" ID="3825">
+        <Edge Node="PathNodeArea_35" Distance="6.25000000000000000000" />
+        <Edge Node="PathNodeArea_48" Distance="7.50000000000000000000" />
+    </Node>
+    <Node Name="PathNodeArea_48" ID="3826">
+        <Edge Node="PathNodeArea_49" Distance="3.00000000000000000000" />
+        <Edge Node="PathNodeArea_47" Distance="7.50000000000000000000" />
+    </Node>
+    <Node Name="PathNodeArea_49" ID="3827">
+        <Edge Node="PathNodeArea_48" Distance="3.00000000000000000000" />
+        <Edge Node="PathNodeArea_31" Distance="6.67083215713500980000" />
+    </Node>
+    <Node Name="PathNodeArea_50" ID="3953">
+        <Edge Node="PathNodeArea_27" Distance="1.73289489746093750000" />
+        <Edge Node="PathNodeArea_26" Distance="2.42620515823364260000" />
+        <Edge Node="PathNodeArea_52" Distance="3.24749755859375000000" />
+        <Edge Node="PathNodeArea_53" Distance="4.39838266372680660000" />
+        <Edge Node="PathNodeArea_51" Distance="4.59970092773437500000" />
+    </Node>
+    <Node Name="PathNodeArea_51" ID="3954">
+        <Edge Node="PathNodeArea_50" Distance="4.59970092773437500000" />
+        <Edge Node="PathNodeArea_27" Distance="6.33259582519531250000" />
+    </Node>
+    <Node Name="PathNodeArea_52" ID="3955">
+        <Edge Node="PathNodeArea_30" Distance="1.39817440509796140000" />
+        <Edge Node="PathNodeArea_27" Distance="1.51460266113281250000" />
+        <Edge Node="PathNodeArea_26" Distance="2.27542710304260250000" />
+        <Edge Node="PathNodeArea_28" Distance="2.44227027893066410000" />
+        <Edge Node="PathNodeArea_29" Distance="2.44227027893066410000" />
+        <Edge Node="PathNodeArea_53" Distance="2.96640014648437500000" />
+    </Node>
+    <Node Name="PathNodeArea_53" ID="3956">
+        <Edge Node="PathNodeArea_25" Distance="1.60654842853546140000" />
+        <Edge Node="PathNodeArea_26" Distance="1.97550094127655030000" />
+        <Edge Node="PathNodeArea_24" Distance="2.66100168228149410000" />
+        <Edge Node="PathNodeArea_52" Distance="2.96640014648437500000" />
+        <Edge Node="PathNodeArea_54" Distance="2.98730087280273440000" />
+        <Edge Node="PathNodeArea_27" Distance="3.33069825172424320000" />
+    </Node>
+    <Node Name="PathNodeArea_54" ID="3957">
+        <Edge Node="PathNodeArea_24" Distance="1.71261847019195560000" />
+        <Edge Node="PathNodeArea_23" Distance="2.14965629577636720000" />
+        <Edge Node="PathNodeArea_25" Distance="2.88172864913940430000" />
+        <Edge Node="PathNodeArea_53" Distance="2.98730087280273440000" />
+        <Edge Node="PathNodeArea_22" Distance="3.08068418502807620000" />
+        <Edge Node="PathNodeArea_11" Distance="3.08342027664184570000" />
+    </Node>
+    <Node Name="Spawn_Enemy_Medium_1" ID="3958">
+        <Edge Node="PathNodeArea_1" Distance="2.78440093994140620000" />
+        <Edge Node="PathNodeArea_2" Distance="3.03440093994140630000" />
+        <Edge Node="PathNodeArea_3" Distance="3.79264950752258300000" />
+        <Edge Node="PathNodeArea_4" Distance="4.54128742218017580000" />
+    </Node>
+    <Node Name="Spawn_Enemy_Medium_2" ID="3959">
+        <Edge Node="PathNodeArea_17" Distance="1.14874041080474850000" />
+        <Edge Node="PathNodeArea_16" Distance="2.08704495429992680000" />
+        <Edge Node="PathNodeArea_18" Distance="2.28110337257385250000" />
+        <Edge Node="PathNodeArea_15" Distance="3.28166007995605470000" />
+        <Edge Node="PathNodeArea_19" Distance="3.83611822128295900000" />
+        <Edge Node="PathNodeArea_14" Distance="4.34213638305664060000" />
+    </Node>
+    <Node Name="Spawn_Enemy_Easy_1" ID="3960">
+        <Edge Node="PathNodeArea_32" Distance="1.65099906921386720000" />
+        <Edge Node="PathNodeArea_40" Distance="1.84900093078613280000" />
+        <Edge Node="PathNodeArea_43" Distance="4.84900093078613280000" />
+    </Node>
+    <Node Name="PathNodeArea_55" ID="4012">
+        <Edge Node="PathNodeArea_56" Distance="1.96504771709442140000" />
+        <Edge Node="PathNodeArea_59" Distance="3.23552584648132320000" />
+        <Edge Node="Spawn_Enemy_Hard_1" Distance="3.36206030845642090000" />
+        <Edge Node="PathNodeArea_64" Distance="4.24467039108276370000" />
+    </Node>
+    <Node Name="PathNodeArea_56" ID="4013">
+        <Edge Node="PathNodeArea_55" Distance="1.96504771709442140000" />
+        <Edge Node="PathNodeArea_59" Distance="3.88362336158752440000" />
+        <Edge Node="PathNodeArea_57" Distance="4.93694782257080080000" />
+    </Node>
+    <Node Name="PathNodeArea_57" ID="4014">
+        <Edge Node="PathNodeArea_58" Distance="4.48088359832763670000" />
+        <Edge Node="PathNodeArea_56" Distance="4.93694782257080080000" />
+    </Node>
+    <Node Name="PathNodeArea_58" ID="4015">
+        <Edge Node="PathNodeArea_57" Distance="4.48088359832763670000" />
+    </Node>
+    <Node Name="PathNodeArea_59" ID="4016">
+        <Edge Node="PathNodeArea_55" Distance="3.23552584648132320000" />
+        <Edge Node="PathNodeArea_56" Distance="3.88362336158752440000" />
+        <Edge Node="PathNodeArea_60" Distance="3.95145869255065920000" />
+    </Node>
+    <Node Name="PathNodeArea_60" ID="4017">
+        <Edge Node="PathNodeArea_61" Distance="3.63349676132202150000" />
+        <Edge Node="PathNodeArea_59" Distance="3.95145869255065920000" />
+    </Node>
+    <Node Name="PathNodeArea_61" ID="4019">
+        <Edge Node="PathNodeArea_62" Distance="3.24254989624023440000" />
+        <Edge Node="PathNodeArea_60" Distance="3.63349676132202150000" />
+    </Node>
+    <Node Name="PathNodeArea_62" ID="4020">
+        <Edge Node="PathNodeArea_61" Distance="3.24254989624023440000" />
+        <Edge Node="PathNodeArea_63" Distance="3.59685206413269040000" />
+    </Node>
+    <Node Name="PathNodeArea_63" ID="4021">
+        <Edge Node="PathNodeArea_62" Distance="3.59685206413269040000" />
+        <Edge Node="PathNodeArea_61" Distance="6.83939933776855470000" />
+    </Node>
+    <Node Name="PathNodeArea_64" ID="4022">
+        <Edge Node="PathNodeArea_65" Distance="2.22047901153564450000" />
+        <Edge Node="PathNodeArea_55" Distance="4.24467039108276370000" />
+    </Node>
+    <Node Name="PathNodeArea_65" ID="4023">
+        <Edge Node="PathNodeArea_64" Distance="2.22047901153564450000" />
+        <Edge Node="PathNodeArea_66" Distance="2.44733357429504390000" />
+        <Edge Node="PathNodeArea_67" Distance="4.10670948028564450000" />
+        <Edge Node="PathNodeArea_68" Distance="4.75542354583740230000" />
+    </Node>
+    <Node Name="PathNodeArea_66" ID="4024">
+        <Edge Node="PathNodeArea_67" Distance="1.80149757862091060000" />
+        <Edge Node="PathNodeArea_65" Distance="2.44733357429504390000" />
+        <Edge Node="PathNodeArea_68" Distance="2.89906811714172360000" />
+        <Edge Node="PathNodeArea_73" Distance="4.60480070114135740000" />
+    </Node>
+    <Node Name="PathNodeArea_67" ID="4025">
+        <Edge Node="PathNodeArea_68" Distance="1.47044336795806880000" />
+        <Edge Node="PathNodeArea_66" Distance="1.80149757862091060000" />
+        <Edge Node="PathNodeArea_65" Distance="4.10670948028564450000" />
+    </Node>
+    <Node Name="PathNodeArea_68" ID="4026">
+        <Edge Node="PathNodeArea_67" Distance="1.47044336795806880000" />
+        <Edge Node="PathNodeArea_73" Distance="1.84543013572692870000" />
+        <Edge Node="PathNodeArea_66" Distance="2.89906811714172360000" />
+        <Edge Node="PathNodeArea_69" Distance="3.69385075569152830000" />
+        <Edge Node="PathNodeArea_65" Distance="4.75542354583740230000" />
+    </Node>
+    <Node Name="PathNodeArea_69" ID="4027">
+        <Edge Node="PathNodeArea_73" Distance="1.90704536437988280000" />
+        <Edge Node="PathNodeArea_70" Distance="2.14083909988403320000" />
+        <Edge Node="PathNodeArea_71" Distance="3.44560956954956050000" />
+        <Edge Node="PathNodeArea_68" Distance="3.69385075569152830000" />
+    </Node>
+    <Node Name="PathNodeArea_70" ID="4028">
+        <Edge Node="PathNodeArea_71" Distance="1.47277593612670900000" />
+        <Edge Node="PathNodeArea_69" Distance="2.14083909988403320000" />
+        <Edge Node="PathNodeArea_73" Distance="3.98193240165710450000" />
+        <Edge Node="PathNodeArea_72" Distance="4.13088846206665040000" />
+    </Node>
+    <Node Name="PathNodeArea_71" ID="4029">
+        <Edge Node="PathNodeArea_70" Distance="1.47277593612670900000" />
+        <Edge Node="PathNodeArea_72" Distance="2.65860033035278320000" />
+        <Edge Node="PathNodeArea_69" Distance="3.44560956954956050000" />
+    </Node>
+    <Node Name="PathNodeArea_72" ID="4030">
+        <Edge Node="PathNodeArea_71" Distance="2.65860033035278320000" />
+        <Edge Node="PathNodeArea_70" Distance="4.13088846206665040000" />
+    </Node>
+    <Node Name="Spawn_Enemy_Hard_1" ID="4031">
+        <Edge Node="PathNodeArea_55" Distance="3.36206030845642090000" />
+        <Edge Node="PathNodeArea_56" Distance="5.32626104354858400000" />
+    </Node>
+    <Node Name="PathNodeArea_73" ID="4032">
+        <Edge Node="PathNodeArea_69" Distance="1.90704536437988280000" />
+        <Edge Node="PathNodeArea_70" Distance="3.98193240165710450000" />
+        <Edge Node="PathNodeArea_66" Distance="4.60480070114135740000" />
+    </Node>
+    <Node Name="OutOfMap_Node" ID="4100" />
+</AINodes>

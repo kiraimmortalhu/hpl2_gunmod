@@ -1,0 +1,12 @@
+<SOUNDENTITY>
+  <SOUNDS>
+  	<Main>
+  		<Sound File="wraith_search_giveup1.ogg" />
+		<Sound File="wraith_search_giveup2.ogg" />
+		<Sound File="wraith_search_giveup3.ogg" />
+		<Sound File="wraith_search_giveup4.ogg" />
+		<Sound File="wraith_search_giveup5.ogg" />
+  	</Main>
+  </SOUNDS>
+  <PROPERTIES Volume="0.7" MinDistance="2" MaxDistance="16" Random="0.3" Interval="2" FadeEnd="False" FadeStart="False" Stream="false" Loop="false" Use3D="True" Blockable="True" BlockVolumeMul="0.7" Priority="1" />
+</SOUNDENTITY>

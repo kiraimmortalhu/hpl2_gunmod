@@ -1,0 +1,35 @@
+<HandObject>
+	<Main
+		Model = "FlashlightOfDoom.ent"
+		Type= "LightSource"
+	
+	/>
+
+	<Settings
+		OffsetScale = "1 1 1"
+		OffsetRotation = "75 0 0"
+		OffsetPosition = "-0.025 -0.01 0.02"
+			
+		HandsAnim_Idle = "Lantern_Idle"
+		HandsAnim_Draw = "Lantern_Draw"
+		HandsAnim_Holster = "Lantern_Holster"
+		
+		AttachBoneName = "attachpoint"
+				
+		FadeInTime = "0.1"
+		FadeOutTime = "0.1"
+		
+		HasSwayPhysics = "false"
+		MaxSwayVel = "0"
+		SwayAngleLimits = "0 0"
+		SwayDownAngleLimits = "0 0"
+		SwayPinDir = "0 0 0"
+		SwayGravity = "0"
+		SwayFriction = "0"
+		SwayPlayerSpeedMul = "0.0"
+		SwayCameraRollMul = "0"
+		
+		SkipSwaySubMesh = ""
+	/>
+
+</HandObject>

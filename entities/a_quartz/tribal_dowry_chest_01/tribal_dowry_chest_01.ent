@@ -1,0 +1,77 @@
+<Entity>
+    <EditorSession>
+        <Performance CamClipPlanes="0.05 1000" LightsActive="true" PSActive="true" ShowFog="true" ShowSkybox="true" WorldReflection="true" />
+        <ViewportConfig BGColor="0.2 0.2 0.2 1" GAmbientLight="true" GPointLight="true" GridSnap="false" GridSnapSeparation="0.25" SelectedViewport="3" UsingEnlargedViewport="true">
+            <Viewport CameraPosition="0 0 180" CameraTarget="0 0 0" CameraZoom="0" GridHeight="0" GridPlane="2" Preset="0" RenderMode="1" ShowAxes="true" ShowGrid="true" UsingLTCam="false" />
+            <Viewport CameraPosition="180 0 0" CameraTarget="0 0 0" CameraZoom="0" GridHeight="0" GridPlane="0" Preset="1" RenderMode="1" ShowAxes="true" ShowGrid="true" UsingLTCam="false" />
+            <Viewport CameraPosition="0 180 0" CameraTarget="0 0 0" CameraZoom="0" GridHeight="0" GridPlane="1" Preset="2" RenderMode="1" ShowAxes="true" ShowGrid="true" UsingLTCam="false" />
+            <Viewport CameraPosition="1.59869 1.08059 -0.338104" CameraTarget="-0.0853706 0.288426 0.130553" CameraZoom="3.26013" GridHeight="0" GridPlane="1" Preset="3" RenderMode="0" ShowAxes="true" ShowGrid="true" UsingLTCam="false" />
+        </ViewportConfig>
+    </EditorSession>
+    <ModelData>
+        <Entities />
+        <Mesh Filename="EDIT/quartz_and_cordite/entities/a_quartz/tribal_dowry_chest_01/tribal_dowry_chest_01.DAE">
+            <SubMesh Active="true" ID="0" Material="" Name="tribal_dowry_chest_01" Rotation="-1.5708 0 0" Scale="1 1 1" SubMeshID="0" Tag="" WorldPos="0 0 0" />
+            <SubMesh Active="true" ID="1" Material="" Name="tribal_dowry_chest_01_lid" Rotation="-1.5708 0 0" Scale="1 1 1" SubMeshID="1" Tag="" WorldPos="0 0.464875 -0.308472" />
+        </Mesh>
+        <Bones />
+        <Shapes>
+            <BodyShape Active="true" ID="2" Name="Shape_1" RelativeRotation="0 -0 0" RelativeScale="1.107 0.47 0.61" RelativeTranslation="0 0 0" Rotation="0 0 0" Scale="1.107 0.47 0.61" ShapeType="Box" Tag="" WorldPos="-0.00104907 0.234662 0.00358941" />
+            <BodyShape Active="true" ID="3" Name="Shape_2" RelativeRotation="0 -0 0" RelativeScale="1.107 0.17 0.558429" RelativeTranslation="0 0 0" Rotation="0 0 0" Scale="1.107 0.17 0.558429" ShapeType="Box" Tag="" WorldPos="-0.00104907 0.576935 0.00358941" />
+        </Shapes>
+        <Bodies>
+            <Body Active="true" AngularDamping="0" BlocksSound="false" BuoyancyDensityMul="1" CanAttachCharacter="true" CollideCharacter="true" CollideNonCharacter="true" ContinuousCollision="true" HasGravity="true" ID="4" LinearDamping="0" Mass="0" Material="Default" MaxAngularSpeed="0" MaxLinearSpeed="0" Name="Body_1" PushedByCharacterGravity="true" Rotation="0 0 0" Scale="1 1 1" Tag="" UseSurfaceEffects="true" Volatile="false" WorldPos="-0.00104907 0.234662 0.00358941">
+                <Children>
+                    <Child ID="0" />
+                </Children>
+                <Shape ID="2" />
+            </Body>
+            <Body Active="true" AngularDamping="0" BlocksSound="false" BuoyancyDensityMul="1" CanAttachCharacter="true" CollideCharacter="true" CollideNonCharacter="true" ContinuousCollision="true" HasGravity="true" ID="5" LinearDamping="0" Mass="7" Material="Default" MaxAngularSpeed="0" MaxLinearSpeed="0" Name="Body_2" PushedByCharacterGravity="true" Rotation="0 0 0" Scale="1 1 1" Tag="" UseSurfaceEffects="true" Volatile="false" WorldPos="-0.00104907 0.576935 0.00358941">
+                <Children>
+                    <Child ID="1" />
+                </Children>
+                <Shape ID="3" />
+            </Body>
+        </Bodies>
+        <Joints>
+            <JointHinge Active="true" BreakForce="0" BreakSound="" Breakable="false" CollideBodies="false" ConnectedChildBodyID="5" ConnectedParentBodyID="4" ID="6" LimitStepCount="0" MaxAngle="100" MaxLimitMaxSpeed="8" MaxLimitMinSpeed="0.1" MaxLimitSound="lever_wood_gritty_max_min.snt" MaxMoveFreq="0.8" MaxMoveFreqSpeed="3" MaxMoveSpeed="5" MaxMoveVolume="0.5" MiddleMoveSpeed="0.5" MiddleMoveVolume="0.5" MinAngle="0" MinLimitMaxSpeed="8" MinLimitMinSpeed="0.1" MinLimitSound="joint_large_wood_min_max.snt" MinMoveFreq="0.6" MinMoveFreqSpeed="3" MinMoveSpeed="0.1" MinMoveVolume="0.1" MoveSound="joint_door_move.snt" MoveType="Angular" Name="HingeJoint_1" PinDir="1 -3.61999e-006 0" Rotation="0 0 -1.5708" Scale="1 1 1" StickyMaxLimit="false" StickyMinLimit="false" Stiffness="0" Tag="" WorldPos="0.000331134 0.458448 -0.286564" />
+        </Joints>
+        <Animations />
+    </ModelData>
+    <UserDefinedVariables EntitySubType="" EntityType="Lever">
+        <Var Name="Health" Value="100" />
+        <Var Name="Toughness" Value="0" />
+        <Var Name="MaxFocusDistance" Value="0" />
+        <Var Name="MainPhysicsBody" Value="" />
+        <Var Name="ShowMesh" Value="true" />
+        <Var Name="DissolveOnDestruction" Value="false" />
+        <Var Name="DissolveTime" Value="1.0" />
+        <Var Name="EffectsOnSound" Value="" />
+        <Var Name="EffectsOffSound" Value="" />
+        <Var Name="EffectsOnTime" Value="1" />
+        <Var Name="EffectsOffTime" Value="1" />
+        <Var Name="EffectsOffLightColor" Value="0 0 0 0" />
+        <Var Name="EffectsOffLightRadius" Value="-1" />
+        <Var Name="ShowHints" Value="false" />
+        <Var Name="StaticMoveCheckCollision" Value="false" />
+        <Var Name="StaticMoveStartSound" Value="" />
+        <Var Name="StaticMoveStopSound" Value="" />
+        <Var Name="StaticMoveLoopSound" Value="" />
+        <Var Name="RandomizeAnimationStart" Value="true" />
+        <Var Name="MoveMaxSpeed" Value="6" />
+        <Var Name="MoveSlowDownFactor" Value="3.0" />
+        <Var Name="MoveSpeedFactor" Value="1.0" />
+        <Var Name="MoveThrowImpulse" Value="3" />
+        <Var Name="CanInteractWithStaticBody" Value="false" />
+        <Var Name="MinLimitRange" Value="5.0" />
+        <Var Name="MaxLimitRange" Value="5.0" />
+        <Var Name="MinLimitSound" Value="" />
+        <Var Name="MaxLimitSound" Value="" />
+        <Var Name="StuckSound" Value="" />
+        <Var Name="MiddleAngleAmount" Value="0" />
+        <Var Name="AutoMoveToAngle" Value="false" />
+        <Var Name="AutoMoveSpeedFactor" Value="2" />
+        <Var Name="AutoMoveMaxSpeed" Value="8" />
+        <Var Name="AutoMoveGoal" Value="Middle" />
+    </UserDefinedVariables>
+</Entity>

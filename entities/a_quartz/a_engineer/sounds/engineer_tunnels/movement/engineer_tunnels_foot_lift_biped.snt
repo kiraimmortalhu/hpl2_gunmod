@@ -1,0 +1,11 @@
+<SOUNDENTITY>
+  <SOUNDS>
+    <Main>
+      <Sound File="engineer_tunnels_foot_lift_1" />
+      <Sound File="engineer_tunnels_foot_lift_2" />
+      <Sound File="engineer_tunnels_foot_lift_3" />
+      <Sound File="engineer_tunnels_foot_lift_4" />
+    </Main>
+  </SOUNDS>
+  <PROPERTIES FadeStart="False" FadeEnd="False" Loop="False" Use3D="True" Stream="False" Blockable="True" Volume="0.02" MinDistance="2" MaxDistance="10" BlockVolumeMul="0.7" Random="1" Interval="0" Priority="0" />
+</SOUNDENTITY>

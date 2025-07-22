@@ -1,0 +1,309 @@
+<Entity>
+    <EditorSession>
+        <Performance CamClipPlanes="0.05 1000" LightsActive="true" PSActive="true" ShowFog="true" ShowSkybox="true" WorldReflection="true" />
+        <ViewportConfig BGColor="0.2 0.2 0.2 1" GAmbientLight="true" GPointLight="true" GridSnap="false" GridSnapSeparation="0.25" SelectedViewport="2" UsingEnlargedViewport="false">
+            <Viewport CameraPosition="0 0 180" CameraTarget="0 0 0" CameraZoom="0" GridHeight="0" GridPlane="2" Preset="0" RenderMode="1" ShowAxes="true" ShowGrid="true" UsingLTCam="false" />
+            <Viewport CameraPosition="180 0 0" CameraTarget="0 0 0" CameraZoom="0" GridHeight="0" GridPlane="0" Preset="1" RenderMode="1" ShowAxes="true" ShowGrid="true" UsingLTCam="false" />
+            <Viewport CameraPosition="0 180 0" CameraTarget="0 0 0" CameraZoom="0" GridHeight="0" GridPlane="1" Preset="2" RenderMode="1" ShowAxes="true" ShowGrid="true" UsingLTCam="false" />
+            <Viewport CameraPosition="10 10 10" CameraTarget="0 0 0" CameraZoom="1.06013" GridHeight="0" GridPlane="1" Preset="3" RenderMode="0" ShowAxes="true" ShowGrid="true" UsingLTCam="false" />
+        </ViewportConfig>
+    </EditorSession>
+    <ModelData>
+        <Entities />
+        <Mesh Filename="entities/enemy/engineer/engineer.FBX">
+            <SubMesh Active="true" ID="0" Material="" Name="manpig" Rotation="0 0 0" Scale="1 1 1" SubMeshID="0" Tag="" WorldPos="0 0 0" />
+        </Mesh>
+        <Bones>
+            <Bone ID="1" Name="Bip001" />
+            <Bone ID="2" Name="Bip001_Pelvis" />
+            <Bone ID="3" Name="Bip001_Spine" />
+            <Bone ID="4" Name="Bip001_L_Thigh" />
+            <Bone ID="5" Name="Bip001_L_Calf" />
+            <Bone ID="6" Name="Bip001_L_HorseLink" />
+            <Bone ID="7" Name="Bip001_L_Foot" />
+            <Bone ID="8" Name="Bip001_L_Toe0" />
+            <Bone ID="9" Name="Bip001_L_Toe0Nub" />
+            <Bone ID="10" Name="Bip001_R_Thigh" />
+            <Bone ID="11" Name="Bip001_R_Calf" />
+            <Bone ID="12" Name="Bip001_R_HorseLink" />
+            <Bone ID="13" Name="Bip001_R_Foot" />
+            <Bone ID="14" Name="Bip001_R_Toe0" />
+            <Bone ID="15" Name="Bip001_R_Toe0Nub" />
+            <Bone ID="16" Name="Bip001_Spine1" />
+            <Bone ID="17" Name="Bip001_Neck" />
+            <Bone ID="18" Name="Bip001_Head" />
+            <Bone ID="19" Name="Bip001_HeadNub" />
+            <Bone ID="20" Name="Bip001_L_EAR" />
+            <Bone ID="21" Name="Bip001 Xtra01Nub" />
+            <Bone ID="22" Name="Bip001_Snout" />
+            <Bone ID="23" Name="Bip001 Xtra02Nub" />
+            <Bone ID="24" Name="Bip001_Jaw" />
+            <Bone ID="25" Name="Bip001 Xtra03Nub" />
+            <Bone ID="26" Name="Bip001_R_EAR" />
+            <Bone ID="27" Name="Bip001 Xtra01OppNub" />
+            <Bone ID="28" Name="Bip001_L_Clavicle" />
+            <Bone ID="29" Name="Bip001_L_UpperArm" />
+            <Bone ID="30" Name="Bip001_L_Forearm" />
+            <Bone ID="31" Name="Bip001_L_Hand" />
+            <Bone ID="32" Name="Bip001_L_Finger0" />
+            <Bone ID="33" Name="Bip001_L_Finger01" />
+            <Bone ID="34" Name="Bip001_ L_Finger02" />
+            <Bone ID="35" Name="Bip001_L_Finger0Nub" />
+            <Bone ID="36" Name="Bip001_L_ Finger1" />
+            <Bone ID="37" Name="Bip001_L_Finger11" />
+            <Bone ID="38" Name="Bip001_L_Finger12" />
+            <Bone ID="39" Name="Bip001_L_Finger1Nub" />
+            <Bone ID="40" Name="Bip001_L_Finger2" />
+            <Bone ID="41" Name="Bip001_L_Finger21" />
+            <Bone ID="42" Name="Bip001_L_Finger22" />
+            <Bone ID="43" Name="Bip001_L_Finger2Nub" />
+            <Bone ID="44" Name="Bip001_R_Clavicle" />
+            <Bone ID="45" Name="Bip001_R_UpperArm" />
+            <Bone ID="46" Name="Bip001_R_Forearm" />
+            <Bone ID="47" Name="Bip001_R_Hand" />
+            <Bone ID="48" Name="Bip001_R_Finger0" />
+            <Bone ID="49" Name="Bip001_R_Finger01" />
+            <Bone ID="50" Name="Bip001_R_Finger02" />
+            <Bone ID="51" Name="Bip001_R_Finger0Nub" />
+            <Bone ID="52" Name="Bip001_R_Finger1" />
+            <Bone ID="53" Name="Bip001_R_Finger11" />
+            <Bone ID="54" Name="Bip001_R_Finger12" />
+            <Bone ID="55" Name="Bip001_R_Finger1Nub" />
+            <Bone ID="56" Name="Bip001_R_Finger2" />
+            <Bone ID="57" Name="Bip001_R_Finger21" />
+            <Bone ID="58" Name="Bip001_R_Finger22" />
+            <Bone ID="59" Name="Bip001_R_Finger2Nub" />
+        </Bones>
+        <Shapes />
+        <Bodies />
+        <Joints />
+        <Animations>
+            <Animation File="engineer/animations/qp_walk.FBX" Name="WalkQuadruped" SpecialEventTime="0" Speed="1.0">
+                <Event Time="0.15" Type="PlaySound" Value="engineer_step_fist" />
+                <Event Time="0.55" Type="PlaySound" Value="engineer_step_quad" />
+                <Event Time="1.2" Type="PlaySound" Value="engineer_step_quad_2" />
+                <Event Time="0.85" Type="PlaySound" Value="null" />
+                <Event Time="0.1" Type="PlaySound" Value="null" />
+            </Animation>
+            <Animation File="engineer/animations/bp_walk.FBX" Name="WalkBiped" SpecialEventTime="0" Speed="1.3333">
+                <Event Time="0.88" Type="PlaySound" Value="engineer_step_biped.snt" />
+                <Event Time="0.37" Type="PlaySound" Value="engineer_step_biped.snt" />
+                <Event Time="0.15" Type="PlaySound" Value="null_biped" />
+                <Event Time="0.56" Type="PlaySound" Value="null_biped" />
+            </Animation>
+            <Animation File="engineer/animations/qp_idle_01.FBX" Name="IdleQuadruped" SpecialEventTime="0" Speed="1">
+            </Animation>
+            <Animation File="engineer/animations/qp_idle_02.FBX" Name="IdleQuadrupedExtra1" SpecialEventTime="0" Speed="1">
+            </Animation>
+            <Animation File="engineer/animations/qp_idle_03.FBX" Name="IdleQuadrupedExtra2" SpecialEventTime="0" Speed="1">
+            </Animation>
+            <Animation File="engineer/animations/bp_idle_01.FBX" Name="IdleBiped" SpecialEventTime="0" Speed="1">
+            </Animation>
+            <Animation File="engineer/animations/bp_idle_02.FBX" Name="IdleBipedExtra1" SpecialEventTime="0" Speed="1">
+            </Animation>
+            <Animation File="engineer/animations/bp_idle_02.FBX" Name="IdleBipedExtra2" SpecialEventTime="0" Speed="1">
+            </Animation>
+            <Animation File="engineer/animations/bp_idle_02.FBX" Name="IdleBipedExtra3" SpecialEventTime="0" Speed="1">
+            </Animation>
+			 <Animation File="engineer/animations/bp_charge.FBX" Name="ChargeBiped" SpecialEventTime="0.35" Speed="1">
+            </Animation>
+            <Animation File="engineer/animations/bp_charge.FBX" Name="ChargeQuadruped" SpecialEventTime="0.4" Speed="1">
+            </Animation>
+            <Animation File="engineer/animations/bp_break_door.FBX" Name="BreakDoor" SpecialEventTime="0.6" Speed="1">
+            </Animation>
+            <Animation File="engineer/animations/qp_notice.FBX" Name="NoticeQuadruped" SpecialEventTime="0" Speed="1">
+            </Animation>
+            <Animation File="engineer/animations/qp_threat_start.FBX" Name="ThreatStartQuadruped" SpecialEventTime="0" Speed="1">
+            </Animation>
+            <Animation File="engineer/animations/qp_threat_end.FBX" Name="ThreatEndQuadruped" SpecialEventTime="0" Speed="1">
+                <Event Time="0" Type="PlaySound" Value="engineer_IdleBipedtoQuadruped_01" />
+            </Animation>
+            <Animation File="engineer/animations/qp_threat_loop_engineer.FBX" Name="ThreatLoop" SpecialEventTime="0" Speed="1">
+            </Animation>
+            <Animation File="engineer/animations/qp_bp_idletrans.FBX" Name="IdleQuadrupedToBiped" SpecialEventTime="0" Speed="1">
+            </Animation>
+            <Animation File="engineer/animations/bp_qp_idletrans.FBX" Name="IdleBipedToQuadruped" SpecialEventTime="0" Speed="1">
+            </Animation>
+            <Animation File="engineer/animations/bp_walk_start.FBX" Name="WalkStartBiped" SpecialEventTime="0" Speed="1" />
+            <Animation File="engineer/animations/bp_walk_stop.FBX" Name="WalkStopBiped" SpecialEventTime="0" Speed="1" />
+            <Animation File="engineer/animations/qp_walk_start.FBX" Name="WalkStartQuadruped" SpecialEventTime="0" Speed="1" />
+            <Animation File="engineer/animations/qp_walk_stop.FBX" Name="WalkStopQuadruped" SpecialEventTime="0" Speed="1" />
+            <Animation File="engineer/animations/bp_run.FBX" Name="RunBiped" SpecialEventTime="0" Speed="0.17452">
+                <Event Time="0.05" Type="PlaySound" Value="" />
+                <Event Time="0.11" Type="PlaySound" Value="engineer_stomp" />
+                <Event Time="0.4" Type="PlaySound" Value="engineer_stomp" />
+                <Event Time="0.25" Type="PlaySound" Value="null" />
+                <Event Time="0.57" Type="PlaySound" Value="null" />
+            </Animation>
+			<Animation File="engineer/animations/bp_jog.FBX" Name="JogBiped" SpecialEventTime="0" Speed="0.4">
+            </Animation>
+           <Animation File="engineer/animations/bp_notice.FBX" Name="NoticeBiped" SpecialEventTime="0" Speed="1">				
+            </Animation>
+            <Animation File="engineer/animations/bp_threat_start.FBX" Name="ThreatStartBiped" SpecialEventTime="0" Speed="1">
+            </Animation>
+            <Animation File="engineer/animations/bp_threat_loop.FBX" Name="ThreatLoopBiped" SpecialEventTime="0" Speed="1">
+            </Animation>
+            <Animation File="engineer/animations/bp_threat_end.FBX" Name="ThreatEndBiped" SpecialEventTime="0" Speed="1" />
+            <Animation File="engineer/animations/bp_threat_turn180_flee.FBX" Name="ThreatTurn180FleeBiped" SpecialEventTime="0" Speed="1">
+                <Event Time="0.1" Type="PlaySound" Value="engineer_step_quad.snt" />
+                <Event Time="0.15" Type="PlaySound" Value="null.snt" />
+            </Animation>
+            <Animation File="engineer/animations/qp_idle_turn180_c.FBX" Name="IdleTurn180CWQuadruped" SpecialEventTime="0" Speed="1">
+                <Event Time="0" Type="PlaySound" Value="engineer_IdleTurn180CWQuadruped_foley.snt" />
+               <Event Time="0" Type="PlaySound" Value="engineer_IdleTurn180CWQuadruped_vocal.snt" />
+                <Event Time="0.25" Type="PlaySound" Value="engineer_step_fist.snt" />
+                <Event Time="0.35" Type="PlaySound" Value="engineer_step_quad.snt" />
+                <Event Time="0.73" Type="PlaySound" Value="null.snt" />
+                <Event Time="0.78" Type="PlaySound" Value="engineer_step_fist.snt" />
+                <Event Time="0.85" Type="PlaySound" Value="engineer_step_quad_2.snt" />
+            </Animation>
+            <Animation File="engineer/animations/qp_jog.FBX" Name="JogQuadruped" SpecialEventTime="0" Speed="0.89285">
+                <Event Time="0.4" Type="PlaySound" Value="engineer_step_fist_louder" />
+                <Event Time="0.35" Type="PlaySound" Value="" />
+                <Event Time="0.55" Type="PlaySound" Value="engineer_step_quad" />
+                <Event Time="0.33" Type="PlaySound" Value="engineer_step_quad_2" />
+                <Event Time="0.03" Type="PlaySound" Value="null" />
+                <Event Time="0.4" Type="PlaySound" Value="null" />
+            </Animation>
+            <Animation File="engineer/animations/qp_run.FBX" Name="RunQuadruped" SpecialEventTime="0" Speed="0.151975">
+                <Event Time="0.35" Type="PlaySound" Value="" />
+                <Event Time="0.5" Type="PlaySound" Value="engineer_step_fist_louder" />
+                <Event Time="0.55" Type="PlaySound" Value="engineer_step_quad" />
+                <Event Time="0.33" Type="PlaySound" Value="engineer_step_quad_2" />
+                <Event Time="0.03" Type="PlaySound" Value="null" />
+                <Event Time="0.4" Type="PlaySound" Value="null" />
+            </Animation>
+			<Animation File="engineer/animations/bp_attack_1.FBX" Name="AttackBiped1" SpecialEventTime="0.3" Speed="1">
+            </Animation>
+            <Animation File="engineer/animations/bp_attack_2.FBX" Name="AttackBiped2" SpecialEventTime="0.3" Speed="1">
+            </Animation>
+            <Animation File="engineer/animations/bp_attack_3.FBX" Name="AttackBiped3" SpecialEventTime="0.3" Speed="1">
+            </Animation>
+            <Animation File="engineer/animations/bp_bite_1.FBX" Name="BiteBiped" SpecialEventTime="0.3" Speed="1" />
+            <Animation File="engineer/animations/qp_attack_1.FBX" Name="AttackQuadruped1" SpecialEventTime="0.3" Speed="1">
+            </Animation>
+            <Animation File="engineer/animations/qp_attack_2.FBX" Name="AttackQuadruped2" SpecialEventTime="0.3" Speed="1">
+            </Animation>
+            <Animation File="engineer/animations/qp_attack_1.FBX" Name="AttackQuadruped3" SpecialEventTime="0.3" Speed="1">
+            </Animation>
+            <Animation File="engineer/animations/qp_bite_1.FBX" Name="BiteQuadruped" SpecialEventTime="0.3" Speed="1">
+            </Animation>
+        </Animations>
+    </ModelData>
+   <UserDefinedVariables EntitySubType="" EntityType="Enemy_ManPig">
+        <Var Name="Health" Value="100" />
+        <Var Name="Toughness" Value="0" />
+        <Var Name="SightRange" Value="20" />
+        <Var Name="DarknessSightRange" Value="10" />
+        <Var Name="HearVolume" Value="0.55" />
+        <Var Name="FOV" Value="120" />
+        <Var Name="FOVXMul" Value="1" />
+        <Var Name="ActivationDistance" Value="40" />
+        <Var Name="MaxRegenHealth" Value="100" />
+        <Var Name="RegenHealthSpeed" Value="5" />
+        <Var Name="DangerMusic" Value="" />
+        <Var Name="DangerMusicPrio" Value="0" />
+        <Var Name="SearchMusic" Value="" />
+        <Var Name="SearchMusicPrio" Value="5" />
+        <Var Name="AttackMusic" Value="" />
+        <Var Name="AttackMusicPrio" Value="5" />
+        <Var Name="PlayerSearchMaxAngle" Value="45" />
+        <Var Name="PlayerSearchMinDistMul" Value="0.5" />
+        <Var Name="PlayerSearchMaxDistMul" Value="2" />
+        <Var Name="PlayerSearchTime" Value="10" />
+        <Var Name="PlayerPatrolMaxAngle" Value="110" />
+        <Var Name="PlayerPatrolMinDist" Value="8" />
+        <Var Name="PlayerPatrolMaxDist" Value="18" />
+        <Var Name="Body_Size" Value="1.2 1.85 1.2" />
+        <Var Name="Body_Mass" Value="50" />
+        <Var Name="Body_AccurateClimbing" Value="true" />
+        <Var Name="Body_MaxNoSlideSlopeAngle" Value="45" />
+        <Var Name="Body_MaxPushMass" Value="40" />
+        <Var Name="Body_PushForce" Value="500" />
+        <Var Name="Body_CharacterMaxPushMass" Value="20" />
+        <Var Name="Body_CharacterPushForce" Value="100" />
+        <Var Name="Body_MaxStepSize" Value="0.5" />
+        <Var Name="Body_StepClimbSpeed" Value="6.0" />
+        <Var Name="Body_OffsetRot" Value="0 180 0" />
+        <Var Name="Body_OffsetTrans" Value="0 0 0.5" />
+        <Var Name="WalkBiped_ForwardSpeed" Value="1.5" />
+        <Var Name="WalkBiped_BackwardSpeed" Value="0.4" />
+        <Var Name="WalkBiped_ForwardAcc" Value="2.0" />
+        <Var Name="WalkBiped_ForwardDeacc" Value="18.0" />
+        <Var Name="RunBiped_ForwardSpeed" Value="4.5" />
+        <Var Name="RunBiped_BackwardSpeed" Value="2.0" />
+        <Var Name="RunBiped_ForwardAcc" Value="4.0" />
+        <Var Name="RunBiped_ForwardDeacc" Value="8.0" />
+        <Var Name="WalkQuadruped_ForwardSpeed" Value="0.7" />
+        <Var Name="WalkQuadruped_BackwardSpeed" Value="0.4" />
+        <Var Name="WalkQuadruped_ForwardAcc" Value="2.0" />
+        <Var Name="WalkQuadruped_ForwardDeacc" Value="18.0" />
+        <Var Name="RunQuadruped_ForwardSpeed" Value="2.9" />
+        <Var Name="RunQuadruped_BackwardSpeed" Value="2.0" />
+        <Var Name="RunQuadruped_ForwardAcc" Value="4.0" />
+        <Var Name="RunQuadruped_ForwardDeacc" Value="8.0" />
+        <Var Name="TurnSpeedMul" Value="6" />
+        <Var Name="TurnMaxSpeed" Value="12" />
+        <Var Name="TurnMinBreakAngle" Value="100" />
+        <Var Name="TurnBreakMul" Value="2" />
+        <Var Name="MoveSpeedAnimMul" Value="1.0" />
+        <Var Name="StoppedToWalkSpeed_Biped" Value="0.15" />
+        <Var Name="WalkToStoppedSpeed_Biped" Value="0.02" />
+        <Var Name="WalkToRunSpeed_Biped" Value="3.3" />
+        <Var Name="RunToWalkSpeed_Biped" Value="0.9" />
+        <Var Name="WalkToJogSpeed_Biped" Value="2.5" />
+        <Var Name="RunToJogSpeed_Biped" Value="3.1" />
+        <Var Name="StoppedToWalkSpeed_Quadruped" Value="0.15" />
+        <Var Name="WalkToStoppedSpeed_Quadruped" Value="0.02" />
+        <Var Name="WalkToRunSpeed_Quadruped" Value="1.9" />
+        <Var Name="RunToWalkSpeed_Quadruped" Value="0.5" />
+        <Var Name="WalkToJogSpeed_Quadruped" Value="0.8 " />
+        <Var Name="RunToJogSpeed_Quadruped" Value="1.8" />
+        <Var Name="WaterStepSpeedWalk" Value="3.0" />
+        <Var Name="WaterStepSpeedRun" Value="5.0" />
+        <Var Name="WaterStepSpeedMisc" Value="3.0" />
+        <Var Name="HitPS_Sword" Value="hit/blood.ps" />
+        <Var Name="HitSound_Sword" Value="pig_attack" />
+        <Var Name="HitPS_Club" Value="hit/blood.ps" />
+        <Var Name="HitSound_Club" Value="pig_attack" />
+        <Var Name="HitPS_Bullet" Value="hit/blood.ps" />
+        <Var Name="HitSound_Bullet" Value="pig_attack" />
+        <Var Name="HitPS_Dud" Value="" />
+        <Var Name="HitSound_Dud" Value="pig_attack" />
+        <Var Name="AmbientSound_Idle" Value="" />
+        <Var Name="AmbientMinTime_Idle" Value="6" />
+        <Var Name="AmbientMaxTime_Idle" Value="10" />
+        <Var Name="AmbientSound_Alert" Value="" />
+        <Var Name="AmbientMinTime_Alert" Value="2" />
+        <Var Name="AmbientMaxTime_Alert" Value="4" />
+        <Var Name="AmbientSound_Hunt" Value="" />
+        <Var Name="AmbientMinTime_Hunt" Value="3" />
+        <Var Name="AmbientMaxTime_Hunt" Value="5" />
+        <Var Name="NormalAttackDistance" Value="1.8" />
+        <Var Name="NormalDamageSize" Value="1 1.6 1.75" />
+        <Var Name="NormalDamageOffset" Value="0 0 1.8" />
+        <Var Name="NormalAttackHitSound" Value="pig_attack_hit" />
+        <Var Name="NormalAttackDamage" Value="10 40" />
+        <Var Name="NormalAttackForce" Value="30 5" />
+        <Var Name="NormalAttackStrength" Value="1" />
+        <Var Name="NormalDamageType" Value="Claws" />
+        <Var Name="BreakDoorAttackDamage" Value="26 26" />
+        <Var Name="BreakDoorAttackForce" Value="30 5" />
+        <Var Name="BreakDoorAttackStrength" Value="6" />
+        <Var Name="BreakDoorAttackHitSound" Value="pig_attack_hit" />
+        <Var Name="BreakDoorDamageType" Value="BloodSplat" />
+        <Var Name="NoticeSound" Value="" />
+        <Var Name="GiveUpNoticeSound" Value="" />
+        <Var Name="EnabledSound" Value="" />
+        <Var Name="GroggyDamageCount" Value="1" />
+        <Var Name="AlertToHuntDistance" Value="6" />
+        <Var Name="AlertToInstantHuntDistance" Value="2.5" />
+        <Var Name="HuntPauseMinTime" Value="0.5" />
+        <Var Name="HuntPauseMaxTime" Value="1" />
+        <Var Name="IncreaseAlertSpeedDistance" Value="6" />
+        <Var Name="IncreasedAlertSpeedMul" Value="1.25" />
+        <Var Name="AlertRunTowardsToHuntLimit" Value="30" />
+        <Var Name="AlertRunTowardsCheckDistance" Value="6" />
+		<Var Name="ChaseSound" Value="" />
+    </UserDefinedVariables>
+</Entity>

@@ -1,0 +1,8 @@
+<SOUNDENTITY>
+  <SOUNDS>
+    <Main>
+      <Sound File="lsaber_switchon" />
+    </Main>
+  </SOUNDS>
+  <PROPERTIES FadeStart="False" FadeEnd="False" Loop="False" Use3D="True" Stream="False" Blockable="True" Volume="1" MinDistance="1" MaxDistance="6" BlockVolumeMul="0.0" Random="1" Interval="0" Priority="0" KeepPlayingOutOfRange="false" />
+</SOUNDENTITY>

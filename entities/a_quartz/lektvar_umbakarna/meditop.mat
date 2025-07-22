@@ -1,0 +1,9 @@
+<Material>
+    <Main BlendMode="Add" DepthTest="true" PhysicsMaterial="Default" Type="soliddiffuse" UseAlpha="true" />
+    <TextureUnits>
+        <Diffuse AnimFrameTime="0" AnimMode="None" Compress="false" File="meditop.png" MipMaps="true" Type="Rect" Wrap="Repeat" />        	
+        <Alpha AnimFrameTime="0" AnimMode="None" Compress="false" File="meditop.png" MipMaps="true" Type="Rect" Wrap="Repeat" />		
+        <NMap File="meditop_Normal.png" Type="2D" Mipmaps="true" Wrap="Repeat" />    
+        <Specular File="meditop_spec.png" Type="2D" Mipmaps="true" Wrap="Repeat" />		
+    </TextureUnits>   
+</Material>

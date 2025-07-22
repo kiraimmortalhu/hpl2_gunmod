@@ -1,0 +1,13 @@
+<SOUNDENTITY>
+  <SOUNDS>
+  	<Main>
+  		<Sound File="wraith_attack_hit1.ogg" />
+		<Sound File="wraith_attack_hit2.ogg" />
+		<Sound File="wraith_attack_hit3.ogg" />
+		<Sound File="wraith_attack_hit4.ogg" />
+		<Sound File="wraith_attack_hit5.ogg" />
+		<Sound File="wraith_attack_hit6.ogg" />
+  	</Main>
+  </SOUNDS>
+  <PROPERTIES Volume="1" MinDistance="5" MaxDistance="40" Random="1" Interval="0" FadeEnd="False" FadeStart="False" Stream="false" Loop="false" Use3D="True" Blockable="True" BlockVolumeMul="0.7" Priority="3" />
+</SOUNDENTITY>

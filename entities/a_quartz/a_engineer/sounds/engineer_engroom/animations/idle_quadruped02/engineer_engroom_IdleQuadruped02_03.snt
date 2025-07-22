@@ -1,0 +1,8 @@
+<SOUNDENTITY>
+  <SOUNDS>
+  	<Main>
+  		<Sound File="engineer_engroom_IdleQuadruped02_03" />
+  	</Main>
+  </SOUNDS>
+  <PROPERTIES Volume="0.8" MinDistance="5" MaxDistance="15" Random="1" Interval="0" FadeEnd="False" FadeStart="False" Stream="false" Loop="false" Use3D="True" Blockable="True" BlockVolumeMul="0.7" Priority="0" />
+</SOUNDENTITY>

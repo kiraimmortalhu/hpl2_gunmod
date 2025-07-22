@@ -1,0 +1,11 @@
+<SOUNDENTITY>
+  <SOUNDS>
+    <Main>
+      <Sound File="tesla_teleport_01" />
+      <Sound File="tesla_teleport_02" />
+      <Sound File="tesla_teleport_03" />
+	  <Sound File="tesla_teleport_04" />
+    </Main>
+  </SOUNDS>
+  <PROPERTIES FadeStart="False" FadeEnd="False" Loop="False" Use3D="True" Stream="False" Blockable="True" Volume="0.9" MinDistance="10" MaxDistance="35" BlockVolumeMul="1.0" Random="1" Interval="0" Priority="1" />
+</SOUNDENTITY>

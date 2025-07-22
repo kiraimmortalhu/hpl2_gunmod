@@ -1,0 +1,44 @@
+<Entity>
+    <EditorSession>
+        <Performance CamClipPlanes="0.05 1000" LightsActive="true" PSActive="true" ShowFog="true" ShowSkybox="true" WorldReflection="true" />
+        <ViewportConfig BGColor="0.2 0.2 0.2 1" GAmbientLight="true" GPointLight="true" GridSnap="false" GridSnapSeparation="0.25" SelectedViewport="3" UsingEnlargedViewport="true">
+            <Viewport CameraPosition="0 7.9984 177.801" CameraTarget="0 7.9984 -2.1988" CameraZoom="0" GridHeight="0" GridPlane="2" Preset="0" RenderMode="1" ShowAxes="true" ShowGrid="true" UsingLTCam="false" />
+            <Viewport CameraPosition="180 7.9984 0" CameraTarget="-4.76837e-007 7.9984 0" CameraZoom="0" GridHeight="0" GridPlane="0" Preset="1" RenderMode="1" ShowAxes="true" ShowGrid="true" UsingLTCam="false" />
+            <Viewport CameraPosition="-4.76837e-007 180 -2.1988" CameraTarget="-4.76837e-007 0 -2.1988" CameraZoom="0" GridHeight="0" GridPlane="1" Preset="2" RenderMode="1" ShowAxes="true" ShowGrid="true" UsingLTCam="false" />
+            <Viewport CameraPosition="-15.8814 14.1425 -19.3529" CameraTarget="2.78932 3.83725 -0.502859" CameraZoom="0.563433" GridHeight="0" GridPlane="1" Preset="3" RenderMode="0" ShowAxes="true" ShowGrid="true" UsingLTCam="false" />
+        </ViewportConfig>
+    </EditorSession>
+    <ModelData>
+        <Entities />
+        <Mesh Filename="entities/pandemia/zasranejkun_headlesscyborg/zasranejkun_dead.dae">
+            <SubMesh Active="true" ID="0" Material="" Name="10026_Horse_v01-it2" Rotation="0 0 0" Scale="0.01 0.01 0.01" SubMeshID="0" Tag="" WorldPos="0 0 0" />
+        </Mesh>
+        <Bones />
+        <Shapes>
+            <BodyShape Active="true" ID="2" Name="Shape_1" RelativeRotation="-1.5708 -0 0" RelativeScale="2.35 11.8985 2.35" RelativeTranslation="-0.011245 -0.0308247 1.74717" Rotation="-1.5708 0 0" Scale="2.35 11.8985 2.35" ShapeType="Cylinder" Tag="" WorldPos="0 8.75 0" />
+            <BodyShape Active="true" ID="3" Name="Shape_2" RelativeRotation="-0.830859 -0 0" RelativeScale="1.75547 6.75 1.75547" RelativeTranslation="-0.011245 2.74137 -4.0054" Rotation="-0.830859 -0 0" Scale="1.75547 6.75 1.75547" ShapeType="Cylinder" Tag="" WorldPos="0 11.5222 -5.75257" />
+            <BodyShape Active="true" ID="4" Name="Shape_3" RelativeRotation="0 -0 0" RelativeScale="0.808392 8.6 0.808392" RelativeTranslation="-1.26125 -4.35917 -2.69496" Rotation="0 0 0" Scale="0.808392 8.6 0.808392" ShapeType="Cylinder" Tag="" WorldPos="-1.25 4.42165 -4.44213" />
+            <BodyShape Active="true" ID="5" Name="Shape_4" RelativeRotation="-0.168554 -0 0" RelativeScale="0.808392 8.6 0.808392" RelativeTranslation="-1.26125 -4.35917 7.22963" Rotation="-0.168554 -0 0" Scale="0.808392 8.6 0.808392" ShapeType="Cylinder" Tag="" WorldPos="-1.25 4.42165 5.48246" />
+            <BodyShape Active="true" ID="6" Name="Shape_5" RelativeRotation="-0.168554 -0 0" RelativeScale="0.808392 8.6 0.808392" RelativeTranslation="1.23641 -4.35917 7.22963" Rotation="-0.168554 -0 0" Scale="0.808392 8.6 0.808392" ShapeType="Cylinder" Tag="" WorldPos="1.24765 4.42165 5.48246" />
+            <BodyShape Active="true" ID="7" Name="Shape_6" RelativeRotation="0 -0 0" RelativeScale="0.808392 8.6 0.808392" RelativeTranslation="1.26125 -4.35917 -2.69496" Rotation="0 0 0" Scale="0.808392 8.6 0.808392" ShapeType="Cylinder" Tag="" WorldPos="1.27249 4.42165 -4.44213" />
+            <BodyShape Active="true" ID="9" Name="Shape_7" RelativeRotation="-2.29174 -0 0" RelativeScale="1.16048 4.76219 1.16048" RelativeTranslation="-0.011245 4.35918 -7.22963" Rotation="-2.29174 0 0" Scale="1.16048 4.76219 1.16048" ShapeType="Cylinder" Tag="" WorldPos="0 13.14 -8.9768" />
+        </Shapes>
+        <Bodies>
+            <Body Active="true" AngularDamping="0" BlocksSound="false" BuoyancyDensityMul="1" CanAttachCharacter="true" CollideCharacter="true" CollideNonCharacter="true" ContinuousCollision="true" HasGravity="true" ID="10" LinearDamping="0" Mass="0" Material="Organic" MaxAngularSpeed="0" MaxLinearSpeed="0" Name="Body_1" PushedByCharacterGravity="true" Rotation="0 0 0" Scale="1 1 1" Tag="" UseSurfaceEffects="true" Volatile="false" WorldPos="0.011245 8.78082 -1.74717">
+                <Children>
+                    <Child ID="0" />
+                </Children>
+                <Shape ID="3" />
+                <Shape ID="9" />
+                <Shape ID="2" />
+                <Shape ID="4" />
+                <Shape ID="7" />
+                <Shape ID="5" />
+                <Shape ID="6" />
+            </Body>
+        </Bodies>
+        <Joints />
+        <Animations />
+    </ModelData>
+    <UserDefinedVariables EntitySubType="" EntityType="StaticProp" />
+</Entity>

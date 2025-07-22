@@ -1,0 +1,25 @@
+<SOUNDENTITY>
+  <SOUNDS>
+    <Main>
+      <Sound File="pig_chase_01" />
+	  <Sound File="pig_chase_02" />
+	  <Sound File="pig_chase_03" />
+	  <Sound File="pig_chase_04" />
+	  <Sound File="pig_chase_05" />
+	  <Sound File="pig_chase_06" />
+	  <Sound File="pig_chase_07" />
+	  <Sound File="pig_chase_08" />
+	  <Sound File="pig_chase_09" />
+	  <Sound File="pig_chase_10" />
+	  <Sound File="pig_chase_11" />
+	  <Sound File="pig_chase_12" />
+	  <Sound File="pig_chase_13" />
+	  <Sound File="pig_chase_14" />
+	  <Sound File="pig_chase_15" />
+	  <Sound File="pig_chase_16" />
+	  <Sound File="pig_chase_17" />
+	  <Sound File="pig_chase_18" />
+	</Main>
+  </SOUNDS>
+  <PROPERTIES FadeStart="False" FadeEnd="False" Loop="False" Use3D="True" Stream="False" Blockable="True" Volume="0.6" MinDistance="7" MaxDistance="14" BlockVolumeMul="0.7" Random="1" Interval="0" Priority="1" />
+</SOUNDENTITY>

@@ -1,0 +1,1230 @@
+void OnStart()
+{
+	// gun setup
+	if (!HasItem("gunLantern")) {
+		GiveItemFromFile("gunLantern", "gun_steampunk.ent");
+	}
+	GUNFUNCTION_Load();
+	
+SetLightVisible("jb_PointLight", false);
+SetLightVisible("jb_PointLight_2", false);
+SetEntityInteractionDisabled("Teleport_save_*_bonfire", true);
+SetEntityPlayerLookAtCallback("save_4", "SetBonfireIcon", false);
+SetEntityPlayerLookAtCallback("save_5", "SetBonfireIcon", false);
+
+SetEntityPlayerLookAtCallback("fountain_Activate", "SetFountainIcon", false);
+SetEntityPlayerLookAtCallback("TeleportArea_save_*_bonfire", "SetTravelIcon", false);
+
+ConnectEntities("castlePortculis", "elevator_lever_1", "castle_portcullis_1", true, -1, "RaiseCastlePortculis");
+
+AddEntityCollideCallback("Player", "BirdsFleeArea_1", "Flee", true, 0);
+AddEntityCollideCallback("Book_1", "PullBook1", "PullinBook", true, 0);
+AddEntityCollideCallback("Player", "AreaDoorBang", "CollideBangDoor", true, 1);
+AddEntityCollideCallback("Player", "Scream", "Ambientcrawlerscream", true, 1);
+AddEntityCollideCallback("Player", "Walking", "ReSpectWalk", true, 1);
+AddEntityCollideCallback("Player", "AnotherCheapSound", "ManBoo", true, 1);
+AddEntityCollideCallback("castle_2", "Efekt", "Efekty", true, 1);
+AddEntityCollideCallback("Player", "CheapScare", "ThatWasCheap", true, 1);
+AddEntityCollideCallback("Player", "PiggiesScream", "PigScreamArea", true, 1);
+
+AddUseItemCallback("", "BonusKey_1", "BonusChest_1", "OpenBonus1", true);
+AddUseItemCallback("", "container_1", "UseAcid_1", "UseAcid", true);
+AddUseItemCallback("", "hollow_needle_1", "zamkniete_1", "OpenDoor", true);
+
+SetEntityCallbackFunc("hollow_needle_1","Blokuj");
+
+//AddEntityCollideCallback("Player", "Music", "StartMusic", true, 1);
+AddEntityCollideCallback("Player", "Flee_1", "BirdsFlee", true, 1);
+
+SetEntityCallbackFunc("note_generic_1","Music");
+SetEntityCallbackFunc("lantern_1","LanternPick");
+
+// demo
+AddEntityCollideCallback("Player", "ActivateWraithArea", "ActivateWraith", false, 1);
+CompleteQuest("fortGoal", "FortGoal");
+}
+
+void OnEnter() {
+	RespawnSelector();
+	NormalizePlayerSpeed();
+	StartInsanityEvent("area_fort");
+	
+	// demo enemy
+	SetEntityActive("Enemy_Easy_1", true);
+	
+	FadeIn(1);
+	SetEntityCustomFocusCrossHair("save_4", "Ignite");
+	SetEntityCustomFocusCrossHair("save_5", "Ignite");
+	
+	if (GetGlobalVarInt("bonfireLit") == 1) {
+		SetEntityActive("fountain_Activate", true);
+		SetLightVisible("jb_PointLight_2", true);
+	}
+	UnlockBonfires();
+	
+	SetEntityCustomFocusCrossHair("fountain_Activate", "Pick");
+	SetEntityCustomFocusCrossHair("TeleportArea_save_*_bonfire", "LevelDoor");
+	
+	// custom music
+	PlayMusic("imprisoned_pythonblue.ogg", true, 1.0, 1.0, 0, false);
+	
+	// gun
+	SetEntityPlayerInteractCallback("gunLantern", "AcquireGun", true);
+	
+	/*if (HasItem("gunLantern")) {
+		SetLanternLitCallback( "GUNFUNCTION_Shoot" );
+		SetGlobalVarInt("GunEffectsOn", 1);
+	}
+	else SetGlobalVarInt("GunEffectsOn", 0);*/
+	SetGlobalVarInt("GunEffectsOn", 1);
+	SetLanternLitCallback( "GUNFUNCTION_Shoot" );
+	
+	AutoSave();
+}
+
+void NormalizePlayerSpeed() {
+	SetPlayerRunSpeedMul(1.2f);
+	SetPlayerMoveSpeedMul(1.1f);
+	SetPlayerJumpForceMul(1.2f);
+}
+
+void RespawnSelector() {
+	
+	// demo test
+	if (GetLocalVarInt("WraithDemoWeakened") < 2) {
+		AddTimer("demoTimer", 3.0f, "DemoTimer");
+		SetLocalVarInt("WraithDemoWeakened", 0);
+		SetSwingDoorLocked("castle_arched01_3", false, false);
+		SetSwingDoorLocked("castle_arched01_4", false, false);
+		SetEntityActive("ActivateWraithArea", true);
+	}
+	
+	if (DistanceCalculate("castle_gate_arched01_2")) {
+		CheckPoint ("checkpointVault", "PlayerStartArea_1", "RespawnStart", "", "");
+	} else if (DistanceCalculate("level_celler_1")) {
+		CheckPoint ("checkpointClockwork", "PlayerStartArea_2", "RespawnStart", "", "");
+	} else if (DistanceCalculate("level_cistern_1")) {
+		CheckPoint ("checkpointSilo", "PlayerStartArea_7", "RespawnStart", "", "");
+	} else if (DistanceCalculate("level_wood_3")) {
+		CheckPoint ("checkpointVault2", "PlayerStartArea_6", "RespawnStart", "", "");
+	}
+}
+
+void RespawnBonfire(string &in asName, int alCount) {	
+	// demo only
+	if (GetLocalVarInt("WraithDemoWeakened") < 2) {
+		SetLocalVarInt("WraithDemoWeakened", 0);
+		SetSwingDoorLocked("castle_arched01_3", false, false);
+		SetSwingDoorLocked("castle_arched01_4", false, false);
+		SetEntityActive("ActivateWraithArea", true);
+	}
+	
+	//RepositionAndRespawnEnemies();
+	NormalizePlayerSpeed();
+	SetPlayerHealth(100);
+	SetPlayerLampOil(100);
+	PlayMusic("imprisoned_pythonblue.ogg", true, 1.0, 1.0, 0, false);
+}
+
+void RespawnStart(string &in asName, int alCount) {
+	
+	// demo only
+	if (GetLocalVarInt("WraithDemoWeakened") < 2) {
+		SetLocalVarInt("WraithDemoWeakened", 0);
+		SetSwingDoorLocked("castle_arched01_3", false, false);
+		SetSwingDoorLocked("castle_arched01_4", false, false);
+		SetEntityActive("ActivateWraithArea", true);
+	}
+	
+	//RepositionAndRespawnEnemies();
+	NormalizePlayerSpeed();
+	PlayMusic("imprisoned_pythonblue.ogg", true, 1.0, 1.0, 0, false);
+}
+
+bool DistanceCalculate(string &in asObject) {
+	return MathAbs(GetPlayerPosX() - GetEntityPosX(asObject)) < 5 && MathAbs(GetPlayerPosZ() - GetEntityPosZ(asObject)) < 5;
+}
+
+void SetBackLevelProperties() {
+	SetSkyBoxColor(0, 0, 0, 1);
+}
+
+////// new events
+
+void DemoTimer(string &in asTimer) {
+	SetEntityActive("jb_fountain", false);
+	SetEntityActive("fountain_Heal", false);
+	SetEntityActive("fountain_Activate", false);
+	SetLightVisible("jb_PointLight", false);
+	SetLightVisible("jb_PointLight_2", false);
+	SetEntityInteractionDisabled("fire_place_1", true);
+	GUNFUNCTION_AddTarget("Enemy_Medium_Large_Wraith_Demo");
+}
+
+void ActivateWraith(string &in asParent, string &in asChild, int alState) {
+	PlayMusic("hadern_rotting_christ.ogg", true, 1.0, 3.0, 0, false);
+	SetSwingDoorLocked("castle_arched01_3", true, false);
+	SetSwingDoorLocked("castle_arched01_4", true, false);
+	SetSwingDoorLocked("castle_2", true, false);
+	SetSwingDoorLocked("castle_arched01_2", true, false);
+	SetEntityActive("ActivateWraithArea", false);
+	SetEntityActive("Enemy_Medium_Large_Wraith_Demo", true);
+	AddTimer("enrageWraith", 5.0f, "EnrageWraith");
+	TeleportEnemyToNode("Enemy_Medium_Large_Wraith_Demo", "Spawn_WraithDemo", true);
+	CreateParticleSystemAtEntity("wraithps", "ps_orb_shockwave.ps", "WraithPSArea", false);
+}
+
+void EnrageWraith(string &in asTimer) {
+	ShowEnemyPlayerPosition("Enemy_Medium_Large_Wraith_Demo");
+}
+
+void WraithDespawnTimer(string &in asTimer) {
+	SetEntityActive(asTimer, true);
+	TeleportEnemyToNode("Enemy_Medium_Large_Wraith_Demo", "OutOfMap_Node", true);
+	RemoveTimer(asTimer);
+	AddTimer(asTimer, 2.0f, "WraithDespawnTimer2");
+	SetEntityActive("fountain_Activate", true);
+	SetLeverStuckState("elevator_lever_1", 0, true);
+}
+
+void WraithDespawnTimer2(string &in asTimer) {
+	PlayMusic("imprisoned_pythonblue.ogg", true, 1.0, 4.0, 0, false);
+	SetSwingDoorLocked("castle_arched01_3", false, false);
+	SetSwingDoorLocked("castle_arched01_4", false, false);
+	SetSwingDoorLocked("castle_2", false, false);
+	SetSwingDoorLocked("castle_arched01_2", false, false);
+	AddQuest("qBestiary5", "Bestiary5");
+	AddTimer("Bestiary5", 8.0f, "RemoveBestiaryQuest");
+	AddQuest("demoEndGoal", "DemoEndGoal");
+	AddDiary("BeastWraithDemo", "journal/diary_page");
+	SetEntityActive(asTimer, false);
+	SetLocalVarInt("WraithDemoWeakened", 2);
+}
+
+void RemoveBestiaryQuest(string &in asTimer) {
+	CompleteQuest("q" + asTimer, asTimer);
+}
+
+void RaiseCastlePortculis(string &in asConnectionName, string &in asMainEntity, string &in asConnectEntity, int alState) {
+	SetLeverStuckState(asMainEntity, 1, true);
+	StartScreenShake(0.01f, 0, 0.5f, 1.0f);
+	
+	PlaySoundAtEntity("clonk", "07_lever", asMainEntity, 0, false);
+	PlaySoundAtEntity("clonk2", "07_lever2", asMainEntity, 0, false);
+	PlaySoundAtEntity("ticking1", "07_tick", asMainEntity, 1, true);
+	PlaySoundAtEntity("ticking2", "07_tick", asConnectEntity, 1, true);
+	
+	AddTimer("gatesounds", 8.0f, "TimerStopGateSounds");
+	AddTimer("clonk2", 0.5f, "TimerStopLeverSound");
+}
+
+void TimerStopLeverSound(string &in asTimer)
+{
+	StopSound(asTimer, 1.0f);
+}
+void TimerStopGateSounds(string &in asTimer)
+{
+	//SetMoveObjectState("castle_portcullis_1", 0);
+	//SetLeverStuckState("lever_simple01_1", 0, true);
+	
+	SetLevelDoorLocked("castle_gate_arched01_2", false);
+	StopPropMovement("castle_portcullis_1");
+	StopSound("ticking1", 0.5f);
+	StopSound("ticking2", 0.5f);
+}
+
+/// DISPLAYING MESSAGE SIGNS
+
+string displayMessage = "";
+
+void Message1(string &in asEntity) {
+	RemoveTimer("messageTimer");
+	displayMessage = "FastTravelMessage";
+	ShowMessageBackground(asEntity);
+	AddTimer("messageTimer", 1.0f, "MessageTimer");
+}
+
+void Message2(string &in asEntity) {
+	RemoveTimer("messageTimer");
+	displayMessage = "ContainerMessage";
+	ShowMessageBackground(asEntity);
+	AddTimer("messageTimer", 1.0f, "MessageTimer");
+}
+
+void ShowMessageBackground(string &in asEntity) {
+	StartInsanityEvent("message_pergament");
+	SetEntityPlayerLookAtCallback(asEntity, "RemoveMessage", true);
+}
+
+void ShowMessageBackgroundLong(string &in asEntity) {
+	StartInsanityEvent("message_pergament_long");
+	SetEntityPlayerLookAtCallback(asEntity, "RemoveMessage", true);
+}
+
+void MessageTimer(string &in asTimer) {
+	SetMessage("Message", displayMessage, 4);
+}
+
+void MessageTimerLong(string &in asTimer) {
+	SetMessage("Message", displayMessage, 8);
+}
+
+void RemoveMessage(string &in asEntity, int alState)
+{
+	if (alState == -1) {
+		SetMessage("Message", "Empty", 1);
+		StopCurrentInsanityEvent();
+		RemoveTimer("messageTimer");
+	}
+}
+
+////// old events
+
+void PigScreamArea(string &in asParent, string &in asChild, int alState)
+{
+	PlayGuiSound("PigsSquealing.snt", 1.0f);
+	SetPropHealth("Door_1", 0);
+	GiveSanityDamage(5.0f, true);
+}
+
+void Efekty(string &in asParent, string &in asChild, int alState)
+{
+	SetSanityDrainDisabled(true);
+	
+	PlayMusic("insanity_vision01_amb.ogg", true, 0.8, 2, 1, true);
+	PlayGuiSound("citadel_ambient_voices1.snt", 1.0f);
+	
+	GiveSanityDamage(5.0f, true);
+	SetMessage("Messages", "kropki", 4);
+	
+	
+	
+	//AddTimer("bang1", 0.6f, "TimerBangDoor");
+}
+
+void ThatWasCheap(string &in asParent, string &in asChild, int alState)
+{
+	SetEntityActive("lalka_1",true);
+	PlayGuiSound("cederholm_scream2.ogg", 0.5f);
+	
+	StartPlayerLookAt("lalka_1", 2, 2, "");
+	
+	//PlayMusic("insanity_vision01_amb.ogg", true, 0.8, 2, 1, true);
+	
+	GiveSanityDamage(100.0f, true);
+	
+	AddTimer("fade", 0.1f, "TimerFade");
+}
+
+void TimerFade(string &in asTimer)
+{
+SetPlayerActive(false);
+FadeOut(3.0f);
+StopPlayerLookAt();
+AddTimer("fade2", 5.0f, "TimerFade2");
+}
+
+void TimerFade2(string &in asTimer)
+{
+TeleportPlayer("PlayerStartArea_3");
+AddTimer("fade3", 3.0f, "TimerFade3");
+}
+
+void TimerFade3(string &in asTimer)
+{
+FadeIn(3.0f);
+AddTimer("fade4", 3.0f, "TimerFade4");
+}
+
+
+void TimerFade4(string &in asTimer)
+{
+AddTimer("T1", 2.0f, "Intro");
+AddTimer("T2", 4.0f, "Intro");
+AddTimer("T3", 6.0f, "Intro");
+AddTimer("T4", 8.0f, "Intro");
+AddTimer("T5", 10.0f, "Intro");
+SetPlayerCrouching(true);
+}
+
+
+void Blokuj(string &in AsItem, string &in asEntity)
+{
+SetPlayerActive(false);
+SetEntityActive("Blokada",true);
+StartPlayerLookAt("ScriptArea_3", 2, 2, "");
+AddTimer("T1", 3.0f, "timer");
+}
+
+void timer(string &in asTimer)
+{
+StopPlayerLookAt();
+SetPlayerActive(true);
+}
+
+void MoveShelfTouch(string &in asEntity)
+{
+	SetMoveObjectStateExt("castlebase_secret_door_1", 1.0f, 0.8f, 0.8f, 0.5f, true);
+	
+	AddTimer("sanityb", 1.5f, "TimerMoveShelf2");
+	AddTimer("AreaSound", 2.0f, "TimerMoveShelf2");
+}
+
+void TimerMoveShelf2(string &in asTimer)
+{
+	if(asTimer == "sanityb"){
+		AddPlayerSanity(5);
+		PlayMusic("01_puzzle_passage", false, 0.8, 2, 1, true);
+		return;
+	}
+	
+	PlaySoundAtEntity("dustblowsound", "scare_wind_reverse", asTimer, 1.0f, false);
+}
+
+void DodajWaznyQuest(string &in AsItem, string &in asEntity)
+{
+	//PlayMusic("penumbra_music_E1_PS1", false, 0.8, 2, 1, true);
+}
+
+void Ambientcrawlerscream(string &in asParent, string &in asChild, int alState)
+{
+PlaySoundAtEntity("Player", "AMBIENTCRAWLERSCREAM.snt", "AreaCrawler", 0, false);
+}
+
+void ReSpectWalk(string &in asParent, string &in asChild, int alState) //dat pantera reference
+{
+PlayGuiSound("scare_wood_creak_walk1.ogg", 0.5f);
+}
+
+void ManBoo(string &in asParent, string &in asChild, int alState) //dat pantera reference
+{
+PlaySoundAtEntity("Player", "scare_male_terrified4.snt", "AnotherSound", 0, false);
+}
+
+void OpenDoor(string &in asItem, string &in asEntity)
+{
+	AddPlayerSanity(5);
+	SetSwingDoorLocked("Door_4", false, true);
+	RemoveItem("hollow_needle_1");
+}
+
+void CollideBangDoor(string &in asParent, string &in asChild, int alState)
+{
+	PlaySoundAtEntity("bangs", "05_event_door_bang", "Door_4", 1, false);
+	PlaySoundAtEntity("whineaa", "scare_whine_loop", "Player", 0.5f, false);
+		
+	FadeSepiaColorTo(0.75f, 0.3f);
+	FadeImageTrailTo(1.5, 0.5);
+	
+	AddTimer("bang1", 0.6f, "TimerBangDoor");
+	AddTimer("bang2", 1.6f, "TimerBangDoor");
+	AddTimer("bang3", 2.5f, "TimerBangDoor");
+	AddTimer("bang4", 3.0f, "TimerBangDoor");
+}
+void TimerBangDoor(string &in asTimer)
+{	
+	if(asTimer == "bang1"){ 
+		AddPropImpulse("Door_4", 0, 5, 0, "World");
+		PlaySoundAtEntity("scare", "react_scare", "Player", 0.25f, false);
+		CreateParticleSystemAtEntity("bang1", "ps_dust_impact_vert.ps", "Door_4", false);
+		StartScreenShake(0.008, 0.5f, 0.1f,0.3f);
+		GiveSanityDamage(10, true);
+	}
+	else if(asTimer == "bang2") { 
+		AddPropImpulse("Door_4", 0, 5, 0, "World");
+		CreateParticleSystemAtEntity("bang1", "ps_dust_impact_vert.ps", "Door_4", false);
+		StartScreenShake(0.008, 0.5f, 0.1f,0.3f);
+	}
+	else if(asTimer == "bang3") { 
+		AddPropImpulse("Door_4", 0, 5, 0, "World");
+		PlaySoundAtEntity("scare", "react_breath", "Player", 0.5f, false);
+		CreateParticleSystemAtEntity("bang1", "ps_dust_impact_vert.ps", "Door_4", false);
+		StartScreenShake(0.008, 0.5f, 0.1f,0.3f);
+	}
+	else {
+		SetSwingDoorLocked("Door_4", false, false);
+		FadeSepiaColorTo(0, 0.3f);
+		FadeImageTrailTo(0, 0.1);
+		StopSound("whineaa", 4);
+	}
+}
+
+void FapSlime1(string &in asEntity)
+{
+PlayGuiSound("guardian_activated1.ogg", 1);
+SetPropActiveAndFade("dimeslime333", true, 1.0f);
+GiveSanityDamage(10, true);
+}
+
+void PullinBook(string &in asParent, string &in asChild, int alState)
+{
+PlaySoundAtEntity("Player", "unlock_door.snt", "PullinBook", 0, false);
+SetSwingDoorLocked("Door_5", false, true);
+}
+
+void Flee(string &in asParent, string &in asChild, int alState)
+{
+PlaySoundAtEntity("Player", "scare_loon.snt", "ScriptArea_1", 0, false);
+CreateParticleSystemAtEntity("PS_Wind", "ps_dust_push.ps", "ScriptArea_1", false);
+}
+
+void DoorLockedPlayer1(string &in entity) 
+{
+    if(GetSwingDoorLocked("zamkniete_1") == true)
+    {
+ 
+        SetMessage("Messages", "Closed1", 0);
+ 
+    }
+}
+
+void DoorLockedPlayer2(string &in entity) 
+{
+    if(GetSwingDoorLocked("Door_5") == true)
+    {
+ 
+        SetMessage("Messages", "Closed2", 0);
+ 
+    }
+}
+
+void UseAcid(string &in asItem, string &in asEntity)
+{
+	AddPlayerSanity(20);
+	SetPropActiveAndFade("padlock", false, 1.0f);
+	PlayGuiSound("15_player_burn.ogg", 1);
+	SetLevelDoorLocked("level_cistern_1", false);
+	PlayMusic("04_puzzle_acid", false, 0.8, 2, 1, true);
+	RemoveItem("UseAcid");
+}
+
+void OpenBonus1(string &in asItem, string &in asEntity)
+{
+	AddPlayerSanity(5);
+	SetPropStaticPhysics("chest_small_1", false);
+	SetEntityActive("BonusChest_1", false);
+	PlayGuiSound("quest_added.ogg", 1);
+	RemoveItem("BonusKey_1");
+}
+
+void Bonus1(string &in asEntity)
+{
+SetMessage("Messages", "BonusC1", 0);
+}
+
+void BirdsFlee(string &in asParent, string &in asChild, int alState)  
+{
+PlaySoundAtEntity("ptaszkihehe", "general_birds_flee.snt", "AreaSound_2", 0, false);
+PlayGuiSound("react_scare1.ogg", 0.5f);
+}
+
+
+void LanternPick(string &in AsItem, string &in asEntity)
+{
+AddTimer("ScarePlayer", 3.0f, "DoScare");
+}
+
+void DoScare(string &in asTimer)
+{
+GiveSanityDamage(10, true);
+PlaySoundAtEntity("krzyk", "05_event_door_bang.snt", "AreaSound_1", 0, false);
+SetSwingDoorLocked("Door_6", false, true);
+SetPropHealth("Door_6", 20);
+AddTimer("ScarePlayer2", 5.0f, "DoScare2");
+}
+
+void DoScare2(string &in asTimer)
+{
+SetMessage("Messages", "ScareNoise", 4);
+}
+
+void StartMusic(string &in asParent, string &in asChild, int alState)
+{
+	//PlayMusic("04_amb.ogg", true, 0.8, 2, 1, true);
+}
+
+
+void Music(string &in AsItem, string &in asEntity)
+{
+PlayMusic("03_paper_daniel01", false, 0.8, 2, 1, true);
+AddTimer("trig1", 2.0f, "writeNote"); 
+}
+
+void writeNote(string &in asTimer)
+{
+AddQuest("Abandoned","Abandoned");
+}
+
+void Intro(string &in asTimer)
+{
+FadeOut(0.1);
+SetPlayerActive(false);
+SetPlayerCrouching(true);
+FadeImageTrailTo(2,7);
+FadeSepiaColorTo(1,1);	
+		
+FadePlayerRollTo(45, 0.1f,3.9f); 
+FadePlayerFOVMulTo(0.6, 0.15);
+
+AddTimer("Intro_2", 5, "Intro2");
+AddDebugMessage("Starten", true);
+}
+
+void Intro2(string &in asTimer)
+{
+FadeIn(2.5);
+FadeImageTrailTo(0,1);
+FadeSepiaColorTo(0,1);
+	
+FadePlayerRollTo(0, 1, 3); 
+FadePlayerFOVMulTo(1, 1);
+		
+FadeGlobalSoundVolume(1, 3);
+FadeGlobalSoundSpeed(1, 3);
+SetPlayerActive(true);
+
+SetPlayerMoveSpeedMul(0.60f);
+SetPlayerRunSpeedMul(0.0f);
+
+}
+
+///////RANDOM SOUNDS////////
+
+void RandomSounds_Func(string &in asTimer)
+{
+int iMoan = RandFloat(1, 3);
+AddTimer("Cry_"+iMoan,5.1,"Cry");
+AddDebugMessage("RandomSounds_Func", true); //PŁACZ KURWA
+}
+
+void Cry(string &in asTimer)
+{
+int iMoan = RandFloat(1, 2);
+
+if(asTimer == "Cry_1")
+  {
+PlaySoundAtEntity("Sound_"+iMoan,"scare_baby_cry.snt","InsaneSound_1",0,false);  //dźwięk eins
+AddTimer("RandomSounds_Func",RandFloat(20,35),"RandomSounds_Func");
+  }
+else if(asTimer == "Cry_2")
+  {
+AutoSave();
+PlaySoundAtEntity("Sound2_"+iMoan,"scare_male_terrified.snt","InsaneSound_2",0,false);   //dzwiek zwei
+AddTimer("RandomSounds_Func",RandFloat(20,35),"RandomSounds_Func");
+  }
+else if(asTimer == "Cry_3")
+  {
+ PlaySoundAtEntity("moanSoun"+iMoan, "general_birds_flee.snt", "InsaneSound_3", 0.0f, false); //dzwiek drei
+AddTimer("RandomSounds_Func",RandFloat(20,35),"RandomSounds_Func");
+  }
+  AddDebugMessage("Cry bitch", true);
+}
+
+///////MOVE SHELF/SECRET WALL////////
+
+void MoveShelf(string &in asEntity, int alState)
+{
+	if(alState != 1) return;
+	
+	SetMoveObjectStateExt("secret_shelf", 1.0f, 0.8f, 0.8f, 0.5f, true);
+	SetMoveObjectStateExt("castlebase_secret_door_2", 1.0f, 0.8f, 0.8f, 0.5f, true);
+	
+	//SetLeverStuckState("lever_small01_1", 1, true);
+	//SetLeverStuckState("lever_small01_2", 1, true);
+	SetPropStaticPhysics("lever_small01_1", true);
+	SetPropStaticPhysics("lever_small01_2", true);
+	SetEntityInteractionDisabled("lever_small01_1", true);
+	SetEntityInteractionDisabled("lever_small01_2", true);
+	
+	AddTimer("sanityb", 1.5f, "TimerMoveShelf");
+	AddTimer("AreaSound", 2.0f, "TimerMoveShelf");
+}
+
+void TimerMoveShelf(string &in asTimer)
+{
+	if(asTimer == "sanityb"){
+		AddPlayerSanity(5);
+		//PlayMusic("01_puzzle_passage", false, 0.8, 2, 1, true);
+		return;
+	}
+	
+	PlaySoundAtEntity("dustblowsound", "scare_wind_reverse", asTimer, 1.0f, false);
+}
+
+
+/// Checkpoints
+
+void UnlockBonfires() {
+	for (int i = 1; i <= 7; i++) {
+		string bonfireName = "save_" + i;
+		string bonfireId = bonfireName + "Unlocked";
+		if (GetGlobalVarInt(bonfireId) == 1) {
+			AddDebugMessage("Bonfire is lit: " + i, false);
+			SetLampLit("Teleport_" + bonfireName + "_bonfire", true, true);
+			SetEntityActive("TeleportArea_" + bonfireName + "_bonfire", true);
+			SetEntityActive("TeleportArea_" + bonfireName + "_bonfire_sign", true);
+		}
+		else {
+			AddDebugMessage("Bonfire is unlit: " + bonfireId, false);
+			AddDebugMessage("Bonfire is unlit with id: " + i, false);
+		}
+	}
+}
+
+void ActivateFountain(string &in asEntity) {
+	SetEntityPlayerInteractCallback("fountain_Activate", "EnterFastTravelHub", false);
+	
+	if (GetGlobalVarInt("bonfireLit") == 0) {
+		SetEntityActive("fountain_Activate", false);
+		SetLightVisible("jb_PointLight_2", false);
+	} else 
+	{
+		SetLightVisible("jb_PointLight_2", true);
+	}
+	
+	SetPropActiveAndFade("fountain_bloodflow", true, 2);
+	
+	SetEntityCustomFocusCrossHair("fountain_Heal", "Push");
+	SetEntityPlayerLookAtCallback("fountain_Heal", "SetHealIcon", false);
+	SetEntityCustomFocusCrossHair("fountain_Activate", "LevelDoor");
+	SetEntityPlayerLookAtCallback("fountain_Activate", "SetTravelIcon", false);
+	
+	PlayGuiSound("boom_hallucination_disappear", 1.0f);
+	PlaySoundAtEntity("foundtainBloodDrip", "16_water_stream_med", "fountain_Heal", 2, true);
+	AddTimer("fountainActivationTimer", 2.0f, "FountainActivationTimer");
+}
+
+void FountainActivationTimer(string &in asTimer) {
+	SetLightVisible("jb_PointLight", true);
+	SetEntityActive("fountain_Heal", true);
+}
+
+void SetFountainIcon(string &in asEntity, int alState)
+{
+	SetEntityCustomFocusCrossHair("fountain_Activate", "Pick");
+}
+
+void SetHealIcon(string &in asEntity, int alState)
+{
+	SetEntityCustomFocusCrossHair("fountain_Heal", "Push");
+}
+
+void SetTravelIcon(string &in asEntity, int alState)
+{
+	SetEntityCustomFocusCrossHair(asEntity, "LevelDoor");
+}
+
+// use bonfires
+
+void SetBonfireIcon(string &in asEntity, int alState)
+{
+	SetEntityCustomFocusCrossHair(asEntity, "Ignite");
+}
+
+void SetBonfireHealIcon(string &in asEntity, int alState)
+{
+	SetEntityCustomFocusCrossHair(asEntity, "Push");
+}
+
+void BonfireLit(string &in asEntity) {
+	CheckPoint ("checkpointBonfire", "PS_TeleportArea_" + asEntity + "_bonfire", "RespawnBonfire", "", "");
+	string varName = asEntity + "Unlocked";
+	SetGlobalVarInt(varName, 1);
+	AddDebugMessage("Name and Value of bonfire id: " + varName + ", " + GetGlobalVarInt(varName), false);
+	
+	SetEntityPlayerLookAtCallback(asEntity, "SetBonfireHealIcon", false);
+	SetEntityPlayerInteractCallback(asEntity, "UseBonfire", false);
+	
+	AddTimer(asEntity, 3.0f, "ReactivateBonfire");
+	SetEntityActive(asEntity, false);
+	SetGlobalVarInt("bonfireLit", 1);
+	
+	// demo only
+	//SetLightVisible("jb_PointLight_2", true);
+	//SetEntityActive("fountain_Activate", true);
+	
+	PlayGuiSound("ui_use_tinderbox", 1.5f);
+	SetLampLit(asEntity + "_bonfire", true, true);
+	SetLampLit("Teleport_" + asEntity + "_bonfire", true, true);
+	SetEntityActive("TeleportArea_" + asEntity + "_bonfire", true);
+	SetEntityActive("TeleportArea_" + asEntity + "_bonfire_sign", true);
+	if (GetPlayerSanity() >= 1.5f) {
+		GiveSanityDamage(1, false);
+	}
+	GiveSanityBoostSmall();
+}
+
+void ReactivateBonfire(string &in asTimer) {
+	SetEntityCustomFocusCrossHair(asTimer, "Push");
+	SetEntityActive(asTimer, true);
+}
+
+void UseBonfire(string &in asEntity) {
+	//RepositionAndRespawnEnemies();
+	CheckPoint ("checkpointBonfire", "PS_TeleportArea_" + asEntity + "_bonfire", "RespawnBonfire", "", "");
+	DestroyParticleSystem("bonfireEffect");
+	CreateParticleSystemAtEntity("bonfireEffect", "ps_dust_whirl_bonfire", asEntity, false);
+	AddPlayerHealth(100);
+	SetPlayerLampOil(100);
+	PlayGuiSound("insanity_monster_roar01.ogg", 0.5f);
+	AutoSave();
+}
+
+//// fountain fast travel
+
+void UseFountain(string &in asEntity) {
+	
+	UseBonfire(asEntity);
+	
+	if (GetPlayerSanity() >= 1.5f) {
+		GiveSanityDamage(1, false);
+	}
+	GiveSanityBoost();
+	PlayGuiSound("04_water_puff.snt", 3.0f);
+}
+
+void EnterFastTravelHub(string &in asEntity) {
+	PlayGuiSound("blackbox_start", 2.0f);
+	SetGlobalVarInt("GunEffectsOn", 0);
+	FadeOut(3);
+	FadePlayerFOVMulTo(0.5, 3);
+	AddTimer("teleportPlayerToHub", 4.0f, "TeleportPlayerToHub");
+}
+
+void TeleportPlayerToHub(string &in asTimer) {
+	
+	SetSkyBoxColor(1, 1, 1, 1);
+	
+	SetLanternDisabled(true);
+	TeleportPlayer("PlayerStartArea_FastTravel");
+	FadeIn(2);
+	FastTravelFrom();
+	FadePlayerFOVMulTo(1.5, 1);
+}
+
+void FastTravelFrom() {
+	
+	SetGlobalVarInt("GunEffectsOn", 0);
+	
+	SetPlayerMoveSpeedMul(0);
+	SetPlayerRunSpeedMul(0);
+	SetPlayerLookSpeedMul(0.4f);
+	SetPlayerJumpDisabled(true);
+	SetPlayerCrouching(true);
+	SetPlayerCrouchDisabled(true);
+	
+	StopMusic(2, 0);
+	StopMusic(2, 1);
+	StopMusic(2, 2);
+}
+
+void FastTravel(string &in asEntity) {
+	FadeOut(2);
+	FadePlayerFOVMulTo(2, 2);
+	PlayGuiSound("blackbox_end", 2.0f);
+	AddTimer(asEntity, 3.0f, "TeleportPlayerToWorld");
+}
+
+void TeleportPlayerToWorld(string &in asTimer) {
+	
+	string destination = "PS_" + asTimer;
+	FastTravelTo(destination);
+	SetBackLevelProperties();
+	
+	SetLanternDisabled(false);
+	FadePlayerFOVMulTo(1, 2);
+	
+	SetPlayerMoveSpeedMul(1.1f);
+	SetPlayerRunSpeedMul(1.2f);
+	SetPlayerLookSpeedMul(1.0f);
+	SetPlayerJumpDisabled(false);
+	SetPlayerCrouchDisabled(false);
+	
+	SetGlobalVarInt("GunEffectsOn", 1);
+	//RepositionAndRespawnEnemies();
+}
+
+void FastTravelTo(string &in bonfireName) {
+	
+	int id = StringToInt(StringSub(bonfireName, 21, 1));
+	SetGlobalVarInt("GunEffectsOn", 1);
+	switch (id) {
+		case 1:
+			ChangeMap("rift_valley_meadow_lake.map", bonfireName, "", "");
+		case 2:
+			ChangeMap("rock-hewn_vault.map", bonfireName, "", "");
+		break;
+		case 3:
+			ChangeMap("battered_clockworks.map", bonfireName, "", "");
+		break;
+		case 6:
+			ChangeMap("cove_on_the_gorge.map", bonfireName, "", "");
+		break;
+		case 7:
+			ChangeMap("slad_silo.map", bonfireName, "", "");
+		break;
+		default:
+			TeleportPlayer(bonfireName);
+			FadeIn(3);
+			PlayMusic("imprisoned_pythonblue.ogg", true, 1.0, 2.0f, 0, false);
+	}
+}
+
+//void CheckPoint (string& asName, string& asStartPos, string& asCallback, string& asDeathHintCat, string& asDeathHintEntry);
+void RespawnFountain(string &in asName, int alCount) {
+}
+
+
+//	# Message by AMN - This is the code for the gun.
+//	#
+//	# COPY everything below to every script file you have.
+//	# Including the variables, functions and comments. Everything.
+
+// This is KiraImmortal's version of Amn's gun script.
+// Special thanks to DNaLange!
+//  If you wish to use it, feel free, but credit all three people involved!
+
+void AcquireGun(string &in asEntity) {
+	GUNFUNCTION_Load();
+	SetGlobalVarInt("GunEffectsOn", 1);
+}
+
+const float GUN_COOLDOWN_TIME = 0.7f;
+
+const int GUN_DEFAULT_KILL_CHANCE = 5;
+const int GUN_EASY_KILL_CHANCE = 2;
+const int GUN_MEDIUM_KILL_CHANCE = 4; // 6
+const int GUN_HARD_KILL_CHANCE = 7; // 8
+
+const float GUN_RADIUS = 20.0f;
+
+bool isCooldownTime = false;
+int KillChance = GUN_DEFAULT_KILL_CHANCE;
+float diffCenterAndPoint = 0.0f;
+float shotPositionX = 0.0f;
+float shotPositionY = 0.0f;
+float shotPositionZ = 0.0f;
+
+string GUN_Target = "";
+
+// You need to name each enemy, breakable and you want the gun to hit along the following guidelines
+// ex: Enemy_Easy_1, Enemy_Easy_2, etc.
+// check the level for more references
+
+string GUN_EasyEnemyFormat = "Enemy_Easy_";
+string GUN_MediumEnemyFormat = "Enemy_Medium_";
+string GUN_HardEnemyFormat = "Enemy_Hard_";
+string GUN_BreakablesFormat = "Breakable_Object_";
+string GUN_DoorsFormat = "Door_";
+
+int Level_EasyEnemyCount = 5;
+int Level_MediumEnemyCount = 5;
+int Level_HardEnemyCount = 5;
+int Level_BreakablesCount = 125;
+int Level_DoorsCount = 20;
+
+void GUNFUNCTION_Load()
+{	
+	SetLanternLitCallback( "GUNFUNCTION_Shoot" );
+ 
+	int i=0;
+	while(i<=Level_EasyEnemyCount) {
+		i=i+1;
+		GUNFUNCTION_AddTarget(GUN_EasyEnemyFormat+i);
+		SetEnemySanityDecreaseActive(GUN_EasyEnemyFormat+i, false);
+				// adding the possibility for enemies to be larger, hence needing a larger particle
+		GUNFUNCTION_AddTarget(GUN_EasyEnemyFormat+"Large_"+i);
+		SetEnemySanityDecreaseActive(GUN_EasyEnemyFormat+"Large_"+i, false);
+	}
+	
+	i=0;
+	while(i<=Level_MediumEnemyCount) {
+		i=i+1;
+		GUNFUNCTION_AddTarget(GUN_MediumEnemyFormat+i);
+		SetEnemySanityDecreaseActive(GUN_MediumEnemyFormat+i, false);
+		GUNFUNCTION_AddTarget(GUN_MediumEnemyFormat+"Large_"+i);
+		SetEnemySanityDecreaseActive(GUN_MediumEnemyFormat+"Large_"+i, false);
+	}
+	
+	i=0;
+	while(i<=Level_HardEnemyCount) {
+		i=i+1;
+		GUNFUNCTION_AddTarget(GUN_HardEnemyFormat+i);
+		SetEnemySanityDecreaseActive(GUN_HardEnemyFormat+i, false);
+		
+		GUNFUNCTION_AddTarget(GUN_HardEnemyFormat+"Large_"+i);
+		SetEnemySanityDecreaseActive(GUN_HardEnemyFormat+"Large_"+i, false);
+	}
+
+	i=0;
+	while(i<=Level_BreakablesCount)
+	{
+		i=i+1;
+		GUNFUNCTION_AddTarget(GUN_BreakablesFormat+i );
+	}
+	
+	i=0;
+	while(i<=Level_DoorsCount)
+	{
+		i=i+1;
+		GUNFUNCTION_AddTarget(GUN_DoorsFormat+i );
+	}
+}
+
+////////////////////// W E A P O N ///////////////////////////
+
+void GUNFUNCTION_AddTarget ( string &in asTarget )
+{
+	SetEntityPlayerLookAtCallback( asTarget, "GUNFUNCTION_TargetAcquired", false);
+}
+
+void GUNFUNCTION_TargetAcquired ( string &in asTarget, int iState )
+{
+	if (iState==1)
+	{
+		AddDebugMessage ("target(" + asTarget + ")", false );
+		GUN_Target=asTarget;
+		if (StringContains(GUN_Target, "Enemy_")) {
+			GUNFUNCTION_CenterAim( asTarget );
+		}
+		RemoveTimer( "GUNTIMER" );
+	}
+ 
+	if (iState==-1)
+	{
+		//GUNFUNCTION_LoseTargetTimed( 1.0f );
+		GUN_Target="";
+		AddDebugMessage ("Target is lost", false );
+	}
+}
+
+void GUNFUNCTION_LoseTargetTimed ( float fDelay )
+{
+	AddTimer ( "GUNTIMER", fDelay, "GUNFUNCTION_LoseTarget" ); 
+}
+
+void GUNFUNCTION_LoseTarget ( string &in t )
+{
+	GUN_Target="";
+}
+
+void GUNFUNCTION_Shoot ( bool isOn )
+{
+  if (!isCooldownTime && GetGlobalVarInt("GunEffectsOn") == 1) {	
+  	if (isOn) { return; }
+	
+	GUNFUNCTION_UseBullet(!ScriptDebugOn());	
+	GUNFUNCTION_UseShootEffects();	
+	GUNFUNCTION_CooldownTimed( GUN_COOLDOWN_TIME );
+	
+	if (GUN_Target=="") {
+		return;
+	}
+
+	// distance calculation, if target is further your shoot will miss
+	
+	if (fittingPlayerAndTargetDistance() == true) {
+	  bool isEnemy = StringContains( GUN_Target, "Enemy_" );
+	  if ( isEnemy )
+	  {		
+		// decision about the kill possibility by enemy type
+		
+		if (StringContains( GUN_Target, GUN_EasyEnemyFormat )) {
+			AddDebugMessage( "Target is easy enemy", false );
+			KillChance = GUN_EASY_KILL_CHANCE;
+		}
+		else if (StringContains( GUN_Target, GUN_MediumEnemyFormat )) {
+			AddDebugMessage( "Target is medium enemy", false );
+			KillChance = GUN_MEDIUM_KILL_CHANCE;
+		}
+		else if (StringContains( GUN_Target, GUN_HardEnemyFormat )) {
+			AddDebugMessage( "Target is hard enemy", false );
+			KillChance = GUN_HARD_KILL_CHANCE;
+		}
+		
+		if (StringContains( GUN_Target, "Large_" )) {
+			AddDebugMessage( "Target is also large", false );
+			CreateParticleSystemAtEntity("", "ps_blood_splash_large.ps", GUN_Target, false);
+		}
+		// else if contains "_Immune", unique particle for ghosts maybe?
+		else {
+			CreateParticleSystemAtEntity("", "ps_blood_splash.ps", GUN_Target, false);
+		}
+		
+		
+		int randKillChance = RandInt(1, KillChance);     //Damage
+		AddDebugMessage( "Killchance is " + randKillChance, false );
+		
+		RemoveTimer("alertEnemies");
+		AddTimer("alertEnemies", 1.5f, "GUNFUNCTION_AlertEnemies");
+
+		if (randKillChance <= 1) //Killing blow
+		{           
+			KillBasicEnemy(GUN_Target);
+			
+			//AddBestiaryEntry(GUN_Target);  // adds bestiary entry based on type, and previous kills
+			//AddQuest("bestiaryQuest", "Bestiary");
+			//RemoveTimer("removeBestiaryQuest");
+			//AddTimer("removeBestiaryQuest", 8.0f, "RemoveBestiaryQuest");
+			
+			GUN_Target="";
+			KillChance=GUN_DEFAULT_KILL_CHANCE;
+		}
+	  }
+	
+	  bool isBreakable = StringContains( GUN_Target, GUN_BreakablesFormat );
+	  if ( isBreakable )
+	  {
+		AddDebugMessage( "Target is breakable", false );
+		SetPropHealth(GUN_Target, 0);
+		GUN_Target="";
+	  }
+	  
+	  bool isDoor = StringContains( GUN_Target, GUN_DoorsFormat );
+	  if ( isDoor )
+	  {
+		AddDebugMessage( "Target is door", false );
+		SetPropHealth(GUN_Target, GetPropHealth(GUN_Target) - 25.0f);
+	  }
+    }
+	else AddDebugMessage( "Target is too far, it's this far: " +  MathSqrt(diffCenterAndPoint), false );
+  }
+}
+
+void KillBasicEnemy(string &in asEntity) {
+	FadeEnemyToSmoke( asEntity, true );
+	SetEntityActive("Zone_" + asEntity, false);
+	if (GetLocalVarInt("ActiveMonsters") > 0) {
+		SetLocalVarInt("ActiveMonsters", GetLocalVarInt("ActiveMonsters") - 1);
+	}
+	if (StringContains(asEntity, "Wraith_Demo") == true) {
+		if (GetLocalVarInt("WraithDemoWeakened") == 0) {
+			SetEntityActive(asEntity, true);
+			SetLocalVarInt("WraithDemoWeakened", 1);
+		} else {
+			CompleteQuest("mainGoal", "MainGoal");
+			SetEntityActive("chalice", true);
+			RotatePropToSpeed("chalice", 1, 1, 0.4, -0.4, 0.1, false, "");
+			SetEntityPos("chalice", GetEntityPosX(asEntity), GetEntityPosY(asEntity) + 1, GetEntityPosZ(asEntity));
+			SetPropActiveAndFade("jb_fountain", true, 4.0f);
+			AddTimer("asEntity", 3.0f, "WraithDespawnTimer");
+		}
+	}
+}
+
+void GUNFUNCTION_AlertEnemies(string &in asTimer)
+{
+	ShowEnemyPlayerPosition( GUN_Target );
+}
+
+void GUNFUNCTION_UseBullet(bool consumeBullets) {
+	// calculates 7 bullets clip
+	if (consumeBullets) {
+		SetPlayerLampOil(GetPlayerLampOil() - 14.28571428571429f);
+		// if anything is lost on conversion to float, manually sets oil to 0 on last bullet
+		if (GetPlayerLampOil() < 5) {
+			SetPlayerLampOil(0);
+		}
+	}
+	PlayGuiSound("ui_shoot.ogg", 1.0f);
+}
+
+void GUNFUNCTION_UseShootEffects() {
+	//Flicker solution with attached spotlight with particles on gun itself
+	if (GetPlayerSpeed() < 1.5f) {
+		SetLightFlickerActive("PlayerHands_SpotLight_Gun", true);   
+	}
+	else {
+		SetLightFlickerActive("PlayerHands_SpotLight_Gun_Running", true);  
+	}
+	
+	AddTimer("", 0.1f, "StopGunFx");   
+	SetLanternActive( true, false );
+}
+
+void StopGunFx(string &in asTimer)
+{
+	SetLightFlickerActive("PlayerHands_SpotLight_Gun", false);
+	SetLightFlickerActive("PlayerHands_SpotLight_Gun_Running", false);
+}
+
+void CalculateEffectVector(float playerX, float playerY, float playerZ) {
+	//if (GetPlayerSpeed() < 1.2f) 
+	// needs also rotation check, that cannot be done on vanilla game
+		shotPositionX = playerX + 0.214f;
+		shotPositionY = playerY + 1.57f;
+		shotPositionZ = playerZ + 0.909f;
+	SetEntityPos("GunEffectArea", shotPositionX, shotPositionY, shotPositionZ);
+}
+
+void GUNFUNCTION_CooldownTimed ( float fDelay )
+{
+	SetPlayerActive(false);
+	//isCooldownTime = true;
+	AddTimer ( "GUNCOOLDOWNTIMER", fDelay, "GUNFUNCTION_CooldownPassed" ); 
+}
+
+void GUNFUNCTION_CooldownPassed(string &in asTimer)
+{
+	SetPlayerActive(true);
+	//isCooldownTime = false;
+}
+
+void GUNFUNCTION_CenterAim ( string &in asTarget )
+{
+	StartPlayerLookAt( asTarget, 2, 2, "" );
+	GUNFUNCTION_StopPlayerLookAtTimed( 0.2f );
+}
+
+void GUNFUNCTION_StopPlayerLookAtTimed ( float fDelay )
+{
+	AddTimer ( "", fDelay, "GUNFUNCTION_StopPlayerLookAt" );
+}
+
+void GUNFUNCTION_StopPlayerLookAt ( string &in t )
+{
+	StopPlayerLookAt();
+}
+
+bool fittingPlayerAndTargetDistance() {
+	// center is player position
+	float cx = GetPlayerPosX();
+	float cy = GetPlayerPosY();
+	float cz = GetPlayerPosZ();
+	
+	// point to intersect with is target position
+	float x = GetEntityPosX(GUN_Target);
+	float y = GetEntityPosY(GUN_Target);
+	float z = GetEntityPosZ(GUN_Target);
+	
+	// radius of the sphere of intersection
+	float radius = GUN_RADIUS;
+	
+	CheckDistanceSphereRadius(cx, cy, cz, x, y, z);
+	if (diffCenterAndPoint <= (radius * radius))
+		// point intersects with sphere
+		return true;
+	else return false;
+}
+
+void CheckDistanceSphereRadius(float &in cx, float &in cy, float &in cz, float &in x, float &in y, float &in z) {
+	float x1 = MathPow(x - cx, 2);
+	float y1 = MathPow(y - cy, 2);
+	float z1 = MathPow(z - cz, 2);
+	diffCenterAndPoint = x1 + y1 + z1;
+}
+
+
+//////////////////
+/// END of Gunscript
+//////////////////
+
+
+void OnLeave()
+{
+FadeOut(0);
+StopCurrentInsanityEvent();
+
+DestroyDataCache();
+
+}

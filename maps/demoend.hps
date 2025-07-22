@@ -1,0 +1,83 @@
+void OnStart() {
+	SetPlayerActive(false);
+	AddTimer("demoEndTimer1", 4.0f, "DemoEndTimer1");		
+	AddTimer("demoEndTimer2", 14.0f, "DemoEndTimer2");
+	AddTimer("demoEndTimer3", 24.0f, "DemoEndTimer3");
+	AddTimer("demoEndTimer4", 27.0f, "DemoEndTimer4");
+	SetGlobalVarInt("GunEffectsOn", 0);
+	FadeOut(0);
+	SetInDarknessEffectsActive(false);
+}
+
+void DemoEndTimer1(string &in asTimer) {
+	ShowMessageBackgroundLong("dunno");
+	FadeIn(2);
+	SetMessage("Message", "DemoEndMessage", 8.0f);
+}
+
+void DemoEndTimer2(string &in asTimer) {
+	StopCurrentInsanityEvent();
+	ShowMessageBackgroundLong("dunno");
+	SetMessage("Message", "DemoEndMessage2", 8.0f);
+}
+
+void DemoEndTimer3(string &in asTimer) {
+	StopCurrentInsanityEvent();
+	ShowMessageBackground("dunno");
+	SetMessage("Message", "DemoEndMessage3", 6.0f);
+}
+
+void DemoEndTimer4(string &in asTimer) {
+	SetPlayerActive(true);
+	
+	SetLanternDisabled(true);
+	SetPlayerMoveSpeedMul(0.5);
+	SetPlayerRunSpeedMul(0);
+	SetPlayerLookSpeedMul(0);
+	SetPlayerJumpDisabled(true);
+	SetPlayerCrouchDisabled(true);
+	
+	AddEntityCollideCallback("Player", "DemoAreaForward", "ReturnDemo", true, 0);
+	AddEntityCollideCallback("Player", "DemoAreaBack", "LeaveDemo", true, 0);
+}
+
+void ReturnDemo(string &in asParent, string &in asChild, int alState) {
+	SetGlobalVarInt("GunEffectsOn", 1);
+	SetLanternDisabled(false);
+	SetPlayerMoveSpeedMul(1.1f);
+	SetPlayerRunSpeedMul(1.2f);
+	SetPlayerLookSpeedMul(1.0f);
+	SetPlayerJumpDisabled(false);
+	SetPlayerCrouchDisabled(false);
+	FadePlayerFOVMulTo(1, 2);
+	
+	SetGlobalVarInt("DemoEnded", 3);
+	AddTimer("changeMap", 1.0f, "ChangeMap");
+}
+
+void ChangeMap(string &in asTimer) {
+	ChangeMap("exhedra_fortalice.map", "PlayerStartArea_2", "", "");
+}
+
+void LeaveDemo(string &in asParent, string &in asChild, int alState) {
+	StartCredits("outro_requiem_penumbra.ogg", true, "Ending", "DemoCredits", 3);
+}
+
+void ShowMessageBackground(string &in asEntity) {
+	StartInsanityEvent("message_pergament");
+	SetEntityPlayerLookAtCallback(asEntity, "RemoveMessage", true);
+}
+
+void ShowMessageBackgroundLong(string &in asEntity) {
+	StartInsanityEvent("message_pergament_long");
+	SetEntityPlayerLookAtCallback(asEntity, "RemoveMessage", true);
+}
+
+void OnLeave()
+{
+FadeOut(0);
+StopCurrentInsanityEvent();
+
+DestroyDataCache();
+
+}

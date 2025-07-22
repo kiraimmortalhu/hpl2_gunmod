@@ -1,0 +1,10 @@
+<SOUNDENTITY>
+  <SOUNDS>
+    <Main>
+      <Sound File="engineer_engroom_foot_01" />
+      <Sound File="engineer_engroom_foot_02" />
+      <Sound File="engineer_engroom_foot_03" />
+    </Main>
+  </SOUNDS>
+  <PROPERTIES FadeStart="False" FadeEnd="False" Loop="False" Use3D="True" Stream="False" Blockable="True" Volume="0.1" MinDistance="3" MaxDistance="10" BlockVolumeMul="0.7" Random="1" Interval="0" Priority="1" />
+</SOUNDENTITY>

@@ -1,0 +1,344 @@
+<Level>
+    <MapData FogActive="true" FogColor="0.40625 0.212101 0.192017 1" FogCulling="false" FogEnd="200" FogFalloffExp="0.7" FogStart="20" GlobalDecalMaxTris="300" Name="" SkyBoxActive="true" SkyBoxColor="1 1 1 1" SkyBoxTexture="../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../custom_stories/Amanita exitialis/textures/skybox/red_day.dds">
+        <MapContents>
+            <FileIndex_StaticObjects NumOfFiles="29">
+                <File Id="0" Path="static_objects/debris/rock/stone_small01.dae" />
+                <File Id="1" Path="static_objects/debris/rock/stone_med02.dae" />
+                <File Id="2" Path="EDIT/quartz_and_cordite/static_objects/forest_assets_florian/stones_brown_remastered/stone_large01_brown_rem.dae" />
+                <File Id="3" Path="static_objects/outside/foliage/grass01.DAE" />
+                <File Id="4" Path="static_objects/outside/foliage/zimmarman_grass02_brown_2sided.dae" />
+                <File Id="5" Path="EDIT/quartz_and_cordite/static_objects/vegetation_soma/shrub_cinnamon_fern_soma/shrub_cinnamon_fern01.DAE" />
+                <File Id="6" Path="EDIT/quartz_and_cordite/static_objects/forest_assets_florian/tree_pine_remastered/pine_remastered.dae" />
+                <File Id="7" Path="static_objects/debris/rock/stone_med01.dae" />
+                <File Id="8" Path="static_objects/castlebase/pillar/roman_short.dae" />
+                <File Id="9" Path="static_objects/castlebase/floor/castlebase_floor_hex_ring.dae" />
+                <File Id="10" Path="EDIT/quartz_and_cordite/static_objects/vegetation_soma/shrub_cinnamon_fern_soma/shrub_cinnamon_fern02.DAE" />
+                <File Id="11" Path="EDIT/quartz_and_cordite/static_objects/vegetation_soma/tree_large_soma/tree_large01.dae" />
+                <File Id="12" Path="EDIT/quartz_and_cordite/static_objects/forest_assets_florian/floor_dirt_mould_remastered/dirt_mould_remastered_pile.dae" />
+                <File Id="13" Path="EDIT/quartz_and_cordite/static_objects/forest_assets_florian/stones_brown_remastered/stone_large02_brown_rem.dae" />
+                <File Id="14" Path="static_objects/dungeonbase/wall/door_frame_large_entrance.dae" />
+                <File Id="15" Path="static_objects/dungeonbase/ceiling/concave.dae" />
+                <File Id="16" Path="static_objects/dungeonbase/pillar/gigantic.dae" />
+                <File Id="17" Path="static_objects/dungeonbase/pillar/hub_pillar.dae" />
+                <File Id="18" Path="static_objects/dungeonbase/special/hub_top.dae" />
+                <File Id="19" Path="static_objects/dungeonbase/wall/corridor_arched_fence_metal.dae" />
+                <File Id="20" Path="static_objects/dungeonbase/special/tree_pillar.dae" />
+                <File Id="21" Path="static_objects/debris/rock/stone_med01_brown.dae" />
+                <File Id="22" Path="EDIT/quartz_and_cordite/entities/custom/carriage_digitalgoblin/drozka2.dae" />
+                <File Id="23" Path="static_objects/castlebase/wall/door_frame_elevator.dae" />
+                <File Id="24" Path="static_objects/castlebase/pillar/tall_stone.dae" />
+                <File Id="25" Path="static_objects/castlebase/wall/door_frame_large_ornate_arched.dae" />
+                <File Id="26" Path="static_objects/castlebase/wall/prisonbars.dae" />
+                <File Id="27" Path="EDIT/quartz_and_cordite/static_objects/house_improved_umbakarna/house_02_highres_umbakarna.dae" />
+                <File Id="28" Path="EDIT/quartz_and_cordite/static_objects/vegetation_soma/tree_large_soma/tree_pillar_mangrove.dae" />
+            </FileIndex_StaticObjects>
+            <FileIndex_Entities NumOfFiles="15">
+                <File Id="0" Path="entities/organic/bone_pile_human/bone_pile_human1.ent" />
+                <File Id="1" Path="entities/debris/rock_debris/rock_debris02.ent" />
+                <File Id="2" Path="EDIT/quartz_and_cordite/entities/a_quartz/jb_glassfountain/jb_blood_overflow.ent" />
+                <File Id="3" Path="EDIT/quartz_and_cordite/entities/a_quartz/table_castle_round/table_castle_round.ent" />
+                <File Id="4" Path="EDIT/quartz_and_cordite/entities/a_quartz/bonfire_save_kiraimmortal/save_bonfire.ent" />
+                <File Id="5" Path="EDIT/quartz_and_cordite/entities/a_quartz/jb_glassfountain/jb_blood.ent" />
+                <File Id="6" Path="entities/door/level_orb_room_door/level_orb_room_door.ent" />
+                <File Id="7" Path="entities/ornament/banner01/banner01.ent" />
+                <File Id="8" Path="EDIT/quartz_and_cordite/entities/a_quartz/generic_items/generic_item_bulletclip.ent" />
+                <File Id="9" Path="entities/ptest/graveyard_corpse/graveyard_corpse01.ent" />
+                <File Id="10" Path="EDIT/quartz_and_cordite/entities/custom/zasranejkun_headlesscyborg/zasranejkun_dead.ent" />
+                <File Id="11" Path="entities/ptest/graveyard_corpse/graveyard_corpse02.ent" />
+                <File Id="12" Path="EDIT/quartz_and_cordite/entities/a_quartz/generic_items/generic_item_bloodinjector.ent" />
+                <File Id="13" Path="entities/door/level_hub/level_hub.ent" />
+                <File Id="14" Path="entities/technical/block_box/block_box.ent" />
+            </FileIndex_Entities>
+            <FileIndex_Decals NumOfFiles="0" />
+            <StaticObjects>
+                <StaticObject CastShadows="true" Collides="true" FileIndex="8" Group="0" ID="4918" Name="pillar_roman_short_3" Rotation="0 1.5708 0" Scale="0.75 0.75 0.75" Tag="" WorldPos="2.5 500 0" />
+                <StaticObject CastShadows="true" Collides="true" FileIndex="8" Group="0" ID="4917" Name="pillar_roman_short_2" Rotation="0 0.523597 0" Scale="0.75 0.75 0.75" Tag="" WorldPos="1.25 500 2.25" />
+                <StaticObject CastShadows="true" Collides="true" FileIndex="8" Group="0" ID="4919" Name="pillar_roman_short_5" Rotation="-3.14159 0.523603 -3.14159" Scale="0.75 0.75 0.75" Tag="" WorldPos="1.25 500 -2.25" />
+                <StaticObject CastShadows="true" Collides="true" FileIndex="8" Group="0" ID="4922" Name="pillar_roman_short_1" Rotation="0 -0.523599 0" Scale="0.75 0.75 0.75" Tag="" WorldPos="-1.25 500 2.25" />
+                <StaticObject CastShadows="true" Collides="true" FileIndex="8" Group="0" ID="4920" Name="pillar_roman_short_6" Rotation="-3.14159 -0.523593 -3.14159" Scale="0.75 0.75 0.75" Tag="" WorldPos="-1.25 500 -2.25" />
+                <StaticObject CastShadows="true" Collides="true" FileIndex="8" Group="0" ID="4921" Name="pillar_roman_short_4" Rotation="0 1.5708 0" Scale="0.75 0.75 0.75" Tag="" WorldPos="-2.5 500 0" />
+                <StaticObject CastShadows="true" Collides="true" FileIndex="9" Group="0" ID="4923" Name="floor_castlebase_floor_hex_ring_1" Rotation="-3.14159 0 0" Scale="0.5 0.5 0.5" Tag="" WorldPos="0 503 0" />
+            </StaticObjects>
+            <Primitives>
+                <Plane Active="true" AlignToWorldCoords="false" CastShadows="false" Collides="true" Corner1UV="0 4.5" Corner2UV="0 0" Corner3UV="3 0" Corner4UV="3 4.5" EndCorner="3 0 4.5" Group="0" ID="4924" Material="D:/Program Files (x86)/Amnesia Modding/textures/water/water_blood_fountain.mat" Name="Plane_1" Rotation="0 0 3.14159" Scale="1 1 1" StartCorner="0 0 0" Tag="" TextureAngle="0" TileAmount="1 1 1" TileOffset="0 0 0" WorldPos="1.5 503 -2.25" />
+                <Plane Active="true" AlignToWorldCoords="false" CastShadows="false" Collides="true" Corner1UV="0 3.65152" Corner2UV="0 0" Corner3UV="0.25 0" Corner4UV="0.25 3.65152" EndCorner="0.25 0 3.65152" Group="0" ID="4925" Material="D:/Program Files (x86)/Amnesia Modding/textures/water/water_blood_fountain.mat" Name="Plane_15" Rotation="0 0 3.14159" Scale="1 1 1" StartCorner="0 0 0" Tag="" TextureAngle="0" TileAmount="1 1 1" TileOffset="0 0 0" WorldPos="-1.5 503 -1.81545" />
+                <Plane Active="true" AlignToWorldCoords="false" CastShadows="false" Collides="true" Corner1UV="0 2.80356" Corner2UV="0 0" Corner3UV="0.25 0" Corner4UV="0.25 2.80356" EndCorner="0.25 0 2.80356" Group="0" ID="4926" Material="D:/Program Files (x86)/Amnesia Modding/textures/water/water_blood_fountain.mat" Name="Plane_16" Rotation="0 0 3.14159" Scale="1 1 1" StartCorner="0 0 0" Tag="" TextureAngle="0" TileAmount="1 1 1" TileOffset="0 0 0" WorldPos="-1.75 503 -1.38525" />
+                <Plane Active="true" AlignToWorldCoords="false" CastShadows="false" Collides="true" Corner1UV="0 1.95239" Corner2UV="0 0" Corner3UV="0.25 0" Corner4UV="0.25 1.95239" EndCorner="0.25 0 1.95239" Group="0" ID="4927" Material="D:/Program Files (x86)/Amnesia Modding/textures/water/water_blood_fountain.mat" Name="Plane_17" Rotation="0 0 3.14159" Scale="1 1 1" StartCorner="0 0 0" Tag="" TextureAngle="0" TileAmount="1 1 1" TileOffset="0 0 0" WorldPos="-2 503 -0.96738" />
+            </Primitives>
+            <Decals />
+            <Entities>
+                <Entity Active="true" FileIndex="3" Group="0" ID="4931" Name="table_castle_round_1" Rotation="0 0 0" Scale="5 5 5" Tag="" WorldPos="0 494.5 0">
+                    <UserVariables>
+                        <Var Name="CastShadows" Value="true" />
+                        <Var Name="IsAffectedByDecal" Value="true" />
+                    </UserVariables>
+                </Entity>
+                <Entity Active="true" FileIndex="4" Group="0" ID="6882" Name="Teleport_save_4_bonfire" Rotation="0 1.22089 0" Scale="1 1 1" Tag="" WorldPos="1.67374 500 -0.376905">
+                    <UserVariables>
+                        <Var Name="CastShadows" Value="true" />
+                        <Var Name="StaticPhysics" Value="false" />
+                        <Var Name="IsAffectedByDecal" Value="false" />
+                        <Var Name="CallbackFunc" Value="" />
+                        <Var Name="ConnectedProps" Value="" />
+                        <Var Name="ConnectionStateChangeCallback" Value="" />
+                        <Var Name="FullGameSave" Value="false" />
+                        <Var Name="PlayerLookAtCallback" Value="" />
+                        <Var Name="PlayerLookAtCallbackAutoRemove" Value="false" />
+                        <Var Name="PlayerInteractCallback" Value="" />
+                        <Var Name="PlayerInteractCallbackAutoRemove" Value="false" />
+                        <Var Name="Lit" Value="false" />
+                        <Var Name="ConnectedLight" Value="" />
+                        <Var Name="ConnectionLightAmount" Value="1" />
+                        <Var Name="ConnectionLightUseOnColor" Value="true" />
+                        <Var Name="ConnectionLightUseSpec" Value="false" />
+                    </UserVariables>
+                </Entity>
+                <Entity Active="true" FileIndex="4" Group="0" ID="6879" Name="Teleport_save_3_bonfire" Rotation="0 -0.108135 0" Scale="1 1 1" Tag="" WorldPos="1.37612 500 1.27376">
+                    <UserVariables>
+                        <Var Name="CastShadows" Value="true" />
+                        <Var Name="StaticPhysics" Value="false" />
+                        <Var Name="IsAffectedByDecal" Value="false" />
+                        <Var Name="CallbackFunc" Value="" />
+                        <Var Name="ConnectedProps" Value="" />
+                        <Var Name="ConnectionStateChangeCallback" Value="" />
+                        <Var Name="FullGameSave" Value="false" />
+                        <Var Name="PlayerLookAtCallback" Value="" />
+                        <Var Name="PlayerLookAtCallbackAutoRemove" Value="false" />
+                        <Var Name="PlayerInteractCallback" Value="" />
+                        <Var Name="PlayerInteractCallbackAutoRemove" Value="false" />
+                        <Var Name="Lit" Value="false" />
+                        <Var Name="ConnectedLight" Value="" />
+                        <Var Name="ConnectionLightAmount" Value="1" />
+                        <Var Name="ConnectionLightUseOnColor" Value="true" />
+                        <Var Name="ConnectionLightUseSpec" Value="false" />
+                    </UserVariables>
+                </Entity>
+                <Area Active="false" AreaType="Script" Group="0" ID="6881" Mesh="" Name="TeleportArea_save_4_bonfire" Rotation="0 0 0" Scale="1.25 0.5 1.25" Tag="" WorldPos="1.70537 500.252 -0.360665">
+                    <UserVariables>
+                        <Var Name="PlayerLookAtCallback" Value="" />
+                        <Var Name="PlayerLookAtCallbackAutoRemove" Value="true" />
+                        <Var Name="PlayerInteractCallback" Value="FastTravel" />
+                        <Var Name="PlayerInteractCallbackAutoRemove" Value="false" />
+                        <Var Name="ItemInteraction" Value="false" />
+                        <Var Name="MaxFocusDistance" Value="-1" />
+                    </UserVariables>
+                </Area>
+                <Area Active="false" AreaType="Script" Group="0" ID="6878" Mesh="" Name="TeleportArea_save_3_bonfire" Rotation="0 0 0" Scale="1.25 0.5 1.25" Tag="" WorldPos="1.40775 500.252 1.29">
+                    <UserVariables>
+                        <Var Name="PlayerLookAtCallback" Value="" />
+                        <Var Name="PlayerLookAtCallbackAutoRemove" Value="true" />
+                        <Var Name="PlayerInteractCallback" Value="FastTravel" />
+                        <Var Name="PlayerInteractCallbackAutoRemove" Value="false" />
+                        <Var Name="ItemInteraction" Value="false" />
+                        <Var Name="MaxFocusDistance" Value="-1" />
+                    </UserVariables>
+                </Area>
+                <Entity Active="true" FileIndex="4" Group="0" ID="6885" Name="Teleport_save_5_bonfire" Rotation="0 -0.289501 0" Scale="1 1 1" Tag="" WorldPos="0.679146 500 -1.60821">
+                    <UserVariables>
+                        <Var Name="CastShadows" Value="true" />
+                        <Var Name="StaticPhysics" Value="false" />
+                        <Var Name="IsAffectedByDecal" Value="false" />
+                        <Var Name="CallbackFunc" Value="" />
+                        <Var Name="ConnectedProps" Value="" />
+                        <Var Name="ConnectionStateChangeCallback" Value="" />
+                        <Var Name="FullGameSave" Value="false" />
+                        <Var Name="PlayerLookAtCallback" Value="" />
+                        <Var Name="PlayerLookAtCallbackAutoRemove" Value="false" />
+                        <Var Name="PlayerInteractCallback" Value="" />
+                        <Var Name="PlayerInteractCallbackAutoRemove" Value="false" />
+                        <Var Name="Lit" Value="false" />
+                        <Var Name="ConnectedLight" Value="" />
+                        <Var Name="ConnectionLightAmount" Value="1" />
+                        <Var Name="ConnectionLightUseOnColor" Value="true" />
+                        <Var Name="ConnectionLightUseSpec" Value="false" />
+                    </UserVariables>
+                </Entity>
+                <Area Active="false" AreaType="Sign" Group="0" ID="6883" Mesh="" Name="TeleportArea_save_4_bonfire_sign" Rotation="0 0 0" Scale="1 1 1" Tag="" WorldPos="1.70537 500.494 -0.360665">
+                    <UserVariables>
+                        <Var Name="TextCat" Value="Levels" />
+                        <Var Name="TextEntry" Value="Bonfire_Fort" />
+                    </UserVariables>
+                </Area>
+                <Area Active="false" AreaType="Sign" Group="0" ID="6880" Mesh="" Name="TeleportArea_save_3_bonfire_sign" Rotation="0 0 0" Scale="1 1 1" Tag="" WorldPos="1.40775 500.494 1.29">
+                    <UserVariables>
+                        <Var Name="TextCat" Value="Levels" />
+                        <Var Name="TextEntry" Value="Bonfire_Clockworks" />
+                    </UserVariables>
+                </Area>
+                <Entity Active="true" FileIndex="4" Group="0" ID="6876" Name="Teleport_save_2_bonfire" Rotation="0 -0.449272 0" Scale="1 1 1" Tag="" WorldPos="-0.0736409 500 1.80143">
+                    <UserVariables>
+                        <Var Name="CastShadows" Value="true" />
+                        <Var Name="StaticPhysics" Value="false" />
+                        <Var Name="IsAffectedByDecal" Value="false" />
+                        <Var Name="CallbackFunc" Value="" />
+                        <Var Name="ConnectedProps" Value="" />
+                        <Var Name="ConnectionStateChangeCallback" Value="" />
+                        <Var Name="FullGameSave" Value="false" />
+                        <Var Name="PlayerLookAtCallback" Value="" />
+                        <Var Name="PlayerLookAtCallbackAutoRemove" Value="false" />
+                        <Var Name="PlayerInteractCallback" Value="" />
+                        <Var Name="PlayerInteractCallbackAutoRemove" Value="false" />
+                        <Var Name="Lit" Value="false" />
+                        <Var Name="ConnectedLight" Value="" />
+                        <Var Name="ConnectionLightAmount" Value="1" />
+                        <Var Name="ConnectionLightUseOnColor" Value="true" />
+                        <Var Name="ConnectionLightUseSpec" Value="false" />
+                    </UserVariables>
+                </Entity>
+                <Area Active="true" AreaType="PlayerStart" Group="0" ID="4936" Mesh="" Name="PlayerStartArea_FastTravel" Rotation="0 0 0" Scale="1 1 1" Tag="" WorldPos="0 500 0">
+                    <UserVariables />
+                </Area>
+                <Area Active="false" AreaType="Script" Group="0" ID="6884" Mesh="" Name="TeleportArea_save_5_bonfire" Rotation="0 0 0" Scale="1.25 0.5 1.25" Tag="" WorldPos="0.710776 500.252 -1.59197">
+                    <UserVariables>
+                        <Var Name="PlayerLookAtCallback" Value="" />
+                        <Var Name="PlayerLookAtCallbackAutoRemove" Value="true" />
+                        <Var Name="PlayerInteractCallback" Value="FastTravel" />
+                        <Var Name="PlayerInteractCallbackAutoRemove" Value="false" />
+                        <Var Name="ItemInteraction" Value="false" />
+                        <Var Name="MaxFocusDistance" Value="-1" />
+                    </UserVariables>
+                </Area>
+                <Area Active="false" AreaType="Script" Group="0" ID="6875" Mesh="" Name="TeleportArea_save_2_bonfire" Rotation="0 0 0" Scale="1.25 0.5 1.25" Tag="" WorldPos="-0.042011 500.252 1.81767">
+                    <UserVariables>
+                        <Var Name="PlayerLookAtCallback" Value="" />
+                        <Var Name="PlayerLookAtCallbackAutoRemove" Value="true" />
+                        <Var Name="PlayerInteractCallback" Value="FastTravel" />
+                        <Var Name="PlayerInteractCallbackAutoRemove" Value="false" />
+                        <Var Name="ItemInteraction" Value="false" />
+                        <Var Name="MaxFocusDistance" Value="-1" />
+                    </UserVariables>
+                </Area>
+                <Entity Active="true" FileIndex="4" Group="0" ID="6888" Name="Teleport_save_6_bonfire" Rotation="0 -1.52225 0" Scale="1 1 1" Tag="" WorldPos="-0.638875 500 -1.60821">
+                    <UserVariables>
+                        <Var Name="CastShadows" Value="true" />
+                        <Var Name="StaticPhysics" Value="false" />
+                        <Var Name="IsAffectedByDecal" Value="false" />
+                        <Var Name="CallbackFunc" Value="" />
+                        <Var Name="ConnectedProps" Value="" />
+                        <Var Name="ConnectionStateChangeCallback" Value="" />
+                        <Var Name="FullGameSave" Value="false" />
+                        <Var Name="PlayerLookAtCallback" Value="" />
+                        <Var Name="PlayerLookAtCallbackAutoRemove" Value="false" />
+                        <Var Name="PlayerInteractCallback" Value="" />
+                        <Var Name="PlayerInteractCallbackAutoRemove" Value="false" />
+                        <Var Name="Lit" Value="false" />
+                        <Var Name="ConnectedLight" Value="" />
+                        <Var Name="ConnectionLightAmount" Value="1" />
+                        <Var Name="ConnectionLightUseOnColor" Value="true" />
+                        <Var Name="ConnectionLightUseSpec" Value="false" />
+                    </UserVariables>
+                </Entity>
+                <Area Active="false" AreaType="Sign" Group="0" ID="6886" Mesh="" Name="TeleportArea_save_5_bonfire_sign" Rotation="0 0 0" Scale="1 1 1" Tag="" WorldPos="0.710776 500.494 -1.59197">
+                    <UserVariables>
+                        <Var Name="TextCat" Value="Levels" />
+                        <Var Name="TextEntry" Value="Bonfire_Fort2" />
+                    </UserVariables>
+                </Area>
+                <Area Active="false" AreaType="Sign" Group="0" ID="6877" Mesh="" Name="TeleportArea_save_2_bonfire_sign" Rotation="0 0 0" Scale="1 1 1" Tag="" WorldPos="-0.042011 500.494 1.81767">
+                    <UserVariables>
+                        <Var Name="TextCat" Value="Levels" />
+                        <Var Name="TextEntry" Value="Bonfire_Vault" />
+                    </UserVariables>
+                </Area>
+                <Entity Active="true" FileIndex="4" Group="0" ID="4932" Name="Teleport_save_1_bonfire" Rotation="0 -1.0472 0" Scale="1 1 1" Tag="" WorldPos="-1.45652 500 1.25">
+                    <UserVariables>
+                        <Var Name="CastShadows" Value="true" />
+                        <Var Name="StaticPhysics" Value="false" />
+                        <Var Name="IsAffectedByDecal" Value="false" />
+                        <Var Name="CallbackFunc" Value="" />
+                        <Var Name="ConnectedProps" Value="" />
+                        <Var Name="ConnectionStateChangeCallback" Value="" />
+                        <Var Name="FullGameSave" Value="false" />
+                        <Var Name="PlayerLookAtCallback" Value="" />
+                        <Var Name="PlayerLookAtCallbackAutoRemove" Value="false" />
+                        <Var Name="PlayerInteractCallback" Value="" />
+                        <Var Name="PlayerInteractCallbackAutoRemove" Value="false" />
+                        <Var Name="Lit" Value="false" />
+                        <Var Name="ConnectedLight" Value="" />
+                        <Var Name="ConnectionLightAmount" Value="1" />
+                        <Var Name="ConnectionLightUseOnColor" Value="true" />
+                        <Var Name="ConnectionLightUseSpec" Value="false" />
+                    </UserVariables>
+                </Entity>
+                <Area Active="false" AreaType="Script" Group="0" ID="6887" Mesh="" Name="TeleportArea_save_6_bonfire" Rotation="0 0 0" Scale="1.25 0.5 1.25" Tag="" WorldPos="-0.607245 500.252 -1.59197">
+                    <UserVariables>
+                        <Var Name="PlayerLookAtCallback" Value="" />
+                        <Var Name="PlayerLookAtCallbackAutoRemove" Value="true" />
+                        <Var Name="PlayerInteractCallback" Value="FastTravel" />
+                        <Var Name="PlayerInteractCallbackAutoRemove" Value="false" />
+                        <Var Name="ItemInteraction" Value="false" />
+                        <Var Name="MaxFocusDistance" Value="-1" />
+                    </UserVariables>
+                </Area>
+                <Entity Active="true" FileIndex="4" Group="0" ID="6891" Name="Teleport_save_7_bonfire" Rotation="-3.128 -0.921324 3.11654" Scale="1 1 1" Tag="" WorldPos="-1.70078 500 -0.376905">
+                    <UserVariables>
+                        <Var Name="CastShadows" Value="true" />
+                        <Var Name="StaticPhysics" Value="false" />
+                        <Var Name="IsAffectedByDecal" Value="false" />
+                        <Var Name="CallbackFunc" Value="" />
+                        <Var Name="ConnectedProps" Value="" />
+                        <Var Name="ConnectionStateChangeCallback" Value="" />
+                        <Var Name="FullGameSave" Value="false" />
+                        <Var Name="PlayerLookAtCallback" Value="" />
+                        <Var Name="PlayerLookAtCallbackAutoRemove" Value="false" />
+                        <Var Name="PlayerInteractCallback" Value="" />
+                        <Var Name="PlayerInteractCallbackAutoRemove" Value="false" />
+                        <Var Name="Lit" Value="false" />
+                        <Var Name="ConnectedLight" Value="" />
+                        <Var Name="ConnectionLightAmount" Value="1" />
+                        <Var Name="ConnectionLightUseOnColor" Value="true" />
+                        <Var Name="ConnectionLightUseSpec" Value="false" />
+                    </UserVariables>
+                </Entity>
+                <Area Active="false" AreaType="Script" Group="0" ID="4937" Mesh="" Name="TeleportArea_save_1_bonfire" Rotation="0 0 0" Scale="1.25 0.5 1.25" Tag="" WorldPos="-1.42489 500.252 1.26624">
+                    <UserVariables>
+                        <Var Name="PlayerLookAtCallback" Value="" />
+                        <Var Name="PlayerLookAtCallbackAutoRemove" Value="true" />
+                        <Var Name="PlayerInteractCallback" Value="FastTravel" />
+                        <Var Name="PlayerInteractCallbackAutoRemove" Value="false" />
+                        <Var Name="ItemInteraction" Value="false" />
+                        <Var Name="MaxFocusDistance" Value="-1" />
+                    </UserVariables>
+                </Area>
+                <Area Active="false" AreaType="Sign" Group="0" ID="6889" Mesh="" Name="TeleportArea_save_6_bonfire_sign" Rotation="0 0 0" Scale="1 1 1" Tag="" WorldPos="-0.607245 500.494 -1.59197">
+                    <UserVariables>
+                        <Var Name="TextCat" Value="Levels" />
+                        <Var Name="TextEntry" Value="Bonfire_Mine" />
+                    </UserVariables>
+                </Area>
+                <Area Active="false" AreaType="Script" Group="0" ID="6890" Mesh="" Name="TeleportArea_save_7_bonfire" Rotation="0 0 0" Scale="1.25 0.5 1.25" Tag="" WorldPos="-1.66915 500.252 -0.360665">
+                    <UserVariables>
+                        <Var Name="PlayerLookAtCallback" Value="" />
+                        <Var Name="PlayerLookAtCallbackAutoRemove" Value="true" />
+                        <Var Name="PlayerInteractCallback" Value="FastTravel" />
+                        <Var Name="PlayerInteractCallbackAutoRemove" Value="false" />
+                        <Var Name="ItemInteraction" Value="false" />
+                        <Var Name="MaxFocusDistance" Value="-1" />
+                    </UserVariables>
+                </Area>
+                <Area Active="false" AreaType="Sign" Group="0" ID="4933" Mesh="" Name="TeleportArea_save_1_bonfire_sign" Rotation="0 0 0" Scale="1 1 1" Tag="" WorldPos="-1.42489 500.494 1.26624">
+                    <UserVariables>
+                        <Var Name="TextCat" Value="Levels" />
+                        <Var Name="TextEntry" Value="Bonfire_Meadow" />
+                    </UserVariables>
+                </Area>
+                <Area Active="false" AreaType="Sign" Group="0" ID="6892" Mesh="" Name="TeleportArea_save_7_bonfire_sign" Rotation="0 0 0" Scale="1 1 1" Tag="" WorldPos="-1.66915 500.494 -0.360665">
+                    <UserVariables>
+                        <Var Name="TextCat" Value="Levels" />
+                        <Var Name="TextEntry" Value="Bonfire_Silo" />
+                    </UserVariables>
+                </Area>
+                <BoxLight Active="true" BlendFunc="0" CastShadows="false" DiffuseColor="0.519531 0.292236 0.292236 1" FalloffMap="" FlickerActive="false" FlickerFade="false" FlickerOffColor="0 0 0 1" FlickerOffFadeMaxLength="0" FlickerOffFadeMinLength="0" FlickerOffMaxLength="0" FlickerOffMinLength="0" FlickerOffPS="" FlickerOffRadius="0" FlickerOffSound="" FlickerOnFadeMaxLength="0" FlickerOnFadeMinLength="0" FlickerOnMaxLength="0" FlickerOnMinLength="0" FlickerOnPS="" FlickerOnSound="" Gobo="" GoboAnimFrameTime="0" GoboAnimMode="None" Group="0" ID="4935" Name="BoxLight_1" Radius="1" Rotation="0 0 0" Scale="10 10 10" ShadowResolution="High" ShadowsAffectDynamic="true" ShadowsAffectStatic="true" Size="10 10 10" Tag="" WorldPos="0 502.25 0" />
+                <Sound Active="true" Group="0" ID="4934" MaxDistance="5" MinDistance="1" Name="Sound_6" Rotation="0 0 0" Scale="1 1 1" SoundEntityFile="../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../EDIT/doomnesia/sounds/blackbox_loop.snt" Tag="" UseDefault="true" Volume="1" WorldPos="0 502.5 -0.75" />
+            </Entities>
+            <Misc>
+                <Compound Active="true" Group="0" ID="6853" Name="Compound_1" Rotation="3.14159 -4.44253e-006 3.14159" Scale="1 1 1" Tag="" WorldPos="1.73597 503 1.4048">
+                    <Component ID="6850" />
+                    <Component ID="6851" />
+                    <Component ID="6852" />
+                </Compound>
+            </Misc>
+            <StaticObjectCombos />
+        </MapContents>
+    </MapData>
+</Level>

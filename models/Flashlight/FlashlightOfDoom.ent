@@ -1,0 +1,29 @@
+<Entity>
+    <EditorSession>
+        <Performance CamClipPlanes="0.05 1000" LightsActive="true" PSActive="true" ShowFog="true" ShowSkybox="true" WorldReflection="true" />
+        <ViewportConfig BGColor="0.2 0.2 0.2 1" GAmbientLight="true" GPointLight="true" GridSnap="false" GridSnapSeparation="0.25" SelectedViewport="3" UsingEnlargedViewport="true">
+            <Viewport CameraPosition="0 0 180" CameraTarget="0 0 0" CameraZoom="0" GridHeight="0" GridPlane="2" Preset="0" RenderMode="1" ShowAxes="true" ShowGrid="true" UsingLTCam="false" />
+            <Viewport CameraPosition="180 0 0" CameraTarget="0 0 0" CameraZoom="0" GridHeight="0" GridPlane="0" Preset="1" RenderMode="1" ShowAxes="true" ShowGrid="true" UsingLTCam="false" />
+            <Viewport CameraPosition="0 180 0" CameraTarget="0 0 0" CameraZoom="0" GridHeight="0" GridPlane="1" Preset="2" RenderMode="1" ShowAxes="true" ShowGrid="true" UsingLTCam="false" />
+            <Viewport CameraPosition="0.255953 0.403761 0.641303" CameraTarget="0.484699 -0.00474733 -0.255987" CameraZoom="3.9" GridHeight="0" GridPlane="1" Preset="3" RenderMode="0" ShowAxes="true" ShowGrid="true" UsingLTCam="false" />
+        </ViewportConfig>
+    </EditorSession>
+    <ModelData>
+        <Entities>
+            <SpotLight Active="true" Aspect="1" CastShadows="true" DiffuseColor="0 0 0 1" FOV="1.13446" FalloffMap="" FlickerActive="false" FlickerFade="false" FlickerOffColor="0.753906 0.519783 0.188477 1" FlickerOffFadeMaxLength="0" FlickerOffFadeMinLength="0" FlickerOffMaxLength="0.001" FlickerOffMinLength="0.001" FlickerOffPS="ps_chemical_blast_Fast_9.ps" FlickerOffRadius="0" FlickerOffSound="" FlickerOnFadeMaxLength="0" FlickerOnFadeMinLength="0" FlickerOnMaxLength="0.001" FlickerOnMinLength="0.001" FlickerOnPS="ps_extract_oven_smoke_Shorter_7.ps" FlickerOnSound="" Gobo="" GoboAnimFrameTime="0" GoboAnimMode="None" ID="4" Name="SpotLight_Gun" NearClipPlane="0.1" Radius="20" Rotation="-0.134318 -1.5708 0" Scale="1 1 1" ShadowResolution="High" ShadowsAffectDynamic="true" ShadowsAffectStatic="true" SpotFalloffMap="" Tag="" WorldPos="0.186 0.073 0" />
+            <SpotLight Active="true" Aspect="1" CastShadows="true" DiffuseColor="0 0 0 1" FOV="1.13446" FalloffMap="" FlickerActive="false" FlickerFade="false" FlickerOffColor="0.753906 0.519783 0.188477 1" FlickerOffFadeMaxLength="0" FlickerOffFadeMinLength="0" FlickerOffMaxLength="0.001" FlickerOffMinLength="0.001" FlickerOffPS="ps_chemical_blast_Fast_9.ps" FlickerOffRadius="0" FlickerOffSound="" FlickerOnFadeMaxLength="0" FlickerOnFadeMinLength="0" FlickerOnMaxLength="0.001" FlickerOnMinLength="0.001" FlickerOnPS="ps_extract_oven_smoke_Shorter_7.ps" FlickerOnSound="" Gobo="" GoboAnimFrameTime="0" GoboAnimMode="None" ID="5" Name="SpotLight_Gun_Running" NearClipPlane="0.1" Radius="20" Rotation="-0.134318 -1.5708 0" Scale="1 1 1" ShadowResolution="High" ShadowsAffectDynamic="true" ShadowsAffectStatic="true" SpotFalloffMap="" Tag="" WorldPos="0.848931 -0.100998 -0.347003" />
+        </Entities>
+        <Mesh Filename="entities/a_quartz/gun_steampunk_batuhan13/gun_steampunk.dae">
+            <SubMesh Active="true" ID="0" Material="" Name="CircleFBXASC046005" Rotation="0 -1.5708 0" Scale="0.5 0.4 0.3" SubMeshID="0" Tag="" WorldPos="0.0600463 0.0174923 0.0326444" />
+            <SubMesh Active="true" ID="1" Material="" Name="CircleFBXASC046001" Rotation="3.14159 -1.5708 -3.14159" Scale="0.4 0.4 0.4" SubMeshID="1" Tag="" WorldPos="0.0487699 0.0247253 0.0326444" />
+            <SubMesh Active="true" ID="2" Material="" Name="CircleFBXASC046002" Rotation="3.14159 -1.5708 -3.14159" Scale="0.4 0.4 0.4" SubMeshID="2" Tag="" WorldPos="0.0487699 0.0247253 0.0326444" />
+            <SubMesh Active="true" ID="3" Material="" Name="CircleFBXASC046003" Rotation="3.14159 -1.5708 -3.14159" Scale="0.4 0.4 0.4" SubMeshID="3" Tag="" WorldPos="0.0487699 0.0247253 0.0326444" />
+        </Mesh>
+        <Bones />
+        <Shapes />
+        <Bodies />
+        <Joints />
+        <Animations />
+    </ModelData>
+    <UserDefinedVariables EntitySubType="" EntityType="HandObject" />
+</Entity>

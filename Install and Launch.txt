@@ -1,0 +1,29 @@
+------ To install the mod:
+
+- Copy the quartz_and_cordite folder
+to your Main Amnesia/redist folder
+(where Amnesia.exe is)
+
+- If you want to try the 64 bit version
+due to crashes or faster loading times,
+download the Amnesia64 addon, and put the
+exe filesunder the main/redist folder also.
+(installation instructions for addon included)
+
+------- To play:
+
+- Go inside main-redist/quartz_and_cordite folder
+- Click on the Quartz and Cordite.bat
+
+If you want to play 64bit or NoSteam:
+- Click on the other respective bat files.
+- There is 64 bit support for steam and NoSteam as well.
+
+NOTE:
+- The 64 bit versions will not work without
+the downloaded and installed addon from the
+moddb page.
+- THERE IS NO REASON normally to use the 64 bit exe,
+unless you're facing issues. The mod should be
+able to run perfectly on vanilla. 
+The option is there as a failsafe, that is.

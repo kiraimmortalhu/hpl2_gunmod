@@ -1,0 +1,35 @@
+<Level>
+    <EditorSession>
+        <Performance CamClipPlanes="0.05 1000" LightsActive="true" PSActive="true" ShowFog="true" ShowSkybox="true" WorldReflection="true" />
+        <ViewportConfig BGColor="0.2 0.2 0.2 1" GAmbientLight="false" GPointLight="false" GridSnap="true" GridSnapSeparation="0.25" SelectedViewport="3" UsingEnlargedViewport="true">
+            <Viewport CameraPosition="0 0 180" CameraTarget="0 0 0" CameraZoom="0" GridHeight="0" GridPlane="2" Preset="0" RenderMode="1" ShowAxes="true" ShowGrid="true" UsingLTCam="true" />
+            <Viewport CameraPosition="180 0 0" CameraTarget="0 0 0" CameraZoom="0" GridHeight="0" GridPlane="0" Preset="1" RenderMode="1" ShowAxes="true" ShowGrid="true" UsingLTCam="true" />
+            <Viewport CameraPosition="0 180 0" CameraTarget="0 0 0" CameraZoom="0" GridHeight="0" GridPlane="1" Preset="2" RenderMode="1" ShowAxes="true" ShowGrid="true" UsingLTCam="true" />
+            <Viewport CameraPosition="1.29413 8.14511 17.7676" CameraTarget="3.71737 2.73935e-007 -14.6532" CameraZoom="0.4" GridHeight="0" GridPlane="1" Preset="3" RenderMode="0" ShowAxes="true" ShowGrid="true" UsingLTCam="true" />
+        </ViewportConfig>
+        <Groups>
+            <Group ID="0" Name="None" Visible="true" />
+        </Groups>
+    </EditorSession>
+    <MapData FogActive="false" FogColor="1 1 1 1" FogCulling="true" FogEnd="20" FogFalloffExp="1" FogStart="0" GlobalDecalMaxTris="300" Name="" SkyBoxActive="false" SkyBoxColor="1 1 1 1" SkyBoxTexture="../../../">
+        <MapContents>
+            <FileIndex_StaticObjects NumOfFiles="0" />
+            <FileIndex_Entities NumOfFiles="0" />
+            <FileIndex_Decals NumOfFiles="0" />
+            <StaticObjects />
+            <Primitives>
+                <Plane Active="true" AlignToWorldCoords="false" CastShadows="false" Collides="true" Corner1UV="0 0.55" Corner2UV="0 0.01" Corner3UV="0.96 0.01" Corner4UV="0.96 0.55" EndCorner="16 0 9" Group="0" ID="1" Material="D:/Program Files (x86)/Amnesia Modding/Wiederkunft/main_menu/moon_menu_tex.mat" Name="Plane" Rotation="1.57079 0 0" Scale="1 1 1" StartCorner="0 0 0" Tag="" TextureAngle="0" TileAmount="0.06 1 0.06" TileOffset="0 0 0.01" WorldPos="-7.087 10.77 -2.7" />
+                <Plane Active="true" AlignToWorldCoords="false" CastShadows="false" Collides="true" Corner1UV="0 22.5" Corner2UV="0 0" Corner3UV="18.75 0" Corner4UV="18.75 22.5" EndCorner="18.75 0 22.5" Group="0" ID="2" Material="E:/Program Files (x86)/Steam/SteamApps/common/Amnesia The Dark Descent/static_objects/technical/plane_black/plane_black.mat" Name="Plane_1" Rotation="0 0 0" Scale="1 1 1" StartCorner="0 0 0" Tag="" TextureAngle="0" TileAmount="1 1 1" TileOffset="0 0 0" WorldPos="-7 0 -0.622688" />
+            </Primitives>
+            <Decals />
+            <Entities>
+                <Area Active="true" AreaType="PlayerStart" Group="0" ID="3" Mesh="" Name="CameraPos" Rotation="-2.6226e-006 -9.03209e-006 2.6226e-006" Scale="1 1 1" Tag="" WorldPos="1 6.25 3.75">
+                    <UserVariables />
+                </Area>
+                <BoxLight Active="true" BlendFunc="0" CastShadows="false" DiffuseColor="0.5625 0.5625 0.5625 1" FalloffMap="" FlickerActive="false" FlickerFade="false" FlickerOffColor="0 0 0 1" FlickerOffFadeMaxLength="0" FlickerOffFadeMinLength="0" FlickerOffMaxLength="0" FlickerOffMinLength="0" FlickerOffPS="" FlickerOffRadius="0" FlickerOffSound="" FlickerOnFadeMaxLength="0" FlickerOnFadeMinLength="0" FlickerOnMaxLength="0" FlickerOnMinLength="0" FlickerOnPS="" FlickerOnSound="" Gobo="" GoboAnimFrameTime="0" GoboAnimMode="None" Group="0" ID="4" Name="BoxLight_1" Radius="1" Rotation="0 0 0" Scale="50 50 50" ShadowResolution="High" ShadowsAffectDynamic="true" ShadowsAffectStatic="true" Size="50 50 50" Tag="" WorldPos="0.75 7.5 12.75" />
+            </Entities>
+            <Misc />
+            <StaticObjectCombos />
+        </MapContents>
+    </MapData>
+</Level>

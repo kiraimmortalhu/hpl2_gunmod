@@ -1,0 +1,12 @@
+<SOUNDENTITY>
+  <SOUNDS>
+  	<Main>
+  		<Sound File="wraith_idle_twitch1.ogg" />
+  		<Sound File="wraith_idle_twitch2.ogg" />
+		<Sound File="wraith_idle_twitch3.ogg" />
+		<Sound File="wraith_idle_twitch4.ogg" />
+
+  	</Main>
+  </SOUNDS>
+  <PROPERTIES Volume="0.4" MinDistance="0.2" MaxDistance="8" Random="0.3" Interval="2" FadeEnd="False" FadeStart="False" Stream="false" Loop="false" Use3D="True" Blockable="True" BlockVolumeMul="0.7" Priority="1" />
+</SOUNDENTITY>

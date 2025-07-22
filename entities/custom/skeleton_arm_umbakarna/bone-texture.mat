@@ -1,0 +1,8 @@
+<Material>
+    <Main BlendMode="Add" DepthTest="true" PhysicsMaterial="Wood_Heavy" Type="soliddiffuse" UseAlpha="false" />
+    <TextureUnits>
+        <Diffuse AnimFrameTime="0" AnimMode="None" Compress="false" File="bone-texture.png" MipMaps="true" Type="2D" Wrap="Repeat" />
+        <NMap AnimFrameTime="0" AnimMode="None" Compress="false" File="bone-texture_Normal.png" MipMaps="true" Type="2D" Wrap="Repeat" />
+        <Specular AnimFrameTime="0" AnimMode="None" Compress="false" File="bone-texture_spec.png" MipMaps="true" Type="2D" Wrap="Repeat" />       
+    </TextureUnits>   
+</Material>

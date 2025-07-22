@@ -1,0 +1,9 @@
+<SOUNDENTITY>
+  <SOUNDS>
+  	<Main>
+  		<Sound File="wraith_distant1.ogg" />
+      <Sound File="wraith_distant2.ogg" />
+  	</Main>
+  </SOUNDS>
+  <PROPERTIES Volume="1" MinDistance="2000" MaxDistance="2000" Random="1" Interval="0" FadeEnd="False" FadeStart="False" Stream="False" Loop="false" Use3D="true" Blockable="False" BlockVolumeMul="0.5" Priority="0" />
+</SOUNDENTITY>

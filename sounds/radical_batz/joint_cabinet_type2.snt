@@ -1,0 +1,8 @@
+<SOUNDENTITY>
+  <SOUNDS>
+    <Main>
+      <Sound File="joint_cabinet_type2_move" />
+    </Main>
+  </SOUNDS>
+  <PROPERTIES FadeStart="False" FadeEnd="False" Loop="True" Use3D="True" Stream="False" Blockable="False" Volume="0.2" MinDistance="1" MaxDistance="10" BlockVolumeMul="0.6" Random="1" Interval="0" Priority="0" />
+</SOUNDENTITY>

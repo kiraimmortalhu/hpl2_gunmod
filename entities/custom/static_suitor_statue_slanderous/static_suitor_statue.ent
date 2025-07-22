@@ -1,0 +1,110 @@
+<Entity>
+    <EditorSession>
+        <Performance CamClipPlanes="0.05 1000" LightsActive="true" PSActive="true" ShowFog="true" ShowSkybox="true" WorldReflection="true" />
+        <ViewportConfig BGColor="0.2 0.2 0.2 1" GAmbientLight="false" GPointLight="true" GridSnap="false" GridSnapSeparation="0.25" SelectedViewport="3" UsingEnlargedViewport="true">
+            <Viewport CameraPosition="-0.590569 0 180" CameraTarget="-0.590569 0 0" CameraZoom="0" GridHeight="0.0048742" GridPlane="2" Preset="0" RenderMode="1" ShowAxes="true" ShowGrid="true" UsingLTCam="false" />
+            <Viewport CameraPosition="180 0 0.0048742" CameraTarget="0 0 0.0048742" CameraZoom="0" GridHeight="-0.590569" GridPlane="0" Preset="1" RenderMode="1" ShowAxes="true" ShowGrid="true" UsingLTCam="false" />
+            <Viewport CameraPosition="0 181.72 0" CameraTarget="0 1.71993 0" CameraZoom="0" GridHeight="1.71993" GridPlane="1" Preset="2" RenderMode="1" ShowAxes="true" ShowGrid="true" UsingLTCam="false" />
+            <Viewport CameraPosition="-0.653019 1.57329 2.6911" CameraTarget="-0.590569 1.71993 0.0048742" CameraZoom="2.92213" GridHeight="1.71993" GridPlane="1" Preset="3" RenderMode="0" ShowAxes="true" ShowGrid="true" UsingLTCam="false" />
+        </ViewportConfig>
+    </EditorSession>
+    <ModelData>
+        <Entities />
+        <Mesh Filename="EDIT/quartz_and_cordite/entities/custom/static_suitor_statue_slanderous/static_suitor_statue.dae">
+            <SubMesh Active="true" ID="76" Material="" Name="Suitor" Rotation="0 0 0" Scale="1 1 1" SubMeshID="0" Tag="" WorldPos="0 0 0" />
+        </Mesh>
+        <Bones>
+            <Bone ID="77" Name="servant_grunt_A_CenterRoot" />
+            <Bone ID="78" Name="servant_grunt_A_CenterSpine" />
+            <Bone ID="79" Name="servant_grunt_A_CenterNeck" />
+            <Bone ID="80" Name="servant_grunt_A_CenterHead" />
+            <Bone ID="81" Name="servant_grunt_A_joint21" />
+            <Bone ID="82" Name="servant_grunt_A_RightCollar" />
+            <Bone ID="83" Name="servant_grunt_A_RightShoulder" />
+            <Bone ID="84" Name="servant_grunt_A_RightElbow" />
+            <Bone ID="85" Name="servant_grunt_A_joint23" />
+            <Bone ID="86" Name="servant_grunt_A_RightHand" />
+            <Bone ID="87" Name="servant_grunt_A_RightHand_servant_grunt_A_RightThumb" />
+            <Bone ID="88" Name="servant_grunt_A_RightHand_servant_grunt_A_RightThumb_servant_grunt_A_RightThumb" />
+            <Bone ID="89" Name="servant_grunt_A_RightIndexFinger01" />
+            <Bone ID="90" Name="servant_grunt_A_RightIndexFinger02" />
+            <Bone ID="91" Name="servant_grunt_A_RightIndexFinger03" />
+            <Bone ID="92" Name="servant_grunt_A_RightPinkyFinger01" />
+            <Bone ID="93" Name="servant_grunt_A_RightPinkyFinger02" />
+            <Bone ID="94" Name="servant_grunt_A_RightPinkyFinger03" />
+            <Bone ID="95" Name="servant_grunt_A_LeftCollar" />
+            <Bone ID="96" Name="servant_grunt_A_LeftShoulder" />
+            <Bone ID="97" Name="servant_grunt_A_LeftElbow" />
+            <Bone ID="98" Name="servant_grunt_A_joint22" />
+            <Bone ID="99" Name="servant_grunt_A_LeftHand" />
+            <Bone ID="100" Name="servant_grunt_A_LeftHandEnd" />
+            <Bone ID="101" Name="servant_grunt_A_LeftHip" />
+            <Bone ID="102" Name="servant_grunt_A_joint10" />
+            <Bone ID="103" Name="servant_grunt_A_joint11" />
+            <Bone ID="104" Name="servant_grunt_A_joint26" />
+            <Bone ID="105" Name="servant_grunt_A_joint27" />
+            <Bone ID="106" Name="servant_grunt_A_joint28" />
+            <Bone ID="107" Name="servant_grunt_A_RightHip" />
+            <Bone ID="108" Name="servant_grunt_A_joint5" />
+            <Bone ID="109" Name="servant_grunt_A_joint6" />
+            <Bone ID="110" Name="servant_grunt_A_joint7" />
+            <Bone ID="111" Name="servant_grunt_A_joint8" />
+            <Bone ID="112" Name="servant_grunt_A_joint25" />
+            <Bone ID="113" Name="Suitor" />
+        </Bones>
+        <Shapes>
+            <BodyShape Active="true" ID="1" Name="Shape_1" RelativeRotation="0 -0 0" RelativeScale="0.5 2 0.3" RelativeTranslation="-0.003558 0.498333 -0.00444743" Rotation="0 0 0" Scale="0.45 2.24 0.375699" ShapeType="Box" Tag="" WorldPos="0.00191629 1.21543 0.0287404" />
+            <BodyShape Active="true" ID="2" Name="Shape_2" RelativeRotation="0 -0 0" RelativeScale="0.67 0.08 0.58" RelativeTranslation="0.003558 -0.498333 0.00444743" Rotation="0 0 0" Scale="0.603 0.0896 0.726352" ShapeType="Box" Tag="" WorldPos="0.00832069 0.0991632 0.0398797" />
+            <BodyShape Active="true" ID="115" Name="Shape_3" RelativeRotation="0 -0 3.92921e-008" RelativeScale="1 1 1" RelativeTranslation="-5.19642e-009 -4.3938e-007 2.88516e-009" Rotation="0 -0 -0.360847" Scale="1 0.15 0.222088" ShapeType="Box" Tag="" WorldPos="0.598908 1.71993 0.0048742" />
+            <BodyShape Active="true" ID="119" Name="Shape_4" RelativeRotation="7.83294e-012 -6.76264e-010 -1.22028e-007" RelativeScale="1 1 1" RelativeTranslation="-1.84026e-008 4.28315e-007 3.44821e-009" Rotation="-3.13764 0.0041626 -2.74257" Scale="1 0.15 0.222088" ShapeType="Box" Tag="" WorldPos="-0.63518 1.70008 -0.0139612" />
+        </Shapes>
+        <Bodies>
+            <Body Active="true" AngularDamping="0" BlocksSound="false" BuoyancyDensityMul="1" CanAttachCharacter="true" CollideCharacter="true" CollideNonCharacter="true" ContinuousCollision="true" HasGravity="true" ID="3" LinearDamping="0" Mass="0" Material="Rock" MaxAngularSpeed="0" MaxLinearSpeed="0" Name="Body" PushedByCharacterGravity="true" Rotation="0 0 0" Scale="0.9 1.12 1.25233" Tag="" UseSurfaceEffects="true" Volatile="false" WorldPos="0.00511849 0.657297 0.0343101">
+                <Shape ID="1" />
+                <Shape ID="2" />
+            </Body>
+            <Body Active="true" AngularDamping="0" BlocksSound="false" BuoyancyDensityMul="1" CanAttachCharacter="true" CollideCharacter="true" CollideNonCharacter="true" ContinuousCollision="true" HasGravity="true" ID="116" LinearDamping="0" Mass="0" Material="Default" MaxAngularSpeed="0" MaxLinearSpeed="0" Name="Body_1" PushedByCharacterGravity="true" Rotation="0 0 -0.360847" Scale="1 0.15 0.222088" Tag="" UseSurfaceEffects="true" Volatile="false" WorldPos="0.598908 1.71993 0.0048742">
+                <Shape ID="115" />
+            </Body>
+            <Body Active="true" AngularDamping="0" BlocksSound="false" BuoyancyDensityMul="1" CanAttachCharacter="true" CollideCharacter="true" CollideNonCharacter="true" ContinuousCollision="true" HasGravity="true" ID="120" LinearDamping="0" Mass="0" Material="Default" MaxAngularSpeed="0" MaxLinearSpeed="0" Name="Body_2" PushedByCharacterGravity="true" Rotation="-3.13764 0.0041626 -2.74257" Scale="1 0.15 0.222088" Tag="" UseSurfaceEffects="true" Volatile="false" WorldPos="-0.63518 1.70008 -0.0139612">
+                <Shape ID="119" />
+            </Body>
+        </Bodies>
+        <Joints />
+        <Animations />
+    </ModelData>
+    <UserDefinedVariables EntitySubType="Static" EntityType="Object">
+        <Var Name="Health" Value="100" />
+        <Var Name="Toughness" Value="0" />
+        <Var Name="MaxFocusDistance" Value="0" />
+        <Var Name="MainPhysicsBody" Value="" />
+        <Var Name="ShowMesh" Value="true" />
+        <Var Name="DissolveOnDestruction" Value="false" />
+        <Var Name="DissolveTime" Value="1.0" />
+        <Var Name="EffectsOnSound" Value="" />
+        <Var Name="EffectsOffSound" Value="" />
+        <Var Name="EffectsOnTime" Value="1" />
+        <Var Name="EffectsOffTime" Value="1" />
+        <Var Name="EffectsOffLightColor" Value="0 0 0 0" />
+        <Var Name="EffectsOffLightRadius" Value="-1" />
+        <Var Name="ShowHints" Value="true" />
+        <Var Name="StaticMoveCheckCollision" Value="false" />
+        <Var Name="StaticMoveStartSound" Value="" />
+        <Var Name="StaticMoveStopSound" Value="" />
+        <Var Name="StaticMoveLoopSound" Value="" />
+        <Var Name="RandomizeAnimationStart" Value="true" />
+        <Var Name="BreakActive" Value="false" />
+        <Var Name="BreakDestroyJoints" Value="false" />
+        <Var Name="BreakMinEnergy" Value="100" />
+        <Var Name="BreakEntity" Value="" />
+        <Var Name="BreakEntityAlignBody" Value="" />
+        <Var Name="BreakSound" Value="" />
+        <Var Name="BreakParticleSystem" Value="" />
+        <Var Name="BreakImpulse" Value="4" />
+        <Var Name="HitDamageAmount" Value="5" />
+        <Var Name="HitDamageStrength" Value="1" />
+        <Var Name="MinHitDamageSpeed" Value="3" />
+        <Var Name="LifeLength" Value="0" />
+        <Var Name="IsFood" Value="false" />
+    </UserDefinedVariables>
+</Entity>

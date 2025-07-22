@@ -1,0 +1,20 @@
+<SOUNDENTITY>
+  <SOUNDS>
+    <Main>
+      <Sound File="engineer_tunnels_biped_walk_01" />
+      <Sound File="engineer_tunnels_biped_walk_02" />
+      <Sound File="engineer_tunnels_biped_walk_03" />
+      <Sound File="engineer_tunnels_biped_walk_04" />
+      <Sound File="engineer_tunnels_biped_walk_05" />
+      <Sound File="engineer_tunnels_biped_walk_06" />
+      <Sound File="engineer_tunnels_biped_walk_07" />
+      <Sound File="engineer_tunnels_biped_walk_08" />
+      <Sound File="engineer_tunnels_biped_walk_09" />
+      <Sound File="engineer_tunnels_biped_walk_10" />
+      <Sound File="engineer_tunnels_biped_walk_11" />
+      <Sound File="engineer_tunnels_biped_walk_12" />
+      <Sound File="engineer_tunnels_biped_walk_13" />
+    </Main>
+  </SOUNDS>
+  <PROPERTIES FadeStart="False" FadeEnd="False" Loop="False" Use3D="True" Stream="False" Blockable="True" Volume="0.35" MinDistance="4" MaxDistance="16" BlockVolumeMul="0.7" Random="1" Interval="0" Priority="1" />
+</SOUNDENTITY>

@@ -1,0 +1,8 @@
+<Material>
+    <Main DepthTest="True" PhysicsMaterial="Default" Type="SolidDiffuse" />
+    <TextureUnits>
+        <Diffuse AnimFrameTime="" AnimMode="" File="spiderusscarus.png" Mipmaps="true" Type="2D" Wrap="Repeat" />       
+        <NMap AnimFrameTime="" AnimMode="" File="spiderusscarus_Normal.png" Mipmaps="true" Type="2D" Wrap="Repeat" /> 
+        <Specular AnimFrameTime="" AnimMode="" File="spiderusscarus_spec.png" Mipmaps="true" Type="2D" Wrap="Repeat" />				
+    </TextureUnits>    
+</Material>

@@ -1,0 +1,74 @@
+<Entity>
+    <EditorSession>
+        <Performance CamClipPlanes="0.05 1000" LightsActive="true" PSActive="true" ShowFog="true" ShowSkybox="true" WorldReflection="true" />
+        <ViewportConfig BGColor="0.2 0.2 0.2 1" GAmbientLight="true" GPointLight="true" GridSnap="false" GridSnapSeparation="0.25" SelectedViewport="3" UsingEnlargedViewport="true">
+            <Viewport CameraPosition="-0.991146 6.40748 182.534" CameraTarget="-0.991146 6.40748 2.53407" CameraZoom="2.47694" GridHeight="2.53407" GridPlane="2" Preset="0" RenderMode="1" ShowAxes="true" ShowGrid="true" UsingLTCam="false" />
+            <Viewport CameraPosition="179.009 6.40748 2.53407" CameraTarget="-0.991146 6.40748 2.53407" CameraZoom="2.06969" GridHeight="-0.991146" GridPlane="0" Preset="1" RenderMode="1" ShowAxes="true" ShowGrid="true" UsingLTCam="false" />
+            <Viewport CameraPosition="-0.991146 186.408 2.53407" CameraTarget="-0.991146 6.40748 2.53407" CameraZoom="2.06969" GridHeight="6.40748" GridPlane="1" Preset="2" RenderMode="1" ShowAxes="true" ShowGrid="true" UsingLTCam="false" />
+            <Viewport CameraPosition="-0.142608 10.8692 -4.58699" CameraTarget="-1.83723 6.82216 5.24156" CameraZoom="1.53587" GridHeight="6.40748" GridPlane="1" Preset="3" RenderMode="0" ShowAxes="true" ShowGrid="true" UsingLTCam="false" />
+        </ViewportConfig>
+    </EditorSession>
+    <ModelData>
+        <Entities />
+        <Mesh Filename="temp/drozka2/drozka2.dae">
+            <SubMesh Active="true" ID="0" Material="" Name="LowPoly" Rotation="-1.5708 0 0" Scale="0.05 0.05 0.05" SubMeshID="0" Tag="" WorldPos="0 0 0" />
+        </Mesh>
+        <Bones />
+        <Shapes>
+            <BodyShape Active="true" ID="24" Name="Shape_1" RelativeRotation="0 -0 0" RelativeScale="4.20751 5.4 0.146351" RelativeTranslation="0.00434875 -0.142137 -2.23146" Rotation="0 0 0" Scale="4.20751 5.4 0.146351" ShapeType="Box" Tag="" WorldPos="-0.991146 5.1778 0.0188324" />
+            <BodyShape Active="true" ID="25" Name="Shape_2" RelativeRotation="0 -0 0" RelativeScale="4.20751 5.45 0.146351" RelativeTranslation="0.00434875 -0.106332 2.23146" Rotation="0 0 0" Scale="4.20751 5.45 0.146351" ShapeType="Box" Tag="" WorldPos="-0.991146 5.2136 4.48176" />
+            <BodyShape Active="true" ID="26" Name="Shape_3" RelativeRotation="8.74228e-08 -1.5702 8.74228e-08" RelativeScale="4.36546 2.8 0.146351" RelativeTranslation="-1.8981 1.08755 0.00454044" Rotation="8.74228e-08 -1.5702 8.74228e-08" Scale="4.36546 2.8 0.146351" ShapeType="Box" Tag="" WorldPos="-2.89359 6.40748 2.25484" />
+            <BodyShape Active="true" ID="27" Name="Shape_4" RelativeRotation="1.47746 -1.5708 1.50996e-07" RelativeScale="4.36546 1.85471 0.146351" RelativeTranslation="-0.902904 -0.193386 0.00454044" Rotation="1.47746 -1.5708 1.50996e-07" Scale="4.36546 1.85471 0.146351" ShapeType="Box" Tag="" WorldPos="-1.8984 5.12655 2.25484" />
+            <BodyShape Active="true" ID="28" Name="Shape_5" RelativeRotation="0.227747 -1.57045 1.50996e-07" RelativeScale="4.36546 2.43741 0.146351" RelativeTranslation="0.198058 -1.32077 0.00454044" Rotation="0.227747 -1.57045 1.50996e-07" Scale="4.36546 2.43741 0.146351" ShapeType="Box" Tag="" WorldPos="-0.797437 3.99917 2.25484" />
+            <BodyShape Active="true" ID="29" Name="Shape_6" RelativeRotation="nan -nan nan" RelativeScale="-nan -nan -nan" RelativeTranslation="0 8.96831e-44 0" Rotation="3.12767 -1.57045 -3.14159" Scale="4.36546 2.7077 0.146351" ShapeType="Box" Tag="" WorldPos="0.902602 4.20033 2.25484" />
+            <BodyShape Active="true" ID="30" Name="Shape_7" RelativeRotation="1.56802 -1.5708 1.50996e-07" RelativeScale="4.36546 1.94792 0.146351" RelativeTranslation="0.914155 -0.706103 0.00454044" Rotation="1.56802 -1.5708 1.50996e-07" Scale="4.36546 1.94792 0.146351" ShapeType="Box" Tag="" WorldPos="-0.0813394 4.61383 2.25484" />
+            <BodyShape Active="true" ID="31" Name="Shape_8" RelativeRotation="3.12767 -1.5708 -3.14159" RelativeScale="4.36546 2.7077 0.146351" RelativeTranslation="1.8981 1.32077 0.00454044" Rotation="3.12767 -1.5708 -3.14159" Scale="4.36546 2.7077 0.146351" ShapeType="Box" Tag="" WorldPos="0.902602 6.6407 2.25484" />
+        </Shapes>
+        <Bodies>
+            <Body Active="true" AngularDamping="0" BlocksSound="false" BuoyancyDensityMul="1" CanAttachCharacter="true" CollideCharacter="true" CollideNonCharacter="false" ContinuousCollision="true" HasGravity="true" ID="33" LinearDamping="0" Mass="0" Material="Default" MaxAngularSpeed="0" MaxLinearSpeed="0" Name="Body_1" PushedByCharacterGravity="false" Rotation="0 0 0" Scale="1 1 1" Tag="" UseSurfaceEffects="true" Volatile="false" WorldPos="-0.995495 5.31993 2.2503">
+                <Shape ID="27" />
+                <Shape ID="25" />
+                <Shape ID="31" />
+                <Shape ID="24" />
+                <Shape ID="30" />
+                <Shape ID="26" />
+                <Shape ID="28" />
+            </Body>
+        </Bodies>
+        <Joints />
+        <Animations />
+    </ModelData>
+    <UserDefinedVariables EntitySubType="" EntityType="MoveObject">
+        <Var Name="Health" Value="100" />
+        <Var Name="Toughness" Value="0" />
+        <Var Name="MaxFocusDistance" Value="0" />
+        <Var Name="MainPhysicsBody" Value="" />
+        <Var Name="ShowMesh" Value="true" />
+        <Var Name="DissolveOnDestruction" Value="false" />
+        <Var Name="DissolveTime" Value="1.0" />
+        <Var Name="EffectsOnSound" Value="" />
+        <Var Name="EffectsOffSound" Value="" />
+        <Var Name="EffectsOnTime" Value="1" />
+        <Var Name="EffectsOffTime" Value="1" />
+        <Var Name="EffectsOffLightColor" Value="0 0 0 0" />
+        <Var Name="EffectsOffLightRadius" Value="-1" />
+        <Var Name="ShowHints" Value="true" />
+        <Var Name="StaticMoveCheckCollision" Value="false" />
+        <Var Name="StaticMoveStartSound" Value="" />
+        <Var Name="StaticMoveStopSound" Value="" />
+        <Var Name="StaticMoveLoopSound" Value="" />
+        <Var Name="RandomizeAnimationStart" Value="true" />
+        <Var Name="MoveObjectType" Value="Linear" />
+        <Var Name="OpenAmount" Value="1.0" />
+        <Var Name="MoveAxis" Value="X" />
+        <Var Name="OpenAcc" Value="5.0" />
+        <Var Name="OpenSpeed" Value="1.0" />
+        <Var Name="CloseAcc" Value="5.0" />
+        <Var Name="CloseSpeed" Value="1.0" />
+        <Var Name="AutoMove" Value="false" />
+        <Var Name="AutoMoveStateGoal" Value="0.0" />
+        <Var Name="AutoMoveAcc" Value="9.0" />
+        <Var Name="AutoMoveSpeed" Value="5.0" />
+        <Var Name="AutoMoveSlowdownDist" Value="0.1" />
+    </UserDefinedVariables>
+</Entity>

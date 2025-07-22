@@ -1,0 +1,7 @@
+<Material>
+    <Main BlendMode="Add" DepthTest="true" PhysicsMaterial="Default" Type="soliddiffuse" UseAlpha="true" />
+    <TextureUnits>
+        <Diffuse AnimFrameTime="0" AnimMode="None" Compress="false" File="slime_greentexture.png" MipMaps="true" Type="Rect" Wrap="Repeat" />         
+        <Specular File="slime_greentexture_spec.png" Type="2D" Mipmaps="true" Wrap="Repeat" />		
+    </TextureUnits>   
+</Material>

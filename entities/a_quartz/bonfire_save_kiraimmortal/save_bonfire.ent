@@ -1,0 +1,95 @@
+<Entity>
+    <EditorSession>
+        <Performance CamClipPlanes="0.05 1000" LightsActive="true" PSActive="true" ShowFog="true" ShowSkybox="true" WorldReflection="true" />
+        <ViewportConfig BGColor="0.2 0.2 0.2 1" GAmbientLight="true" GPointLight="true" GridSnap="false" GridSnapSeparation="0.25" SelectedViewport="3" UsingEnlargedViewport="true">
+            <Viewport CameraPosition="0 0 100" CameraTarget="0 0 0" CameraZoom="0" GridHeight="0" GridPlane="2" Preset="0" RenderMode="1" ShowAxes="true" ShowGrid="true" UsingLTCam="true" />
+            <Viewport CameraPosition="100 0.028007 -0.007002" CameraTarget="0 0.028007 -0.007002" CameraZoom="0" GridHeight="0" GridPlane="0" Preset="1" RenderMode="1" ShowAxes="true" ShowGrid="true" UsingLTCam="true" />
+            <Viewport CameraPosition="0 100 0" CameraTarget="0 0 0" CameraZoom="0" GridHeight="0" GridPlane="1" Preset="2" RenderMode="1" ShowAxes="true" ShowGrid="true" UsingLTCam="true" />
+            <Viewport CameraPosition="0.398812 0.9371 0.569833" CameraTarget="0.0250623 0.359922 0.0208746" CameraZoom="4.04" GridHeight="0" GridPlane="1" Preset="3" RenderMode="0" ShowAxes="true" ShowGrid="true" UsingLTCam="true" />
+        </ViewportConfig>
+    </EditorSession>
+    <ModelData>
+        <Entities>
+            <ParticleSystem Active="true" Color="1 1 1 1" FadeAtDistance="false" File="ps_fire_candle_large_red.ps" ID="1" MaxFadeDistanceEnd="110" MaxFadeDistanceStart="100" MinFadeDistanceEnd="1" MinFadeDistanceStart="2" Name="ParticleSystem_1" Rotation="0 0 0" Scale="5 5 5" Tag="" WorldPos="-0.073594 0.368174 -0.021359" />
+            <PointLight Active="true" CastShadows="false" DiffuseColor="0.507 0.183625 0.109 0.7" FalloffMap="" FlickerActive="true" FlickerFade="true" FlickerOffColor="0.336 0.168 0.055 0.5" FlickerOffFadeMaxLength="2" FlickerOffFadeMinLength="0.1" FlickerOffMaxLength="0" FlickerOffMinLength="0" FlickerOffPS="" FlickerOffRadius="1.1" FlickerOffSound="" FlickerOnFadeMaxLength="2" FlickerOnFadeMinLength="0.1" FlickerOnMaxLength="0" FlickerOnMinLength="0" FlickerOnPS="" FlickerOnSound="" Gobo="" GoboAnimFrameTime="0" GoboAnimMode="None" ID="11" Name="PointLight_1" Radius="2.2" Rotation="0 0 0" Scale="1 1 1" ShadowResolution="High" ShadowsAffectDynamic="true" ShadowsAffectStatic="true" Tag="" WorldPos="0.00571051 0.561034 -0.001537" />
+            <Sound Active="true" ID="12" MaxDistance="7" MinDistance="2" Name="Sound_1" Rotation="0 0 0" Scale="1 1 1" SoundEntityFile="../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../general_fire_burning_low.snt" Tag="" UseDefault="true" Volume="0.1" WorldPos="-0.02814 0.506002 -0.047974" />
+            <Billboard Active="true" BillboardColor="0.871094 0.0714569 0.0714569 1" BillboardOffset="0" BillboardSize="1 1.5" BillboardType="Point" ConnectLight="PointLight_1" HaloSourceSize="0.5 0.6 0.5" ID="15" IsHalo="true" MaterialFile="billboards/bb_torch_static01.mat" Name="Billboard_1" Rotation="0 0 0" Tag="" WorldPos="-0.066572 0.477672 -0.038737" />
+            <ParticleSystem Active="true" Color="1 1 1 1" FadeAtDistance="false" File="ps_fire_candle_large_red.ps" ID="16" MaxFadeDistanceEnd="110" MaxFadeDistanceStart="100" MinFadeDistanceEnd="1" MinFadeDistanceStart="2" Name="ParticleSystem_2" Rotation="0 0 0" Scale="5 5 5" Tag="" WorldPos="0.00584165 0.244206 -0.104897" />
+            <ParticleSystem Active="true" Color="1 1 1 1" FadeAtDistance="false" File="ps_fire_candle_large_red.ps" ID="17" MaxFadeDistanceEnd="110" MaxFadeDistanceStart="100" MinFadeDistanceEnd="1" MinFadeDistanceStart="2" Name="ParticleSystem_3" Rotation="0 0 0" Scale="5 5 5" Tag="" WorldPos="-0.188437 0.198769 0.0158529" />
+            <ParticleSystem Active="true" Color="1 1 1 1" FadeAtDistance="false" File="ps_fire_candle_large_red.ps" ID="18" MaxFadeDistanceEnd="110" MaxFadeDistanceStart="100" MinFadeDistanceEnd="1" MinFadeDistanceStart="2" Name="ParticleSystem_4" Rotation="0 0 0" Scale="5 5 5" Tag="" WorldPos="-0.120401 0.274375 -0.021359" />
+            <ParticleSystem Active="true" Color="1 1 1 1" FadeAtDistance="false" File="ps_fire_candle_large_red.ps" ID="19" MaxFadeDistanceEnd="110" MaxFadeDistanceStart="100" MinFadeDistanceEnd="1" MinFadeDistanceStart="2" Name="ParticleSystem_5" Rotation="0 0 0" Scale="5 5 5" Tag="" WorldPos="-0.0606263 0.431164 -0.0829618" />
+            <ParticleSystem Active="true" Color="1 1 1 1" FadeAtDistance="false" File="ps_fire_candle_large_red.ps" ID="20" MaxFadeDistanceEnd="110" MaxFadeDistanceStart="100" MinFadeDistanceEnd="1" MinFadeDistanceStart="2" Name="ParticleSystem_6" Rotation="0 0 0" Scale="5 5 5" Tag="" WorldPos="-0.128643 0.344518 -0.0829618" />
+            <ParticleSystem Active="true" Color="1 1 1 1" FadeAtDistance="false" File="ps_fire_candle_large_red.ps" ID="21" MaxFadeDistanceEnd="110" MaxFadeDistanceStart="100" MinFadeDistanceEnd="1" MinFadeDistanceStart="2" Name="ParticleSystem_7" Rotation="0 0 0" Scale="5 5 5" Tag="" WorldPos="0.0251554 0.262162 -0.245633" />
+            <ParticleSystem Active="true" Color="1 1 1 1" FadeAtDistance="false" File="ps_fire_candle_large_red.ps" ID="22" MaxFadeDistanceEnd="110" MaxFadeDistanceStart="100" MinFadeDistanceEnd="1" MinFadeDistanceStart="2" Name="ParticleSystem_8" Rotation="0 0 0" Scale="5 5 5" Tag="" WorldPos="-0.0372709 0.127204 0.111877" />
+            <ParticleSystem Active="true" Color="1 1 1 1" FadeAtDistance="false" File="ps_fire_candle_large_red.ps" ID="23" MaxFadeDistanceEnd="110" MaxFadeDistanceStart="100" MinFadeDistanceEnd="1" MinFadeDistanceStart="2" Name="ParticleSystem_9" Rotation="0 0 0" Scale="5 5 5" Tag="" WorldPos="0.0311355 0.246801 0.0683898" />
+            <ParticleSystem Active="true" Color="1 1 1 1" FadeAtDistance="false" File="ps_fire_candle_large_red.ps" ID="24" MaxFadeDistanceEnd="110" MaxFadeDistanceStart="100" MinFadeDistanceEnd="1" MinFadeDistanceStart="2" Name="ParticleSystem_10" Rotation="0 0 0" Scale="5 5 5" Tag="" WorldPos="-0.116605 0.261172 0.137492" />
+            <ParticleSystem Active="true" Color="1 1 1 1" FadeAtDistance="false" File="ps_fire_candle_large_red.ps" ID="25" MaxFadeDistanceEnd="110" MaxFadeDistanceStart="100" MinFadeDistanceEnd="1" MinFadeDistanceStart="2" Name="ParticleSystem_11" Rotation="0 0 0" Scale="5 5 5" Tag="" WorldPos="-0.262997 0.124543 0.0995981" />
+            <ParticleSystem Active="true" Color="1 1 1 1" FadeAtDistance="false" File="ps_fire_candle_large_red.ps" ID="26" MaxFadeDistanceEnd="110" MaxFadeDistanceStart="100" MinFadeDistanceEnd="1" MinFadeDistanceStart="2" Name="ParticleSystem_12" Rotation="0 0 0" Scale="5 5 5" Tag="" WorldPos="-0.139701 0.139483 0.207556" />
+            <ParticleSystem Active="true" Color="1 1 1 1" FadeAtDistance="false" File="ps_fire_candle_large_red.ps" ID="27" MaxFadeDistanceEnd="110" MaxFadeDistanceStart="100" MinFadeDistanceEnd="1" MinFadeDistanceStart="2" Name="ParticleSystem_13" Rotation="0 0 0" Scale="5 5 5" Tag="" WorldPos="0.159198 0.265477 0.0683898" />
+            <ParticleSystem Active="true" Color="1 1 1 1" FadeAtDistance="false" File="ps_fire_candle_large_red.ps" ID="28" MaxFadeDistanceEnd="110" MaxFadeDistanceStart="100" MinFadeDistanceEnd="1" MinFadeDistanceStart="2" Name="ParticleSystem_14" Rotation="0 0 0" Scale="5 5 5" Tag="" WorldPos="0.197596 0.162761 -0.0702283" />
+        </Entities>
+        <Mesh Filename="entities/a_quartz/bonfire_save_kiraimmortal/bonfire_remastered.dae">
+            <SubMesh Active="true" ID="0" Material="" Name="bonfire_mesh" Rotation="0 0 0" Scale="1 1 1" SubMeshID="0" Tag="" WorldPos="0 0 0" />
+        </Mesh>
+        <Bones />
+        <Shapes>
+            <BodyShape Active="true" ID="3" Name="Shape_1" RelativeRotation="0 0.575959 0" RelativeScale="0.55 0.2 0.4" RelativeTranslation="-0.00564 -0.076421 -0.111364" Rotation="0 0.575959 0" Scale="0.55 0.2 0.4" ShapeType="Box" Tag="" WorldPos="-0.036647 0.1 -0.04259" />
+            <BodyShape Active="true" ID="4" Name="Shape_2" RelativeRotation="0 0.120431 0" RelativeScale="0.5 0.11 0.097783" RelativeTranslation="0.229811 -0.121421 -0.13673" Rotation="0 0.120431 0" Scale="0.5 0.11 0.097783" ShapeType="Box" Tag="" WorldPos="0.198804 0.055 -0.067956" />
+            <BodyShape Active="true" ID="5" Name="Shape_3" RelativeRotation="0.141961 0.136642 0.610216" RelativeScale="0.415 0.11 0.09" RelativeTranslation="-0.229811 -0.01943 0.0896815" Rotation="0.141961 0.136642 0.610216" Scale="0.415 0.11 0.09" ShapeType="Box" Tag="" WorldPos="-0.260818 0.156991 0.158456" />
+            <BodyShape Active="true" ID="6" Name="Shape_4" RelativeRotation="0 0.325561 0" RelativeScale="0.3 0.2 0.1" RelativeTranslation="0.05322 -0.076421 0.161227" Rotation="0 0.325561 0" Scale="0.3 0.2 0.1" ShapeType="Box" Tag="" WorldPos="0.022213 0.1 0.230002" />
+            <BodyShape Active="true" ID="8" Name="Shape_5" RelativeRotation="0 0.575959 0" RelativeScale="0.269414 0.2 0.2" RelativeTranslation="0.029583 0.121421 -0.161227" Rotation="0 0.575959 0" Scale="0.269414 0.2 0.2" ShapeType="Box" Tag="" WorldPos="-0.001424 0.297842 -0.092453" />
+        </Shapes>
+        <Bodies>
+            <Body Active="true" AngularDamping="0" BlocksSound="false" BuoyancyDensityMul="1" CanAttachCharacter="true" CollideCharacter="true" CollideNonCharacter="true" ContinuousCollision="true" HasGravity="true" ID="10" LinearDamping="0" Mass="0" Material="Wood" MaxAngularSpeed="0" MaxLinearSpeed="0" Name="Body" PushedByCharacterGravity="true" Rotation="0 0 0" Scale="1 1 1" Tag="" UseSurfaceEffects="true" Volatile="false" WorldPos="-0.031007 0.176421 0.0687745">
+                <Children>
+                    <Child ID="1" />
+                    <Child ID="11" />
+                    <Child ID="12" />
+                    <Child ID="16" />
+                    <Child ID="17" />
+                    <Child ID="18" />
+                    <Child ID="19" />
+                    <Child ID="20" />
+                    <Child ID="21" />
+                    <Child ID="22" />
+                    <Child ID="23" />
+                    <Child ID="24" />
+                    <Child ID="25" />
+                    <Child ID="26" />
+                    <Child ID="27" />
+                    <Child ID="28" />
+                </Children>
+                <Shape ID="4" />
+                <Shape ID="6" />
+                <Shape ID="8" />
+                <Shape ID="5" />
+                <Shape ID="3" />
+            </Body>
+        </Bodies>
+        <Joints />
+        <Animations />
+    </ModelData>
+    <UserDefinedVariables EntitySubType="" EntityType="Lamp">
+        <Var Name="Health" Value="100" />
+        <Var Name="Toughness" Value="0" />
+        <Var Name="MaxFocusDistance" Value="0" />
+        <Var Name="MainPhysicsBody" Value="" />
+        <Var Name="ShowMesh" Value="true" />
+        <Var Name="DissolveOnDestruction" Value="false" />
+        <Var Name="DissolveTime" Value="1.0" />
+        <Var Name="EffectsOnSound" Value="" />
+        <Var Name="EffectsOffSound" Value="" />
+        <Var Name="EffectsOnTime" Value="1" />
+        <Var Name="EffectsOffTime" Value="1" />
+        <Var Name="EffectsOffLightColor" Value="0 0 0 0" />
+        <Var Name="EffectsOffLightRadius" Value="-1" />
+        <Var Name="ShowHints" Value="true" />
+        <Var Name="StaticMoveCheckCollision" Value="false" />
+        <Var Name="StaticMoveStartSound" Value="" />
+        <Var Name="StaticMoveStopSound" Value="" />
+        <Var Name="StaticMoveLoopSound" Value="" />
+        <Var Name="RandomizeAnimationStart" Value="true" />
+        <Var Name="CanBeLitByPlayer" Value="false" />
+        <Var Name="CanBeGrabbed" Value="false" />
+    </UserDefinedVariables>
+</Entity>
