@@ -1,6 +1,5 @@
-<LANGUAGE>
-  <RESOURCES>
-  </RESOURCES>
+﻿<LANGUAGE>
+  <RESOURCES />
   <CATEGORY Name="Global">
     <Entry Name="Warning">Warning</Entry>
     <Entry Name="Yes">Yes</Entry>
@@ -12,7 +11,7 @@
   <CATEGORY Name="MainMenu">
     <Entry Name="Start Game">Start New Game</Entry>
     <Entry Name="Load Game">Load Game</Entry>
-    <Entry Name="Custom Map"></Entry>
+    <Entry Name="Custom Map">Custom Story</Entry>
     <Entry Name="Change Profile">Change Profile</Entry>
     <Entry Name="Exit">Exit</Entry>
     <Entry Name="Start a new game?">Start a new game?</Entry>
@@ -50,6 +49,18 @@
     <Entry Name="Chapter">Chapter</Entry>
     <Entry Name="Level">Level</Entry>
     <Entry Name="Save">Save</Entry>
+	
+	<Entry Name="HardMode">Hard mode</Entry>
+	<Entry Name="NormalMode">Normal</Entry>
+	
+	<Entry Name="HardModeDescription">Enemies will spot you more easily. Tinderboxes and oil are harder to come by. Autosave is disabled and saving your game costs tinderboxes. Losing your sanity will kill you.</Entry>
+	<Entry Name="NormalModeDescription">The way the game was designed to be played.</Entry>
+	<Entry Name="HardModeStartNewGame">Start a new game in hard mode?</Entry>
+
+	<Entry Name="HardModeSaveCost">Saving costs # Tinderboxes</Entry>
+	<Entry Name="HardModeTinderboxInInventory">you have # in your inventory</Entry>
+	<Entry Name="HardModeSavePopup">Saving will remove # tinderboxes from the inventory</Entry>
+	
   </CATEGORY>
   <CATEGORY Name="OptionsMenu">
     <Entry Name="Low">Low</Entry>
@@ -69,9 +80,12 @@
     <Entry Name="Resolution">Resolution</Entry>
     <Entry Name="ResolutionTip">Change screen resolution.</Entry>
     <Entry Name="FullScreen">FullScreen</Entry>
+    <Entry Name="FullScreenDesktop">Full Desktop on</Entry>
     <Entry Name="FullScreenTip">Toggle between full screen and windowed mode.</Entry>
     <Entry Name="VSync">Vertical Sync</Entry>
+    <Entry Name="AdaptiveVSync">Adaptive VSync</Entry>
     <Entry Name="VSyncTip">Synchronize vertical retrace. Might solve tearing in the image.</Entry>
+    <Entry Name="AdaptiveVSyncTip">Automatically disables Vertical Sync if the game runs slower than the update rate of the screen. Enable if the game is slow</Entry>
     <Entry Name="TexQuality">Texture Quality</Entry>
     <Entry Name="TexQualityTip">The resolution of the in-game textures.</Entry>
     <Entry Name="TexFilter">Texture Filter</Entry>
@@ -105,9 +119,9 @@
     <Entry Name="SmoothMouseTip">If the mouse movements should be smoothed.</Entry>
     <Entry Name="MouseSensitivity">Mouse Sensitivity</Entry>
     <Entry Name="MouseSensitivityTip">Set how sensitive the mouse movements should be.</Entry>
-    <Entry Name="InvertGamepadLook">Invert Gamepad Look</Entry>
+    <Entry Name="InvertGamepadLook">Invert Right Stick look</Entry>
     <Entry Name="InvertGamepadLookTip">Inverts the gamepad analog look Y-axis.</Entry>
-    <Entry Name="GamepadLookSensitivity">Gamepad Look Sensitivity</Entry>
+    <Entry Name="GamepadLookSensitivity">Stick look sensitivity</Entry>
     <Entry Name="GamepadLookSensitivityTip">Set how sensitive the gamepad analog look movements should be.</Entry>
     <Entry Name="Volume">Master Volume</Entry>
     <Entry Name="VolumeTip">Global sound volume</Entry>
@@ -157,6 +171,7 @@
     <Entry Name="NoGame">No game to load</Entry>
     <Entry Name="MissingGame">Save file is missing or corrupt</Entry>
     <Entry Name="LoadGameMessage">Load saved game?</Entry>
+    <Entry Name="SaveIcon">This game features an auto-save mechanism. As long as this icon appears, do not turn off the system.</Entry>
   </CATEGORY>
   <CATEGORY Name="KeyConfig">
     <Entry Name="KeyConfigTitle">Key Config</Entry>
@@ -171,8 +186,7 @@
     <Entry Name="LoadDefaultsMessage">Sure to load default keys?</Entry>
     <Entry Name="InvalidInputMessage">There are duplicate control definitions. Are you sure you want to keep them?</Entry>
   </CATEGORY>
-  <CATEGORY Name="StartUp">
-  </CATEGORY>
+  <CATEGORY Name="StartUp" />
   <CATEGORY Name="ButtonNames">
     <Entry Name="BackSpace">BackSpace</Entry>
     <Entry Name="Tab">Tab</Entry>
@@ -438,6 +452,32 @@
     <Entry Name="Button 9">Button RStick</Entry>
     <Entry Name="Button 10">Button x5</Entry>
     <Entry Name="Button 11">Button x6</Entry>
+    <!-- SDL 2 mapping names -->
+    <Entry Name="Axis LeftX.Negative">LStick Left</Entry>
+    <Entry Name="Axis LeftX.Positive">LStick Right</Entry>
+    <Entry Name="Axis LeftY.Negative">LStick Up</Entry>
+    <Entry Name="Axis LeftY.Positive">LStick Down</Entry>
+	<Entry Name="Axis RightTrigger.Positive">Button RT</Entry>
+	<Entry Name="Axis LeftTrigger.Positive">Button LT</Entry>
+    <Entry Name="Axis RightX.Negative">RStick Up</Entry>
+    <Entry Name="Axis RightX.Positive">RStick Down</Entry>
+    <Entry Name="Axis RightY.Negative">RStick Left</Entry>
+    <Entry Name="Axis RightY.Positive">RStick Right</Entry>
+	<Entry Name="Button DpadUp">DPad Up</Entry>
+	<Entry Name="Button DpadRight">DPad Right</Entry>
+    <Entry Name="Button DpadDown">DPad Down</Entry>
+    <Entry Name="Button DpadLeft">DPad Left</Entry>
+    <Entry Name="Button A">Button A</Entry>
+    <Entry Name="Button B">Button B</Entry>
+    <Entry Name="Button X">Button X</Entry>
+    <Entry Name="Button Y">Button Y</Entry>
+    <Entry Name="Button LeftShoulder">Button LB</Entry>
+    <Entry Name="Button RightShoulder">Button RB</Entry>
+	<Entry Name="Button Back">Back</Entry>
+	<Entry Name="Button Start">Start</Entry>
+    <Entry Name="Button LeftStick">Button LStick</Entry>
+    <Entry Name="Button RightStick">Button RStick</Entry>
+    <Entry Name="Button Guide">Guide</Entry>
   </CATEGORY>
   <CATEGORY Name="Actions">
     <Entry Name="Forward">Forward</Entry>
@@ -453,7 +493,7 @@
     <Entry Name="Attack">Throw</Entry>
     <Entry Name="Interact">Interact</Entry>
     <Entry Name="Rotate">Rotate</Entry>
-    <Entry Name="Lantern">Load Gun / Shoot</Entry>
+    <Entry Name="Lantern">Lantern</Entry>
     <Entry Name="Inventory">Inventory</Entry>
     <Entry Name="Journal">Journal</Entry>
     <Entry Name="QuestLog">Mementos</Entry>
@@ -469,12 +509,12 @@
     <Entry Name="LanternTooltip">Brings up or puts down the lantern.</Entry>
     <Entry Name="LeanLeftTooltip">Tilts head to left, useful to peek around corners.</Entry>
     <Entry Name="LeanRightTooltip">Tilts head to right, useful to peek around corners.</Entry>
-    <Entry Name="LeanTooltip">Tilts head to where the look control points, useful to peek around corners.</Entry>
+	<Entry Name="LeanTooltip">Tilts head to where the look control points, useful to peek around corners.</Entry>
     <Entry Name="LeftTooltip">Strafe left.</Entry>
     <Entry Name="QuestLogTooltip">Brings up the memento list. Useful to check when stuck.</Entry>
     <Entry Name="RecentTextTooltip">Brings up most recently read text (note or diary).</Entry>
     <Entry Name="RightTooltip">Strafe right.</Entry>
-    <Entry Name="RotateTooltip">Hold while moving the mouse to rotate the currently grabbed object.</Entry>
+    <Entry Name="RotateTooltip">Hold while moving the Right Stick to rotate the currently grabbed object.</Entry>
     <Entry Name="RunTooltip">Hold while using the movement to run.</Entry>
     <Entry Name="CrosshairToggle">CrosshairToggle</Entry>
     <Entry Name="CrosshairToggleTooltip">Toggle onscreen crosshair.</Entry>
@@ -486,31 +526,31 @@
     <Entry Name="UseItemDoesNotWork">Cannot use this item this way!</Entry>
     <Entry Name="UseItemHasNoObject">No object to use item on!</Entry>
     <Entry Name="Equipped:">Equipped:</Entry>
-    <Entry Name="ItemDesc_Lantern">Gun with a rotary cartridge carrier. Press $ButLanternto shoot.</Entry>
-    <Entry Name="ItemName_Lantern">Pistol</Entry>
+    <Entry Name="ItemDesc_Lantern">The lantern will light up dark places. When in game press $ButLantern to turn it on.</Entry>
+    <Entry Name="ItemName_Lantern">Lantern</Entry>
     <Entry Name="Thalers">Thaler:</Entry>
-    <Entry Name="Sanity">Third Eye status</Entry>
-    <Entry Name="SanityDesc0">Sight lost, eye fully closed. Reconnect to the Source to see once more..[br][br]Looking at writhing blood in concentrated amounts disrupts one's chakra flow directly. A mere human would collapse after a simple glance.[br][br]Even spritually trained hunters find a hard time standing in the presence of such abominable creatures.</Entry>
-    <Entry Name="SanityDesc1">The eye started closing, connection will be severed soon.[br][br]Looking at writhing blood in concentrated amounts disrupts one's chakra flow directly. A mere human would collapse after a simple glance.[br][br]Even spritually trained hunters find a hard time standing in the presence of such abominable creatures.</Entry>
-    <Entry Name="SanityDesc2">Degraded sync, still pretty clear sight.[br][br]Certain three eyed specialists go through intense spiritual training, that eventually leads to its awakening.</Entry>
-    <Entry Name="SanityDesc3">Fully open, consistent connection the otherworld.[br][br]Certain three eyed specialists go through intense spiritual training, that eventually leads to its awakening.</Entry>
+    <Entry Name="Sanity">Sanity</Entry>
+    <Entry Name="SanityDesc0">...</Entry>
+    <Entry Name="SanityDesc1">Head is pounding and hands are shaking.</Entry>
+    <Entry Name="SanityDesc2">A slight headache.</Entry>
+    <Entry Name="SanityDesc3">Crystal clear.</Entry>
     <Entry Name="Health">Health</Entry>
-    <Entry Name="HealthDesc0">Barely conscious.[br][br]A Hirudo hunter never really dies, only rises from its ashes again from the fire. Until the Blood flow dries up, such specialists can act as immortal demigods, watching over their mortal subjects. It would be hard to imagine for some, if all the rifts would close, they would return to simple human beings. Such is the price of their pride that must be swallowed.</Entry>
-    <Entry Name="HealthDesc1">Some wounds are bleeding quite badly.[br][br]A Hirudo hunter never really dies, only rises from its ashes again from the fire. Until the Blood flow dries up, such specialists can act as demigods, watching over their mortal subjects. It would be hard to imagine for some, if all the rifts would close, they would return to simple human beings. Such is the price of their pride, that must be swallowed.</Entry>
-    <Entry Name="HealthDesc2">Minor damage, easily healed.</Entry>
-    <Entry Name="HealthDesc3">Vitals are looking good.</Entry>
-    <Entry Name="LampOil">Mercury Bullets</Entry>
-    <Entry Name="LampOilDesc">Clip loaded into the pistol.[br][br]The bullets inside are filled with a mixture of cordite and quicksilver, highly effective against targets of monstrous origin.</Entry>
-    <Entry Name="ItemDesc_HealthPotion">Medical bracer of unknown origin, that only heavy-duty bodies, like that of monsters hunters can take.</Entry>
-    <Entry Name="ItemName_HealthPotion">Blood Injector</Entry>
-    <Entry Name="ItemDesc_SanityPotion">Its unsettling content will increase synchronization with the mind's eye.</Entry>
-    <Entry Name="ItemName_SanityPotion">Cerebral Fluid</Entry>
-    <Entry Name="ItemName_OilPotion">Bullet</Entry>
-    <Entry Name="ItemDesc_OilPotion">Bullet, filled with mercury.</Entry>
-    <Entry Name="ItemName_OilPotionLarge">Bullet Clip</Entry>
-    <Entry Name="ItemDesc_OilPotionLarge">Clip of bullets, each filled with mercury.</Entry>
+    <Entry Name="HealthDesc0">Barely conscious.</Entry>
+    <Entry Name="HealthDesc1">A wound is bleeding quite badly.</Entry>
+    <Entry Name="HealthDesc2">A few cuts and bruises.</Entry>
+    <Entry Name="HealthDesc3">All is good.</Entry>
+    <Entry Name="LampOil">Oil</Entry>
+    <Entry Name="LampOilDesc">Used to keep the lantern flame alive. When it runs out, the lantern can no longer be used.</Entry>
+    <Entry Name="ItemDesc_HealthPotion">A medical bracer to improve health and help heal wounds.</Entry>
+    <Entry Name="ItemName_HealthPotion">Laudanum</Entry>
+    <Entry Name="ItemDesc_SanityPotion">It will increase the sanity level.</Entry>
+    <Entry Name="ItemName_SanityPotion">Sanity Potion</Entry>
+    <Entry Name="ItemName_OilPotion">Oil</Entry>
+    <Entry Name="ItemDesc_OilPotion">Fuel for lantern.</Entry>
+    <Entry Name="ItemName_OilPotionLarge">Large Oil Potion</Entry>
+    <Entry Name="ItemDesc_OilPotionLarge">Fuel for lantern.</Entry>
     <Entry Name="TooManyItemsOfSort">There is no more room for this kind of item.</Entry>
-    <Entry Name="PickedUp">Harvested a</Entry>
+    <Entry Name="PickedUp">Picked up</Entry>
     <Entry Name="ItemName_CoinsSmall">Pouch with 10 thalers</Entry>
     <Entry Name="ItemDesc_CoinsSmall">A small pouch carrying 10 thalers.</Entry>
     <Entry Name="ItemName_CoinsMedium">Bag with 25 thalers</Entry>
@@ -518,17 +558,17 @@
     <Entry Name="ItemName_CoinsLarge">Sack with 50 thalers</Entry>
     <Entry Name="ItemDesc_CoinsLarge">A large sack filled with 50 thalers.</Entry>
     <Entry Name="ItemDesc_Tinderbox">Used for lighting candles and torches.</Entry>
-    <Entry Name="ItemName_Tinderbox">Quartz Match Case</Entry>
+    <Entry Name="ItemName_Tinderbox">Tinderbox</Entry>
     <Entry Name="ItemName_LockPick">Lock Pick</Entry>
     <Entry Name="ItemDesc_LockPick">Rusty and weak but in working condition for picking one lock.</Entry>
     <Entry Name="UseItemCanNotBeLit">Cannot light this object.</Entry>
-    <Entry Name="LanternOn">Loaded</Entry>
-    <Entry Name="LanternOff">Empty</Entry>
-    <Entry Name="OilNeedsLantern">There is nothing to load bullets into.</Entry>
-    <Entry Name="Tinderboxes">Fire Quartz matches</Entry>
-    <Entry Name="TinderboxesDesc">Creates a spark to ignite lights in the environment.[br][br]Once used, the combustion renders the crystal unable to create another scintilla, due to the immense burn marks on its surface. Low quality, mass produced subtances like these, produce more smoke than flame indeed.</Entry>
+    <Entry Name="LanternOn">On</Entry>
+    <Entry Name="LanternOff">Off</Entry>
+    <Entry Name="OilNeedsLantern">There is nothing to fill with oil.</Entry>
+    <Entry Name="Tinderboxes">Tinderboxes</Entry>
+    <Entry Name="TinderboxesDesc">Used to ignite light sources in the environment.</Entry>
     <Entry Name="Journal">Journal</Entry>
-    <Entry Name="JournalDesc">Contains all documents, bestiary entries and mission logs. Click to open.</Entry>
+    <Entry Name="JournalDesc">Contains all notes that have been picked up. Click to open.</Entry>
   </CATEGORY>
   <CATEGORY Name="Game">
     <Entry Name="InteractChest01">This chest requires</Entry>
@@ -537,7 +577,7 @@
     <Entry Name="InteractChest03_Question">Unlock it?</Entry>
     <Entry Name="InteractChest03">Current thaler:</Entry>
     <Entry Name="DeathPress">Press a button to continue...</Entry>
-    <Entry Name="NoMoreTinderboxes">No matches left.</Entry>
+    <Entry Name="NoMoreTinderboxes">No tinderboxes left.</Entry>
     <Entry Name="OilBarrel_Empty">There is no oil left in barrel.</Entry>
     <Entry Name="OilBarrel_LanternFull">No need to fill up on oil. The lantern is already full!</Entry>
     <Entry Name="OilBarrel_Refill_Full">The lantern is now fully refilled.</Entry>
@@ -553,13 +593,13 @@
   </CATEGORY>
   <CATEGORY Name="Journal">
     <Entry Name="Notes">NOTES</Entry>
-    <Entry Name="Diaries">BESTIARY</Entry>
-    <Entry Name="Quest Log">MISSION LOG</Entry>
+    <Entry Name="Diaries">DIARIES</Entry>
+    <Entry Name="Quest Log">MEMENTOS</Entry>
     <Entry Name="Back">Back</Entry>
     <Entry Name="MainBack">BACK</Entry>
     <Entry Name="NotesEmpty">No notes are available!</Entry>
-    <Entry Name="DiariesEmpty">The Bestiary is empty.</Entry>
-    <Entry Name="QuestsEmpty">My tasks are completed for the moment.</Entry>
+    <Entry Name="DiariesEmpty">No diaries are available!</Entry>
+    <Entry Name="QuestsEmpty">No mementos are available!</Entry>
   </CATEGORY>
   <CATEGORY Name="Quest">
     <Entry Name="QuestCompleted">QUEST COMPLETED</Entry>
@@ -569,42 +609,45 @@
     <Entry Name="Completed">Completed</Entry>
   </CATEGORY>
   <CATEGORY Name="Hints">
-    <Entry Name="SanityAdd">As you make progress or pick up important items, you'll recover some lost synchornization.</Entry>
-    <Entry Name="LanternNoItem">You need to find a gun before one can be used.</Entry>
-    <Entry Name="LanternNoOil">There are no bullets left in the Gun. You need to find ammunition and load it to make the gun work again.</Entry>
+    <Entry Name="SanityAdd">As you make progress or pick up important items, you'll recover some lost sanity.</Entry>
+    <Entry Name="LanternNoItem">You need to find a lantern before one can be turned on.</Entry>
+    <Entry Name="LanternNoOil">There is no Oil left in the Lantern. You need to find an oil potion and use it to make the lantern work again.</Entry>
     <Entry Name="LeanHint">Press $ButLeanLeft or $ButLeanRight to lean around corners or to peek into narrow places. Or use $ButLean and look around to lean.</Entry>
-    <Entry Name="PushHint"></Entry>
+    <Entry Name="PushHint">When holding an object, you can click $ButAttack to give it an extra push.</Entry>
     <Entry Name="ThrowHint">When holding an object, you can click $ButAttack to throw the object.</Entry>
     <Entry Name="HINT:">HINT:</Entry>
-    <Entry Name="DefaultDeath">The Blood brings you back once more..</Entry>
+    <Entry Name="DefaultDeath">You have to carry on...</Entry>
     <Entry Name="HintHint">Hints can be turned off in the Options menu under the Game tab. The Options menu is accessed by pressing $ButExit.</Entry>
-    <Entry Name="EntityWheel">Hold down $ButInteract and do a Circular Motion with the $Look thumbstick to turn the wheel. The wheel will turn in the same direction as you rotate.</Entry>
+    <Entry Name="EntityWheel">Hold down $ButInteract and do a Circular Motion with the Right Stick to turn the wheel. The wheel will turn in the same direction as you rotate.</Entry>
     <Entry Name="EntityGrab01">When grabbing an object, press $ButAttack to throw it. Hold down $ButRotate and move the $Look to rotate the object.</Entry>
     <Entry Name="EntityGrab02">Use the $ButScrollDown and $ButScrollUp or $ButZoomIn and $ButZoomOut to move the object closer or further away from you.</Entry>
-    <Entry Name="EntityPush">Use Pyres to have a rest and heal. Be aware, resting also respawns enemies!</Entry>
-    <Entry Name="EntitySlide">Move the $Look thumbstick while holding down $ButInteract in order to move the object.</Entry>
+    <Entry Name="EntityPush">Hold down $ButInteract while moving with the Left Stick to push. Press $ButAttack for a strong push in the direction you face.</Entry>
+    <Entry Name="EntitySlide">Move the Left Stick while holding down $ButInteract in order to move the object.</Entry>
     <Entry Name="EntitySwingDoor">Hold down $ButInteract and move the $Look in order to move the door. Press $ButAttack to throw the door open or shut, depending on the direction you face.</Entry>
     <Entry Name="EntityLever">Hold down $ButInteract and move the $Look in the direction you want to move the lever.</Entry>
-    <Entry Name="DarknessDecrease">Darkness doesn't frighten you, however try looking for various sources of light if you don't want to get lost!</Entry>
-    <Entry Name="SanityHit">Witnessing the blood writhing in monsters reduces your third eye's openness. Avoid looking at things not of this world!</Entry>
-    <Entry Name="SanityLow">Your third eye is closed. Try using a Blood Fountain, restorative items, or solve puzzles in the environment!</Entry>
-    <Entry Name="PickSanityPotion">Use Cerebral Fluid to increase your synchornization levels. To use it, double click on it in the Inventory ($ButInventory).</Entry>
+    <Entry Name="DarknessDecrease">Beware! When standing in darkness your sanity will slowly drain. Turn on lights in the environment using Tinderboxes or search for other sources of light.</Entry>
+    <Entry Name="SanityHit">Witnessing unsettling events will reduce your sanity. It can be increased by completing puzzles and making progress.</Entry>
+    <Entry Name="SanityLow">Your sanity is now dangerously low. Make sure to stay in the light and try to make progress.</Entry>
+    <Entry Name="PickSanityPotion">Use the Sanity Potion to increase your sanity. To use it, double click on it in the Inventory ($ButInventory).</Entry>
     <Entry Name="PickCoin">You have found a bag of thalers. When you have enough thalers you can open chests containing valuable items.</Entry>
-    <Entry Name="PickHealthPotion">Use the Blood Injector to increase your health. To inject, double click on its icon inside the Inventory ($ButInventory).</Entry>
-    <Entry Name="PickOil">The Gun uses bullets when it shoots. To reload the gun, double click on the ammo items in the Inventory ($ButInventory).</Entry>
-    <Entry Name="PickLantern">You have picked up the Gun. When loaded, it can be shot by pressing $ButLantern. It damages enemies, doors and containers.</Entry>
-    <Entry Name="PickTinderbox">Quartz Matches are used to light candles and other light sources in the enviroment. The current number is shown in Inventory ($ButInventory).</Entry>
-    <Entry Name="EnemySeen">Avoid looking at enemies for too long. It will drain your synchronization and you will eventually be seen.</Entry>
+    <Entry Name="PickHealthPotion">Use the Laudanum to increase your health. To drink it, double click on its icon inside the Inventory ($ButInventory).</Entry>
+    <Entry Name="PickOil">The Lantern drains Oil when it is turned on. To add more Oil to the Lantern, double click on the Oil item in the Inventory ($ButInventory).</Entry>
+    <Entry Name="PickLantern">You have picked up the Lantern. When filled with Oil it can be turned on by pressing $ButLantern or selecting it in the Inventory ($ButInventory).</Entry>
+    <Entry Name="PickTinderbox">Tinderboxes are used to light candles and other light sources in the enviroment. The current number of Tinderboxes is shown in Inventory ($ButInventory).</Entry>
+    <Entry Name="EnemySeen">Avoid looking at enemies for too long. It will drain your sanity and you will eventually be seen.</Entry>
     <Entry Name="StickyArea">You can use objects to reach hard-to-get places.</Entry>
-    <Entry Name="HideHint">You better find a place to hide, especially if you're running low on ammo.</Entry>
-    <Entry Name="EnemyTip01">If an enemy is near, stay out sight and hide in the darkness. Or you can take them head on, by shooting the gun ($ButLantern), if possible.</Entry>
-    <Entry Name="EnemyTip02">Crouching ($ButCrouch) in the darkness makes you a lot harder to spot. If enemies get close, use your repeater, or run!</Entry>
+    <Entry Name="HideHint">You better find a place to hide, you have no means to defend yourself.</Entry>
+    <Entry Name="EnemyTip01">If an enemy is near, stay out sight and hide in the darkness. Make sure to turn off your lantern ($ButLantern), if possible.</Entry>
+    <Entry Name="EnemyTip02">Be careful when enemies are near. Crouching ($ButCrouch) in the darkness makes you a lot harder to spot.</Entry>
     <Entry Name="CombineHint">Some items can be combined in the Inventory ($ButInventory). You drag and drop one item onto another to attempt a combine.</Entry>
     <Entry Name="RunHint">To run, hold down $ButRun while moving.</Entry>
-    <Entry Name="QuestAdded">A record has been added to the Journal ($ButJournal). For quick access to your Mission Log, press $ButQuestLog. Make sure to check these whenever you get stuck!</Entry>
+    <Entry Name="QuestAdded">A Memento has been added to the Journal ($ButJournal). For quick access to your Mementos, press $ButQuestLog. Make sure to check these whenever you get stuck!</Entry>
     <Entry Name="RecentlyReadText">You can quickly check the most recently read text by pressing $ButRecentText or by accessing the Journal ($ButJournal).</Entry>
     <Entry Name="Mouse">Mouse</Entry>
     <Entry Name="Thumbstick">Thumbstick</Entry>
+	
+	<Entry Name="HardModeDeath">You died...</Entry>
+	
   </CATEGORY>
   <CATEGORY Name="LevelDoors">
     <Entry Name="LockedForever">It won't budge.</Entry>
@@ -634,8 +677,8 @@
     <Entry Name="UnsupportedVCard">Card is unsupported</Entry>
     <Entry Name="UnlistedVCard">Card is not listed, assuming medium settings</Entry>
     <Entry Name="UnlistedVCardClosestMatch">Card is not listed, using settings for closest match:</Entry>
-    <Entry Name="Custom">Custom</Entry>
-    <Entry Name="Unsupported">Unsupported</Entry>
+	<Entry Name="Custom">Custom</Entry>
+	<Entry Name="Unsupported">Unsupported</Entry>
   </CATEGORY>
   <CATEGORY Name="PreMenu">
     <Entry Name="Continue">Continue</Entry>
@@ -651,16 +694,15 @@
   </CATEGORY>
   <CATEGORY Name="Languages">
     <Entry Name="english">English</Entry>
+    <Entry Name="chinese">Simplified Chinese</Entry>
     <Entry Name="german">Deutsch</Entry>
     <Entry Name="spanish">Español</Entry>
     <Entry Name="french">Français</Entry>
-    <Entry Name="russian">Russian</Entry>
-    <Entry Name="polish">Polish</Entry>
     <Entry Name="italian">Italiano</Entry>
-    <Entry Name="swedish">Svenska</Entry>
-    <Entry Name="finnish">Suomi</Entry>
-    <Entry Name="danish">Dansk</Entry>
-    <Entry Name="norwegian">Norsk</Entry>
-    <Entry Name="icelandish">Icelandish</Entry>
+    <Entry Name="russian">Russian</Entry>
+    <Entry Name="polish">Polski</Entry>
+    <Entry Name="czech">[u268]eština</Entry>
+    <Entry Name="hungarian">Magyar</Entry>
+    <Entry Name="brazilian_portuguese">Português brasileiro</Entry>
   </CATEGORY>
 </LANGUAGE>

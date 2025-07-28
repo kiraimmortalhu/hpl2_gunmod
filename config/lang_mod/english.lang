@@ -1,91 +1,12 @@
 <LANGUAGE>
   <RESOURCES>
-    <Directory Path="fonts/eng"/>
-    <Directory Path="lang/eng"/>
+    <Directory Path="fonts/eng" />
+    <Directory Path="lang/eng" />
   </RESOURCES>
-  <CATEGORY Name="Message">
-    <Entry Name="DemoEndMessage">                  Thank you for playing the open beta Demo![br]This is where intended level progression ends. You have the option to[br]    continue exploring the rest of the unfinished areas, or stop here.</Entry>
-    <Entry Name="DemoEndMessage2">There is a bossfight ahead that is heavily WIP and slightly broken.[br]If you wish to try it, you can. Getting back to the carriage in the first[br]           level triggers the ending, and the credits will roll.</Entry>
-    <Entry Name="DemoEndMessage3">  If you want to continue exploring: STEP FORWARD[br][br]If you want to end the demo here: STEP BACKWARDS</Entry>
-    <Entry Name="PickUpQuartzMatch">Picked up Quartz Match Case </Entry>
-    <Entry Name="statuedoor">A statue is blocking the door.</Entry>
-    <Entry Name="PickUpCrank">Picked up Reserve Sneck</Entry>
-    <Entry Name="NotThisSide">Doesn't open from this side.</Entry>
-    <Entry Name="GateOtherSide">The gate is locked by a contraption from the far end.</Entry>
-    <Entry Name="HalfPowerPuzzle2">The reserve engine started up, but something is still blocking the steam flow.</Entry>
-    <Entry Name="HalfPowerPuzzle1">The faulty pipe flow was put to a hault, but power is not yet restored.</Entry>
-    <Entry Name="ReservePower">Judging by the signs, this seems like a reserve steam source.</Entry>
-    <Entry Name="BrokenPipe">The pipe is broken, and the machine flow is interrupted.</Entry>
-    <Entry Name="LadderOutOfReach">There is a ladder out of reach, and a lift that's not moving.[br]Something must be done about the power outage in here.</Entry>
-    <Entry Name="NoPower">There is no power.</Entry>
-    <Entry Name="BonfireEnemyMessage">Be aware that using a checkpoint, or dying respawns enemies!</Entry>
-    <Entry Name="ContainerMessage">   Containers such as boxes and barrels, sometimes include[br]useful items. Destroy them yourself, or force an enemy to do so.</Entry>
-    <Entry Name="FastTravelMessage">Focus on the target bonfire to read the location.[br]     Look down to latch onto the travel point.</Entry>
-    <Entry Name="FountainMessage">Blood Fountains function as places of respite, restoring health,[br]and third eye synchronization. After unlocking Bloodfire Pyres,[br]  it also serves as a fast travel hub. Try touching the head!</Entry>
-    <Entry Name="BonfireMessage">    Unlock Pyres to restore health and ammo.[br]They serve as respawn and fast travel locations.</Entry>
-    <Entry Name="TorchMessage">Use carriable torches to light up the environment.</Entry>
-    <Entry Name="Empty"></Entry>
-    <Entry Name="TestMessage">Try tongue, but hole.</Entry>
-  </CATEGORY>
-  <CATEGORY Name="Levels">
-    <Entry Name="Bonfire_Meadow">Abandoned Homestead</Entry>
-    <Entry Name="Bonfire_Vault">Vault Entrance</Entry>
-    <Entry Name="Bonfire_Clockworks">Derelict Clock Tower</Entry>
-    <Entry Name="Bonfire_Fort">Fort Substrata</Entry>
-    <Entry Name="Bonfire_Fort2">Servant Hideaway</Entry>
-    <Entry Name="Bonfire_Mine">Mineshaft Deadlock</Entry>
-    <Entry Name="Bonfire_Silo">Reservoir Overlook</Entry>
-    <Entry Name="WineCellar">Wine Cellar</Entry>
-    <Entry Name="WineCellarLab">Laboratory</Entry>
-    <Entry Name="Distillery">Refinery</Entry>
-    <Entry Name="Archives">Archives</Entry>
-    <Entry Name="ArchivesOld">Old Archives</Entry>
-    <Entry Name="ArchivesCellar">Cellar Archives</Entry>
-    <Entry Name="EntranceHall">Entrance Hall</Entry>
-    <Entry Name="CellarMaze">Archive Tunnels</Entry>
-    <Entry Name="BackHall">Back Hall</Entry>
-    <Entry Name="DanielsRoom">Guest Room</Entry>
-    <Entry Name="Study">Study</Entry>
-    <Entry Name="MachineRoom">Machine Room</Entry>
-    <Entry Name="Storage">Storage</Entry>
-    <Entry Name="PrisonNorth">Prison - Northern Block</Entry>
-    <Entry Name="PrisonSouth">Prison - Southern Block</Entry>
-    <Entry Name="ControlRoom">Control Room</Entry>
-    <Entry Name="Morgue">Morgue</Entry>
-    <Entry Name="Cistern">Cistern</Entry>
-    <Entry Name="CisternEntrance">Entrance to Cistern</Entry>
-    <Entry Name="Sewer">Sewer</Entry>
-    <Entry Name="Transept">Transept</Entry>
-    <Entry Name="Chancel">Chancel</Entry>
-    <Entry Name="ChoirEast">Choir - Main Hall</Entry>
-    <Entry Name="ChoirWest">Choir - Entrance</Entry>
-    <Entry Name="Nave">Nave</Entry>
-    <Entry Name="Cells">Cells</Entry>
-    <Entry Name="Elevator">Elevator</Entry>
-    <Entry Name="RainyHall">Rainy Hall</Entry>
-    <Entry Name="InnerSanctum">Inner Sanctum</Entry>
-    <Entry Name="ZimmermanFarm">Zimmermann Farm</Entry>
-    <Entry Name="OrbChamber">Orb Chamber</Entry>
+  <CATEGORY Name="CustomStoryMain">
+    <Entry Name="Description">What is wrong with you</Entry>
   </CATEGORY>
   <CATEGORY Name="Inventory">
-    <Entry Name="ItemDesc_BloodChalice">Golden goblet, harvested from a clump of cosmic lifeblood. This trophy only finds its way to those, who have gone through inconceivable hardship.[br][br]When the Great Conjunction took place, the sap of the universe interlaced everything. Through this inseparable connection do huntsmen see a maddening writhing in pools of blood and mercury. [br]The finest materials this world could produce have a will of their own, and want nothing more than to outstrip humanity's tyranny.</Entry>
-    <Entry Name="ItemName_BloodChalice">Embrued Aurelian Chalice</Entry>
-    <Entry Name="ItemDesc_MadmanKnowledge">Fleeting thoughts of an individual, who after running around the surrounding areas for weeks, finally succumbed to insanity.[br][br]"Seek a barred door in the elevator shaft of the Clockwork Tower. There you will find a mystery that should be left well alone. Oh, I know very well how the secrets beckon so sweetly. Especially when the secrets are particularly unseemly. Only an honest death will cure you now. Liberate you from your wild curiosity."</Entry>
-    <Entry Name="ItemName_MadmanKnowledge">Madman's Knowledge</Entry>
-    <Entry Name="ItemName_CrankReplacement">Reserve Sneck</Entry>
-    <Entry Name="ItemName_CrankUsed">Reserve Sneck (Used)</Entry>
-    <Entry Name="ItemDesc_CrankReplacement">A wooden crank responsible for turning mechanics. It has long been discarded, but retains a good enough condition to still be of some use.[br][br]When the old clockworks had broken down, a rift was said to have been formed to another world. From that gateway, ghoulish creatures have poured out, and took residence in the dreary structure. Ever since then, most of the old contraptions were laid to waste, retaining only a shimmer of their former glory. This asset holds only a slight promise of restoration.</Entry>
-    <Entry Name="ItemDesc_CrankUsed">A wooden crank which has long been discarded, but retained a good enough condition to be used. It was attached to the reserve steam engine. [br][br]When the old clockworks had broken down, a rift was said to have been formed to another world. From that gateway, ghoulish creatures have poured out, and took residence in the dreary structure. Ever since then, most of the old contraptions were laid to waste, retaining only a shimmer of their former glory. This asset holds only a slight promise of restoration.[br]</Entry>
-    <Entry Name="ItemName_RepeaterPistol">Hirudo Repeater</Entry>
-    <Entry Name="ItemDesc_RepeaterPistol">Basic firearm for a specialist, of the notorious Order of Leeches. Loading it with silver makes it a force to be reckoned with, especially for monsters susceptible to such projectiles. Press $ButLantern when loaded, to shoot.[br][br]The quicksilver within encases the target's life essence, and sends it back exactly the way it came into this world. In truth, no one would know for sure, but it is established fact since none were ever seen or heard from again.[br]</Entry>
-    <Entry Name="ItemDesc_SilverBulletClip">Silver bullets, that are especially effective against inhumane targets, not of this world. This amount is worth a full clip.[br][br]If hunters would ever become the hunted, these slugs would be their worst fear, for they share a similar origin with the creatures they pursue. Alas, it is fundamental principle, that the Order conjoins its members in communion, and any outliers are swiftly eradicated, even from history. Such is the way, their immaculate reputation is held up.</Entry>
-    <Entry Name="ItemName_SilverBulletClip">Mercury Ammo Magazine</Entry>
-    <Entry Name="ItemDesc_SilverBullet">Silver bullets, that are especially effective against inhumane targets, not of this world. One should load them into a firearm for usage.[br][br]If hunters would ever become the hunted, these slugs would be their worst fear, for they share a similar origin with the creatures they pursue. When running low on quicksilver, one should seek out transcendent windows, such as rifts left by corpses, or a fire infused by cosmic lifeblood.</Entry>
-    <Entry Name="ItemName_SilverBullet">Mercury-bearing Ammo</Entry>
-    <Entry Name="ItemDesc_BrainFluid">Its unsettling content will increase synchronization with the mind's eye. Functions as a stim directly to raise focus, and reinvigorate chakra flow.[br][br]Hirudo eccentrics were oft called vampires who drink the blood and eat the brains of their victims. But such folk tales exist only to keep unruly children in line, and to spare them the much deeper terrors[br]which we hunt, under the veil of night.[br]</Entry>
-    <Entry Name="ItemName_BrainFluid">Cerebral Fluid</Entry>
-    <Entry Name="ItemDesc_BloodInjector">Simple phial, that contains a cosmic substance, which is fabled - in Triapsidal Church scriptures - to be the nectar of the Gods. Heals any pandit who's able to see and harvest it.[br][br]The unalloyed blood of the universe is poison to err'one and remedy to none, save for the libertine Hirudo Order, who specialise in the consumption and usage of such otherworldly materials. This liquor is ever writhing, as if to revolt against its very nature on this plane of existence.[br]</Entry>
-    <Entry Name="ItemName_BloodInjector">Blood Injector</Entry>
     <Entry Name="CombineLevel12Error">Can't assemble the drill yet, need to find all the parts first.</Entry>
     <Entry Name="ItemName_ChemicalContainer">Chemistry Pot</Entry>
     <Entry Name="ItemDesc_ChemicalContainer">A pot to contain mixtures of all sorts.</Entry>
@@ -193,34 +114,6 @@
     <Entry Name="CombineLevel21OrbAndString">The string will not help assemble the orb. The pieces are too slippery.</Entry>
   </CATEGORY>
   <CATEGORY Name="Journal">
-    <Entry Name="Note_ExperimentNote_Name">Research Jottings</Entry>
-    <Entry Name="Note_ExperimentNote_Text">The mysteries the Beyond hides from us, must be some thing to behold. The solution for extracting or synthetizing its substances eluded us, thus far..[br][br]The pristine scriptures from the library hold no feasible information either, as no such event like the Conjuction had ever taken place before.[br][br]Has all this effort been for naught?[br]I'm left with nothing but shambles.</Entry>
-    <Entry Name="Note_DeathNoteDemo_Name">Death Note</Entry>
-    <Entry Name="Note_DeathNoteDemo_Text">My apologies for the indelicate situation.[br][br]Things can get ouf of hand when you're testing the mechanics of this place. Consider yourself absolved.</Entry>
-    <Entry Name="Note_CarriageNote_Name">Carriage Notice</Entry>
-    <Entry Name="Note_CarriageNote_Text">For any Hunter available for assignments.[br][br]The fort in the rift valley is teeming with creatures spreading their unholy pestilence. Clear out the infestation, and the town of Carahorn will forever be in your debt.[br][br](Expect more than the usual fee when that debt is to be paid)</Entry>
-    <Entry Name="Note_StainedNote_Name">Stained Scroll</Entry>
-    <Entry Name="Note_StainedNote_Text">When the slaughter began, the Church left us to fend for ourselves. The golden relics were taken to the Exhedra, tainted, all of them.[br][br]To escape this dreadful nightmare, all we can do is make for the fort through the lift shaft. May the Maker bless us on this frightful journey, and help us dethrone these infidels of their dominion.</Entry>
-    <Entry Name="Quest_MainGoal_Text">I need to wipe out the pests from the fort, as it was requested.</Entry>
-    <Entry Name="Quest_FortGoal_Text">I need to reach the upper level, and get to the mountain fortalice. A larger incident may have taken place there.</Entry>
-    <Entry Name="Quest_DemoEndGoal_Text">I should return back to the carriage in the first level when I'm done exploring.</Entry>
-    <Entry Name="Quest_Bestiary_Text">New Bestiary entry added!</Entry>
-    <Entry Name="Quest_Bestiary2_Text">New Bestiary entry added!</Entry>
-    <Entry Name="Quest_Bestiary3_Text">New Bestiary entry added!</Entry>
-    <Entry Name="Quest_Bestiary4_Text">New Bestiary entry added!</Entry>
-    <Entry Name="Quest_Bestiary5_Text">New Bestiary entry added!</Entry>
-    <Entry Name="Diary_BeastSuitor_Name1">Oozy Cadaver</Entry>
-    <Entry Name="Diary_BeastSuitor_Text1">A walking corpse, of what previously was a member of a prevalent religious organization. Even now, the seeping darkness from its deadlights tells tales of a tribute insult. [br][br]This apparition prides itself on a gruesome origin. In their debauchery, they tried to glimpse into the cosmos to gain unmerited wisdom. Prying without directrix is a dangerous thing indeed, and what they gazed into was a black hole.[br][br]The eyes strived to form a triangular shape - which some hold as an esteemed symbol of enlightenment - but ultimately failed. The universe allots karmic justice after all.[br]</Entry>
-    <Entry Name="Diary_BeastGrunt_Name1">Malformed Ungual</Entry>
-    <Entry Name="Diary_BeastGrunt_Text1">Twisted and malformed, these creatures fell through the cracks when the fabric of reality wavered, and worlds collided. The sudden stalling caused their limbs and skin to elongate, now ending in huge talons.[br][br]Caused by the ruptured tears of the third eye attempts, the universe itself started to bleed through, trying to fill in the void incurred. Evolution that's labored is an act against natural order, so they say.[br][br]Now these lost souls roam unfamiliar lands, with nothing but their primordial instincts as propulsion.[br]</Entry>
-    <Entry Name="Diary_BeastBrute_Name1">Cloven Malformed</Entry>
-    <Entry Name="Diary_BeastBrute_Text1">Twisted and malformed, these creatures fell through the cracks when the fabric of reality wavered, and worlds collided. The sudden stalling affected this one immensely, splintering bones and muscle alike. What led to it featuring a metallic blade instead of its arm remains unknown.[br][br]Caused by the ruptured tears of the third eye attempts, the universe itself started to bleed through, trying to fill in the void incurred. Evolution that's labored is an act against natural order, so they say.[br][br]Now these lost souls roam unfamiliar lands, with nothing but their primordial instincts as propulsion.[br][br]</Entry>
-    <Entry Name="Diary_BeastGhoul_Name1">Lesser Webling</Entry>
-    <Entry Name="Diary_BeastGhoul_Text1">Walking nightmare of alien origin. The strange network mark on its torso gives the impression of a lesser cosmic being, clearly having some authority dominating over it.[br][br]Stray weblings are one of the lesser threats known to tracker specialists, vaguely reminiscent of lost lambs. But if a shepherd would corrall them together, one should only turn away and scurry without a second thought.</Entry>
-    <Entry Name="Diary_BeastWraith_Name1">Preacher</Entry>
-    <Entry Name="Diary_BeastWraith_Text1">An alien priest, oft seen guiding its flock, to sweep the various planes of subsistence clean of its botchers. Their civilization evolved through approved means, hence granting an audience with their cosmic overlords. Existence this way is considered uncomprehensible honor, but human beings would certainly condemn such servitude.[br][br]Although its body looks decayed, it holds the most immense spiritual strength of all the discovered creatures from the multiverse (so far that is). When they're guiding "lambs", they quickly lose focus and dissipate, once the shepherd is vanquished, as the convergent energy gets lost.</Entry>
-    <Entry Name="Diary_BeastWraithDemo_Name1">Preacher[br]</Entry>
-    <Entry Name="Diary_BeastWraithDemo_Text1">An alien priest, oft seen guiding its flock, to sweep the various planes of subsistence clean of its botchers. Their civilization evolved through approved means, hence granting an audience with their cosmic overlords. Existence this way is considered uncomprehensible honor, but human beings would certainly condemn such servitude.[br][br]Although its body looks decayed, it holds the most immense spiritual strength of all the discovered creatures from the multiverse (so far that is). Once they're killed they lose focus and dissipate while the convergent energy gets lost.</Entry>
     <Entry Name="Note_CH01L03_VillageTales_Name">Local Folklore</Entry>
     <Entry Name="Note_CH01L03_VillageTales_Text">Altstadt and Brennenburg Castle 1801[br][br]Another region rich with lore is Altstadt, deep within the East Prussian woods. For centuries there have been stories surrounding the hamlet and its neighbor, castle Brennenburg. The quiet forest-clad mountains dressed with scattered lakes is as picturesque as can be, albeit the area is haunted by the dark. Ask any local and you will hear proof of the widespread superstition. All travelers should indulge themselves in such conversations since it will certainly serve as exciting entertainment. All of them have their own twists on the tales, but there are some motifs that keep reappearing.[br][new_page][br]The Gatherers[br][br]This story reaches all the way back to the time of the Thirty Years' War. It is said that soldiers who abandoned their duty got lost in the cold dark woods and were forever damned to roam the grounds. Their bodies wrought by their tainted souls have left them disfigured and empty of essence. Many have sighted them over the years and describe them as horrid revenants. They move silently through the woods, shying away from any beholder. They are called Gatherers as they seem to follow some ambition to steal living creatures. It is their prey which can be heard struggling inside damp burlap sacks dragged behind them which reveal their presence. What dark scheme do they follow?[br][new_page][br]A Visit Undone[br][br]Heinrich Cornelius Agrippa, the well known erudite, visited Altstadt at the start of the 16th century. He resided in the local inn for a fortnight as he looked for remnants of kingdoms past. During his stay all the prominent members of society paid notice and he is mentioned in many records of the time. One day he went to investigate a burrow in the northwestern glades only to never be seen again. Heinrich is known to have passed away in Grenoble some ten years later. He dismissed the notion of ever visiting Altstadt, which makes you wonder what really happened. Who was this mysterious man who visited the sleepy hamlet in the woods and what happened to him?[br][new_page][br]The Immortal Baron[br][br]The Baron of Brennenburg lives a reclusive life with his family at his castle nearby Altstadt and like most those of noble birth, rumors are inherited alongside with the title. Researching the history reveals little before the castle was consumed by fire in the late 16th century. It was rebuilt by Alexander, a nobleman from the Rhinelands claiming the role as protector of the Prussian State. Alexander helped the region to flourish and remained popular throughout his presumed lifetime. The family has always been secretive when it comes to lineage and heritage, therefore the birth and death of Alexander and his offspring has never been fully recorded. This has fed the idea that the baron is in fact the one and the same who came from the West over three hundred years ago, lived through the time of occupation, and joined the coveted order of the Black Eagle along with the great leaders of this country.</Entry>
     <Entry Name="Note_CH01L03_WineCellar_Name">Regarding Closing of the Wine Cellar</Entry>
@@ -544,9 +437,12 @@
     <Entry Name="CH03L29_Ending_Agrippa_01">There he is. Do you see him, Weyer? He deserves so much more.</Entry>
     <Entry Name="CH03L29_Ending_Agrippa_02">Please help him, I know you can.</Entry>
     <Entry Name="CH03L29_Ending_Agrippa_03">Don't worry, Daniel. It will be alright.</Entry>
-    <Entry Name="CH03L29_Ending_Daniel_Cough"></Entry>
-    <Entry Name="CH03L29_Ending_Daniel_Scream"></Entry>
-    <Entry Name="CH03L29_Alexander_DeathScream"></Entry>
+    <Entry Name="CH03L29_Ending_Daniel_Cough">
+    </Entry>
+    <Entry Name="CH03L29_Ending_Daniel_Scream">
+    </Entry>
+    <Entry Name="CH03L29_Alexander_DeathScream">
+    </Entry>
   </CATEGORY>
   <CATEGORY Name="Flashbacks">
     <Entry Name="CH01L02_JourneyToSanctum01_01">Alexander, is it inside the castle?</Entry>
@@ -737,6 +633,39 @@
     <Entry Name="CH03L29_DanielRemorse_01">Please... Let me go...</Entry>
     <Entry Name="CH03L29_DanielRemorse_02">I am innocent...</Entry>
     <Entry Name="CH03L29_DanielRemorse_03">I'll never tell you...</Entry>
+  </CATEGORY>
+  <CATEGORY Name="Levels">
+    <Entry Name="WineCellar">Wine Cellar</Entry>
+    <Entry Name="WineCellarLab">Laboratory</Entry>
+    <Entry Name="Distillery">Refinery</Entry>
+    <Entry Name="Archives">Archives</Entry>
+    <Entry Name="ArchivesOld">Old Archives</Entry>
+    <Entry Name="ArchivesCellar">Cellar Archives</Entry>
+    <Entry Name="EntranceHall">Entrance Hall</Entry>
+    <Entry Name="CellarMaze">Archive Tunnels</Entry>
+    <Entry Name="BackHall">Back Hall</Entry>
+    <Entry Name="DanielsRoom">Guest Room</Entry>
+    <Entry Name="Study">Study</Entry>
+    <Entry Name="MachineRoom">Machine Room</Entry>
+    <Entry Name="Storage">Storage</Entry>
+    <Entry Name="PrisonNorth">Prison - Northern Block</Entry>
+    <Entry Name="PrisonSouth">Prison - Southern Block</Entry>
+    <Entry Name="ControlRoom">Control Room</Entry>
+    <Entry Name="Morgue">Morgue</Entry>
+    <Entry Name="Cistern">Cistern</Entry>
+    <Entry Name="CisternEntrance">Entrance to Cistern</Entry>
+    <Entry Name="Sewer">Sewer</Entry>
+    <Entry Name="Transept">Transept</Entry>
+    <Entry Name="Chancel">Chancel</Entry>
+    <Entry Name="ChoirEast">Choir - Main Hall</Entry>
+    <Entry Name="ChoirWest">Choir - Entrance</Entry>
+    <Entry Name="Nave">Nave</Entry>
+    <Entry Name="Cells">Cells</Entry>
+    <Entry Name="Elevator">Elevator</Entry>
+    <Entry Name="RainyHall">Rainy Hall</Entry>
+    <Entry Name="InnerSanctum">Inner Sanctum</Entry>
+    <Entry Name="ZimmermanFarm">Zimmermann Farm</Entry>
+    <Entry Name="OrbChamber">Orb Chamber</Entry>
   </CATEGORY>
   <CATEGORY Name="Temp">
     <Entry Name="Locked">It's locked dammit!</Entry>
@@ -1028,7 +957,6 @@
     <Entry Name="Alexander05">Is it you, my love, I miss the most, or is it perhaps myself? I know what I have become, I am not blind. I am a monster to them, a demonic sultan perched on a dark mountain top. There is little I can do to redeem myself.[br] [br]The Black Eagle fears me and after Napoleon's defeat it is only a matter of time before they will demand my head on a platter. I must remove myself from this land. This time it must work. If I can't return home now, I shall perish.</Entry>
   </CATEGORY>
   <CATEGORY Name="LoadingText">
-    <Entry Name="LoadingAmmo">Mercury-bearing Ammo[br][br]Silver bullets, that are especially effective against inhumane targets, not of this world. One should load them into a firearm for usage.[br][br]If hunters would ever become the hunted, these slugs would be their worst fear, for they share a similar origin with the creatures they pursue. When running low on quicksilver, one should seek out transcendent windows, such as rifts left by corpses, or a fire infused by cosmic lifeblood.[br]</Entry>
     <Entry Name="Ch01_Beginning01">The door slammed shut behind him and he knew he would never again see the old tailor at Berkeley Square. Another lone soul in London - seemed appropriate somehow.</Entry>
     <Entry Name="Ch01_Beginning02">The other children cheered him on. His name voiced in a steadily rising pace, urging him to do it. "Am I really doing this?", the young boy thought and struck his victim with a rock.</Entry>
     <Entry Name="Ch01_Beginning03">He fell to the kitchen floor. Tears were beginning to well in his eyes as he received the first kick in his stomach. Hazel remained hidden, in fear she too would be punished.</Entry>
@@ -1111,11 +1039,6 @@
     <Entry Name="InteractAcidMachineNoChem">Four different chemicals are needed to continue.</Entry>
   </CATEGORY>
   <CATEGORY Name="PreMenu">
-    <Entry Name="WelcomeDemo1">Welcome to Quartz and Cordite - Open beta Demo[br](a Wheezy Everlasting 2 release)[br][br]What you'll experience is a work in progress concept, full of possibilities for inconveniences and occasional bugs, continue with that in mind.</Entry>
-    <Entry Name="WelcomeDemo2">The mod features a core shooting mechanic, which is heavily limited by the shortcomings of the HPL2 engine.[br][br]While I gave it my best shot to have the best player experience, it still yearns for improvements in future updates. Please follow some of the guidelines listed to avoid most of the misunderstandings regarding this feature. </Entry>
-    <Entry Name="WelcomeDemo3">TIPS:[br][br]- The targeting system sometimes fails to recognize the object you're shooting at. Moving the mouse around often helps fixing it.[br][br]- The gun has slight aim assist for enemies. If you hover slowly around the enemies' silhoutte, you can get your aim centered to a point which is almost a sure hit.[br][br]- When you make a successful shot on an enemy, it bleeds with an effect. Use this as indication of a succesful shot![br][br]- Enemies have a random chance involved for landing the killing blow. If you run out of bullets it may be a good idea to retreat, and try again later. Sneaking is almost always a viable option as well![br][br]- You can also shoot containers and doors, but it's rarely worth spending your precious bullets on!</Entry>
-    <Entry Name="WelcomeDemo4">The interplay between light and dark is very important to the game and because of this it is vital to set up the gamma correctly. Use the slider control below to do so. Adjust it until the square at the right is barely visible. [br][br][br]While the mod lacks a lantern, you can find various sources of light, so be on the lookout![br][br]Also make sure to play in a dark room and wear headphones for the best effect.</Entry>
-    <Entry Name="WelcomeDemo5">That is all, enjoy the mod and leave your feedback once you've managed to complete it![br][br]KiraImmortal</Entry>
     <Entry Name="WelcomeMessage01">Welcome to Amnesia: The Dark Descent! [br][br]What follows is a couple of quick messages on how to get the best possible experience.</Entry>
     <Entry Name="WelcomeMessage02">Amnesia should not be played to win. [br][br]Instead, focus on immersing yourself in the game's world and story.</Entry>
     <Entry Name="WelcomeMessage03">Do not worry about when and how to save during gameplay, the game will take care of that for you. [br][br]When you want to leave the game, just choose "Save and Exit". You can then use "Continue" to return to where you left off next time you start up the game.</Entry>
@@ -1141,9 +1064,7 @@
     <Entry Name="InteractRodFirstTime">The pylon is unstable and on the verge of falling over.</Entry>
   </CATEGORY>
   <CATEGORY Name="Ending">
-    <Entry Name="DemoCredits">*- Quartz and Cordite -[br][br]The demo is an open beta concept, please leave feedback to help me improve![br]This work wouldn't have been possible without the following awesome people:[br][br]KiraImmortal - Concept, story, mechanics, world design[br]Radical Batz (Badcat5550) - Level Design and overhaul, custom sounds[br]DnALANGE - Level Design, gun script help and support[br]Maxleyo - Level design[br]Slanderous - Level design, custom assets[br]Spuzz - Level design parts[br]Umbakarna - Level design parts, custom assets[br][br]Music by:[br]Pyhthon Blue - Various music tracks[br]Monasterium Inperi - Fortalice ambience[br]Amber Light Ambience - Evil Forest Drones music[br]BurghRecords - Forest Ambience nature sounds[br]Ike Josihiro - Ergo Proxy OST[br]Mikko Tarmia - Soma and Penumbra OST[br]Rotting Christ - Hadern (Mortal Shell OST)[br][br]Additional credits:[br]Amn - Original gun and script[br]Batuhan13 - Steampunk gun original model[br]cptconc94 - Desert Eagle shoot sound[br]Digitalgoblin - Carriage model[br]DoctorDolor - Scripting brainstorming, custom skyboxes[br]Draugemalf - Soma assets porting[br]Florian - Remastered and Brennenburg stuff, technical support[br]HeadlessCyborg - Castle Wackersberg models[br]Nkmol - custom models[br]Nutboi - custom assets porting, scripting help[br]Oddstuff - Ghoul TDD import[br]Ozarinay Studios - Blood explosion sound effect[br]Sabatu - Custom effects[br]SFXandSoothingSounds - fast heartbeat sound[br]SoundBible.com - Gun sounds[br]Spelos - custom models[br]Umbakarna - Custom hud elements[br]WalriderTriger - Wraith TDD import, custom model import support[br]yesimadesigner - Dark pergament graphic[br][br]and probably more..[br][br]Follow the mod for the final release! (TBD)</Entry>
-    <Entry Name="ShowcaseCredits">*- Quartz and Cordite -[br][br]This work wouldn't have been possible without the following awesome people:[br][br]Amn - Original gun and script concept in 2014[br]Batuhan13 - Steampunk gun original model[br]DnALANGE - Gun script help and support from 2015[br]DoctorDolor - Scripting brainstorming, custom skybox[br]Florian - Remastered and Brennenburg stuff[br]Oddstuff - Ghoul TDD import[br]Ozarinay Studios - Blood explosion sound effect[br]Sabatu - Custom effects[br]SFXandSoothingSounds - fast heartbeat sound[br]SoundBible.com - Gun sounds[br]Umbakarna - Custom hud elements[br]WalriderTriger - Wraith TDD import, custom model import support[br]yesimadesigner - Dark pergament graphic[br][br]and probably many more..[br][br]*Public release in March, before Amnesia: Bunker!</Entry>
-    <Entry Name="MainCredits">- A FRICTIONAL GAMES PRODUCTION -[br][br][br]- AMNESIA: THE DARK DESCENT -[br][br][br]*Frictional Games Are:[br]Thomas Grip[br]Marcus Johansson[br]Luis A. Rodero Morales[br]Marc Nicander[br]Jens Nilsson[br][br][br][br][br][br]*CREDITS[br][br]*Design[br]Thomas Grip[br]Jens Nilsson[br][br]*Programming[br]Thomas Grip[br]Luis A. Rodero Morales[br][br]*Sound Engineering[br]Jens Nilsson[br][br]*Graphics[br]Marcus Johansson[br]Marc Nicander[br][br]*Level Editing[br]Marcus Johansson[br]Marc Nicander[br]Jens Nilsson[br][br]*Level Scripting[br]Thomas Grip[br]Luis A. Rodero Morales[br]Jens Nilsson[br][br]*Mac/Linux Porting[br]Edward Rudd[br][br]*Additional Graphics[br]Abyss Lights Studios[br]Rasmus Gunnarsson[br]Magnus Hertzberg[br]Nicodemus Mattisson[br]Jonas Steinick Berlin[br]Olof Strand[br]Sebastian Vasselbring[br][br]*Music[br]Mikko Tarmia[br][br]*Additional Sound Effects[br]Tapio Liukkonen - Kaamos Sound[br][br]*Writing[br]Mikael Hedberg[br][br]*Story[br]Thomas Grip[br]Mikael Hedberg[br][br]*Concept Art[br]Rasmus Gunnarsson[br]Jonas Steinick Berlin[br][br]*Voice Direction &amp; Casting[br]Lani Minella - AudioGodz[br][br]*Voice Talent[br]Richard Topping  as  Daniel[br]Sam Mowry  as  Alexander[br]Bill Corkery  as  Agrippa[br]Eric Newsome  as  Herbert[br]Lani Minella  as  Girl &amp; Mother[br]Marc Biagi  as  Innocent Man[br]Dave Rivas  as  Man In Morgue[br]Dan Zullo  as  Wilhelm &amp; Thugs[br][br]*Beta Testing[br]Anton Adamse[br]Antonio Luis Tirado Chávez[br]Agustín Cordes[br]Cedric Guillemet[br]Christopher Bates[br]Rasmus Gunnarsson[br]David Gustavsson[br]Mikael Hedberg[br]Magnus Hertzberg[br]Martin Jonsson[br]Tom Jubert[br]Aleksey Luchin[br]Kristoffer Lövgren[br]Javier Mairena[br]Nicodemus Mattisson[br]Emil Meiton[br]David Rosen[br]Michaël Samyn[br]Jonas Steinick Berlin[br]Erik Svedäng[br][br]*Special Thanks To[br]Near and dear for support and patience[br]Wolfire Games[br]Julio Jerez - Newton Game Dynamics[br]Andreas Jonsson - Angel Code[br]DevIL Image Library[br]TinyXML[br]LibSDL</Entry>
+	<Entry Name="MainCredits">- A FRICTIONAL GAMES PRODUCTION -[br][br][br]- AMNESIA: THE DARK DESCENT -[br][br][br]*Frictional Games (2018) Are:[br]Thomas Grip[br]Marcus Johansson[br]Luis A. Rodero Morales[br]Marc Nicander[br]Rasmus Gunnarsson[br]Aaron Clifford[br]Peter Wester[br]Patrik Dekhla[br]Fredrik Olsson[br]David Satzinger[br]Max Lidbeck[br]Gregor Pani[u269][br]Alex Camilleri[br]Edvin Jacobsson[br]Kira Katve Vesikko[br][br][br][br][br][br]*CREDITS[br][br]*Design[br]Thomas Grip[br]Jens Nilsson[br][br]*Programming[br]Thomas Grip[br]Luis A. Rodero Morales[br][br]*Sound Engineering[br]Jens Nilsson[br][br]*Graphics[br]Marcus Johansson[br]Marc Nicander[br][br]*Level Editing[br]Marcus Johansson[br]Marc Nicander[br]Jens Nilsson[br][br]*Level Scripting[br]Thomas Grip[br]Luis A. Rodero Morales[br]Jens Nilsson[br][br]*PORT BY BLITWORKS[br]Miguel [u193]ngel Exp[u243]sito[br]C[u233]sar S[u225]nchez[br]Jorge Cabezas[br]Jacobo Rodr[u237]guez[br]Julio Garc[u237]a[br][br]*Mac/Linux Porting[br]Edward Rudd[br][br]*Additional Graphics[br]Abyss Lights Studios[br]Rasmus Gunnarsson[br]Magnus Hertzberg[br]Nicodemus Mattisson[br]Jonas Steinick Berlin[br]Olof Strand[br]Sebastian Vasselbring[br][br]*Music[br]Mikko Tarmia[br][br]*Additional Sound Effects[br]Tapio Liukkonen - Kaamos Sound[br][br]*Writing[br]Mikael Hedberg[br][br]*Story[br]Thomas Grip[br]Mikael Hedberg[br][br]*Concept Art[br]Rasmus Gunnarsson[br]Jonas Steinick Berlin[br][br]*Executive Producer[br]Thomas Grip[br]Fredrik Olsson[br]Peter Wester[br][br]*Voice Direction &amp; Casting[br]Lani Minella - AudioGodz[br][br]*Voice Talent[br]Richard Topping  as  Daniel[br]Sam Mowry  as  Alexander[br]Bill Corkery  as  Agrippa[br]Eric Newsome  as  Herbert[br]Lani Minella  as  Girl &amp; Mother[br]Marc Biagi  as  Innocent Man[br]Dave Rivas  as  Man In Morgue[br]Dan Zullo  as  Wilhelm &amp; Thugs[br][br]*QA BY LOLLIPOP ROBOT[br]Daniel Segarra[br][u211]scar Naval[u243]n[br]Luis Moyano[br]Pablo Granada[br]Rub[u233]n Pe[u241]a[br]Fran Sanchez[br][br]*QA AND TRANSLATION BY TESTRONIC[br][br]*Beta Testing[br]Anton Adamse[br]Antonio Luis Tirado Chvez[br]Agust[u878] Cordes[br]Cedric Guillemet[br]Christopher Bates[br]Rasmus Gunnarsson[br]David Gustavsson[br]Mikael Hedberg[br]Magnus Hertzberg[br]Martin Jonsson[br]Tom Jubert[br]Aleksey Luchin[br]Kristoffer L[u1462]gren[br]Javier Mairena[br]Nicodemus Mattisson[br]Emil Meiton[br]David Rosen[br]Micha[u748] Samyn[br]Jonas Steinick Berlin[br]Erik Sved[u302]g[br][br]*Special Thanks To[br]Near and dear for support and patience[br]Wolfire Games[br]Julio Jerez - Newton Game Dynamics[br]Andreas Jonsson - Angel Code[br]DevIL Image Library[br]TinyXML[br]LibSDL[br]FMOD Sound System by Firelight Technologies</Entry>
   </CATEGORY>
   <CATEGORY Name="BasicPhrases">
     <Entry Name="UseItemOrCombineItem02">Can't do this right now.</Entry>
