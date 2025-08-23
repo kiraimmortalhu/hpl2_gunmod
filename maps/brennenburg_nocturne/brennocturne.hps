@@ -1,0 +1,645 @@
+void OnStart() {
+	// DEBUG
+	//SetPlayerMoveSpeedMul(1.5f);
+	//SetPlayerRunSpeedMul(1.5f);
+	GiveItemFromFile("tinderbox_"+1, "tinderbox.ent"); 
+	GiveItemFromFile("tinderbox_"+1, "tinderbox.ent"); 
+	//SetSkyBoxActive(false);
+	/*for (int i = 1; i <= 13; i++) {
+		SetLightVisible("BoxLight_"+i, false);
+	}*/
+	
+	SetLampLit("torch_static01_*", false, false);
+	SetLampLit("male_corpse_torso_torch_sabatu_*", false, false);
+	//
+	
+	GiveItemFromFile("gunLantern", "lantern.ent");
+	//SetPlayerLampOil(0);
+	//GUNFUNCTION_Load;
+	
+	FadeOut(0);
+	FadeIn(4);
+	
+	SetLocalVarInt("bonfireLit", 0);
+	SetLightVisible("jb_PointLight", false);
+	SetEntityInteractionDisabled("Teleport_save_*_bonfire", true);
+	SetEntityInteractionDisabled("save_*_bonfire", true);
+	
+	// custom icons
+	SetEntityPlayerLookAtCallback("level_*", "LevelDoorDeactivate", false);
+	
+	// custom icons setup with initial and OnLook cases
+	
+	SetEntityCustomFocusCrossHair("fountain_Activate", "Pick");
+	SetEntityPlayerLookAtCallback("fountain_Activate", "SetFountainIcon", false);
+	SetEntityCustomFocusCrossHair("save_*", "Ignite");
+	SetEntityPlayerLookAtCallback("save_*", "SetBonfireIconIcon", false);
+	SetEntityCustomFocusCrossHair("TeleportArea_save_*_bonfire", "LevelDoor");
+	SetEntityPlayerLookAtCallback("TeleportArea_save_*_bonfire", "SetTravelIcon", false);
+}
+
+void LevelDoorDeactivate(string &in asEntity, int alState) {
+	SetEntityInteractionDisabled(asEntity, true);
+}
+
+void ShowcaseFunction1(string &in asParent, string &in asChild, int alState) {
+	StartInsanityEvent("area_entrancehall");
+}
+
+//	# Message by AMN - This is the code for the gun.
+//	#
+//	# COPY everything below to every script file you have.
+//	# Including the variables, functions and comments. Everything.
+
+// This is KiraImmortal's version of Amn's gun script.
+// Special thanks to DNaLange!
+//  If you wish to use it, feel free, but credit all three people involved!
+
+// To implement
+// X - Distance modifier for the shots
+// X - Add custom muzzle flash and smoke
+// X - Custom door damage type
+// X - 3 enemy categories based on difficulty
+// X - Separate shot sound from lantern off, make that a clicking sound you can hear when the clip is empty
+// - Make shot sound an actual world sound that alerts enemies in range
+// - IF doesn't fix enemy respawns, add pathnodes to them respawning
+// - Make orange and blue carry torches, let them be lit with matches, then spawn with carry
+// - Orange spotlight flicker to light up the dark
+// - Better cooldown, actual cooldown time without playeractive (REMODDED)
+// - Instead of killchance, a possible improvement would be a health integer for each enemy in an array (REMODDED)
+// + boss healthbar mechanic
+
+void OnEnter() {
+	
+	SetEntityPlayerInteractCallback("gunLantern", "AcquireGun", true);
+	
+	if (HasItem("gunLantern")) {
+		GUNFUNCTION_Load();
+		SetGlobalVarInt("GunEffectsOn", 1);
+	}
+	else SetGlobalVarInt("GunEffectsOn", 0);
+}
+
+void AcquireGun(string &in asEntity) {
+	GUNFUNCTION_Load();
+	SetPlayerLampOil(100);
+	SetGlobalVarInt("GunEffectsOn", 1);
+}
+
+const float GUN_COOLDOWN_TIME = 0.7f;
+
+const int GUN_DEFAULT_KILL_CHANCE = 5;
+const int GUN_EASY_KILL_CHANCE = 2;
+const int GUN_MEDIUM_KILL_CHANCE = 4; // 6
+const int GUN_HARD_KILL_CHANCE = 7; // 8
+
+const float GUN_RADIUS = 20.0f;
+
+bool isCooldownTime = false;
+int KillChance = GUN_DEFAULT_KILL_CHANCE;
+float diffCenterAndPoint = 0.0f;
+float shotPositionX = 0.0f;
+float shotPositionY = 0.0f;
+float shotPositionZ = 0.0f;
+
+string GUN_Target = "";
+
+// You need to name each enemy, breakable and you want the gun to hit along the following guidelines
+// ex: Enemy_Easy_1, Enemy_Easy_2, etc.
+// check the level for more references
+
+string GUN_EasyEnemyFormat = "Enemy_Easy_";
+string GUN_MediumEnemyFormat = "Enemy_Medium_";
+string GUN_HardEnemyFormat = "Enemy_Hard_";
+string GUN_BreakablesFormat = "Breakable_Object_";
+string GUN_DoorsFormat = "Door_";
+
+int Level_EasyEnemyCount = 1;
+int Level_MediumEnemyCount = 1;
+int Level_HardEnemyCount = 2;
+int Level_BreakablesCount = 50;
+int Level_DoorsCount = 50;
+
+void GUNFUNCTION_Load()
+{
+	// In this mod oil loss is disabled and there are bullet counters, so there's no need for this part
+	
+	//FP_KeepOilFullTimed( "" );
+	//AddTimer ( "", 10, "FP_KeepOilFullTimed" );
+	
+	SetLanternLitCallback( "GUNFUNCTION_Shoot" );
+ 
+	int i=0;
+	while(i<=Level_EasyEnemyCount) {
+		i=i+1;
+		GUNFUNCTION_AddTarget(GUN_EasyEnemyFormat+i);
+		SetEnemySanityDecreaseActive(GUN_EasyEnemyFormat+i, false);
+				// adding the possibility for enemies to be larger, hence needing a larger particle
+		GUNFUNCTION_AddTarget(GUN_EasyEnemyFormat+"Large_"+i);
+		SetEnemySanityDecreaseActive(GUN_EasyEnemyFormat+"Large_"+i, false);
+	}
+	
+	i=0;
+	while(i<=Level_MediumEnemyCount) {
+		i=i+1;
+		GUNFUNCTION_AddTarget(GUN_MediumEnemyFormat+i);
+		SetEnemySanityDecreaseActive(GUN_MediumEnemyFormat+i, false);
+		GUNFUNCTION_AddTarget(GUN_MediumEnemyFormat+"Large_"+i);
+		SetEnemySanityDecreaseActive(GUN_MediumEnemyFormat+"Large_"+i, false);
+	}
+	
+	i=0;
+	while(i<=Level_HardEnemyCount) {
+		i=i+1;
+		GUNFUNCTION_AddTarget(GUN_HardEnemyFormat+i);
+		SetEnemySanityDecreaseActive(GUN_HardEnemyFormat+i, false);
+		
+		GUNFUNCTION_AddTarget(GUN_HardEnemyFormat+"Large_"+i);
+		SetEnemySanityDecreaseActive(GUN_HardEnemyFormat+"Large_"+i, false);
+	}
+
+	i=0;
+	while(i<=Level_BreakablesCount)
+	{
+		i=i+1;
+		GUNFUNCTION_AddTarget(GUN_BreakablesFormat+i );
+	}
+	
+	i=0;
+	while(i<=Level_DoorsCount)
+	{
+		i=i+1;
+		GUNFUNCTION_AddTarget(GUN_DoorsFormat+i );
+	}
+}
+
+////////////////////// W E A P O N ///////////////////////////
+
+void GUNFUNCTION_AddTarget ( string &in asTarget )
+{
+	SetEntityPlayerLookAtCallback( asTarget, "GUNFUNCTION_TargetAcquired", false);
+}
+
+void GUNFUNCTION_TargetAcquired ( string &in asTarget, int iState )
+{
+	if (iState==1)
+	{
+		AddDebugMessage ("target(" + asTarget + ")", false );
+		GUN_Target=asTarget;
+		if (StringContains(GUN_Target, "Enemy_")) {
+			GUNFUNCTION_CenterAim( asTarget );
+		}
+		RemoveTimer( "GUNTIMER" );
+	}
+ 
+	if (iState==-1)
+	{
+		//GUNFUNCTION_LoseTargetTimed( 1.0f );
+		GUN_Target="";
+		AddDebugMessage ("Target is lost", false );
+	}
+}
+
+void GUNFUNCTION_LoseTargetTimed ( float fDelay )
+{
+	AddTimer ( "GUNTIMER", fDelay, "GUNFUNCTION_LoseTarget" ); 
+}
+
+void GUNFUNCTION_LoseTarget ( string &in t )
+{
+	GUN_Target="";
+}
+
+void GUNFUNCTION_Shoot ( bool isOn )
+{
+  if (!isCooldownTime && GetGlobalVarInt("GunEffectsOn") == 1) {	
+  	if (isOn) { return; }
+	
+	GUNFUNCTION_UseBullet(!ScriptDebugOn());	
+	GUNFUNCTION_UseShootEffects();	
+	GUNFUNCTION_CooldownTimed( GUN_COOLDOWN_TIME );
+	
+	if (GUN_Target=="") {
+		// could add ricochet particle here, but it would only work on entities
+		return;
+	}
+
+	// distance calculation, if target is further your shoot will miss
+	
+	if (fittingPlayerAndTargetDistance() == true) {
+	  bool isEnemy = StringContains( GUN_Target, "Enemy_" );
+	  if ( isEnemy )
+	  {		
+		// decision about the kill possibility by enemy type
+		
+		if (StringContains( GUN_Target, GUN_EasyEnemyFormat )) {
+			AddDebugMessage( "Target is easy enemy", false );
+			KillChance = GUN_EASY_KILL_CHANCE;
+		}
+		else if (StringContains( GUN_Target, GUN_MediumEnemyFormat )) {
+			AddDebugMessage( "Target is medium enemy", false );
+			KillChance = GUN_MEDIUM_KILL_CHANCE;
+		}
+		else if (StringContains( GUN_Target, GUN_HardEnemyFormat )) {
+			AddDebugMessage( "Target is hard enemy", false );
+			KillChance = GUN_HARD_KILL_CHANCE;
+		}
+		
+		if (StringContains( GUN_Target, "Large_" )) {
+			AddDebugMessage( "Target is also large", false );
+			CreateParticleSystemAtEntity("", "ps_blood_splash_large.ps", GUN_Target, false);
+		}
+		// else if contains "_Immune", unique particle for ghosts maybe?
+		else {
+			CreateParticleSystemAtEntity("", "ps_blood_splash.ps", GUN_Target, false);
+		}
+		
+		
+		int randKillChance = RandInt(1, KillChance);     //Damage
+		AddDebugMessage( "Killchance is " + randKillChance, false );
+		
+		// KillChance=KillChance-1;  
+		// this could be added somehow to improve your chances on not losing target
+		
+		//Would be nice if enemies could flinch on shot, up to Remodded
+		//PlayPropAnimation("GUN_Target", "Flinch", 0, false, "");
+		
+		RemoveTimer("alertEnemies");
+		AddTimer("alertEnemies", 1.5f, "GUNFUNCTION_AlertEnemies");
+
+		if (randKillChance <= 1) //Killing blow
+		{           
+			FadeEnemyToSmoke( GUN_Target, true );
+			
+			AddBestiaryEntry(GUN_Target);  // adds bestiary entry based on type, and previous kills
+			AddQuest("bestiaryQuest", "Bestiary");
+			AddTimer("removeBestiaryQuest", 8.0f, "RemoveBestiaryQuest");
+			
+			GUN_Target="";
+			KillChance=GUN_DEFAULT_KILL_CHANCE;
+		}
+	  }
+	
+	  bool isBreakable = StringContains( GUN_Target, GUN_BreakablesFormat );
+	  if ( isBreakable )
+	  {
+		AddDebugMessage( "Target is breakable", false );
+		SetPropHealth(GUN_Target, 0);
+		GUN_Target="";
+		//SetEntityActive(GUN_Target , false);
+	  }
+	  
+	  bool isDoor = StringContains( GUN_Target, GUN_DoorsFormat );
+	  if ( isDoor )
+	  {
+		AddDebugMessage( "Target is door", false );
+		SetPropHealth(GUN_Target, GetPropHealth(GUN_Target) - 25.0f);
+		//SetEntityActive(GUN_Target , false);
+	  }
+    }
+	else AddDebugMessage( "Target is too far, it's this far: " +  MathSqrt(diffCenterAndPoint), false );
+  }
+}
+
+void GUNFUNCTION_AlertEnemies(string &in asTimer)
+{
+	ShowEnemyPlayerPosition( GUN_Target );
+}
+
+void GUNFUNCTION_UseBullet(bool consumeBullets) {
+	// calculates 7 bullets clip
+	if (consumeBullets) {
+		SetPlayerLampOil(GetPlayerLampOil() - 14.28571428571429f);
+		// if anything is lost on conversion to float, manually sets oil to 0 on last bullet
+		if (GetPlayerLampOil() < 5) {
+			SetPlayerLampOil(0);
+		}
+	}
+	PlayGuiSound("ui_shoot.ogg", 1.0f);  // this also plays if you climb on ladders
+}
+
+void GUNFUNCTION_UseShootEffects() {
+	//Flicker solution with attached spotlight with particles on gun itself
+	if (GetPlayerSpeed() < 1.5f) {
+		SetLightFlickerActive("PlayerHands_SpotLight_Gun", true);   
+	}
+	else {
+		SetLightFlickerActive("PlayerHands_SpotLight_Gun_Running", true);  
+	}
+	
+	AddTimer("", 0.1f, "StopGunFx");   
+	SetLanternActive( true, false );
+	
+	// better version can only be done on Remodded
+	//CalculateEffectVector(GetPlayerPosX(), GetPlayerPosY(), GetPlayerPosZ());
+	//CreateParticleSystemAtEntityExt("", "ps_extract_oven_smoke_Shorter_7.ps", "GunEffectArea", false,1, 1, 1, 1, false, 0, 0, 7, 7);
+	//CreateParticleSystemAtEntityExt("", "ps_chemical_blast_Fast_9.ps", "GunEffectArea", false,1, 1, 1, 1, false, 0, 0, 7, 7);
+}
+
+void StopGunFx(string &in asTimer)
+{
+	SetLightFlickerActive("PlayerHands_SpotLight_Gun", false);
+	SetLightFlickerActive("PlayerHands_SpotLight_Gun_Running", false);
+}
+
+void CalculateEffectVector(float playerX, float playerY, float playerZ) {
+	//if (GetPlayerSpeed() < 1.2f) 
+	// needs also rotation check, that cannot be done on vanilla game
+		shotPositionX = playerX + 0.214f;
+		shotPositionY = playerY + 1.57f;
+		shotPositionZ = playerZ + 0.909f;
+	SetEntityPos("GunEffectArea", shotPositionX, shotPositionY, shotPositionZ);
+}
+
+void GUNFUNCTION_CooldownTimed ( float fDelay )
+{
+	SetPlayerActive(false);
+	//isCooldownTime = true;
+	AddTimer ( "GUNCOOLDOWNTIMER", fDelay, "GUNFUNCTION_CooldownPassed" ); 
+}
+
+void GUNFUNCTION_CooldownPassed(string &in asTimer)
+{
+	SetPlayerActive(true);
+	//isCooldownTime = false;
+}
+
+void GUNFUNCTION_CenterAim ( string &in asTarget )
+{
+	StartPlayerLookAt( asTarget, 2, 2, "" );
+	GUNFUNCTION_StopPlayerLookAtTimed( 0.2f );
+}
+
+void GUNFUNCTION_StopPlayerLookAtTimed ( float fDelay )
+{
+	AddTimer ( "", fDelay, "GUNFUNCTION_StopPlayerLookAt" );
+}
+
+void GUNFUNCTION_StopPlayerLookAt ( string &in t )
+{
+	StopPlayerLookAt();
+}
+
+void FP_KeepOilFullTimed ( string &in t )  // legacy function, not needed in full conversion mod
+{
+	SetPlayerLampOil( 100.0f );
+	RemoveTimer("FP_KeepOilFullTimed");
+	AddTimer ( "", 10, "FP_KeepOilFullTimed" );
+}
+
+bool fittingPlayerAndTargetDistance() {
+	// center is player position
+	float cx = GetPlayerPosX();
+	float cy = GetPlayerPosY();
+	float cz = GetPlayerPosZ();
+	
+	// point to intersect with is target position
+	float x = GetEntityPosX(GUN_Target);
+	float y = GetEntityPosY(GUN_Target);
+	float z = GetEntityPosZ(GUN_Target);
+	
+	// radius of the sphere of intersection
+	float radius = GUN_RADIUS;
+	
+	CheckDistanceSphereRadius(cx, cy, cz, x, y, z);
+	if (diffCenterAndPoint <= (radius * radius))
+		// point intersects with sphere
+		return true;
+	else return false;
+}
+
+void CheckDistanceSphereRadius(float &in cx, float &in cy, float &in cz, float &in x, float &in y, float &in z) {
+	float x1 = MathPow(x - cx, 2);
+	float y1 = MathPow(y - cy, 2);
+	float z1 = MathPow(z - cz, 2);
+	diffCenterAndPoint = x1 + y1 + z1;
+}
+
+//////////////////////////
+///////// Other functions
+/////////////////////////
+
+void PickItem(string &in asEntity) {
+	StopCurrentInsanityEvent();
+	StartInsanityEvent("item_pergament");
+}
+
+void OpenChest(string &in asEntity) {
+	SetEntityActive(asEntity + "_item", true);
+}
+
+/// Checkpoints
+
+void ActivateFountain(string &in asEntity) {
+	
+	SetPropActiveAndFade("slime_*", true, 5);
+	
+	SetEntityPlayerInteractCallback("fountain_Activate", "EnterFastTravelHub", false);
+	if (GetLocalVarInt("bonfireLit") == 0) {
+		SetEntityActive("fountain_Activate", false);
+	}
+	
+	SetPropActiveAndFade("fountain_bloodflow", true, 2);
+	
+	SetEntityCustomFocusCrossHair("fountain_Heal", "Ladder");
+	SetEntityPlayerLookAtCallback("fountain_Heal", "SetHealIcon", false);
+	SetEntityCustomFocusCrossHair("fountain_Activate", "LevelDoor");
+	SetEntityPlayerLookAtCallback("fountain_Activate", "SetTravelIcon", false);
+	
+	PlayGuiSound("boom_hallucination_disappear", 1.0f);
+	PlaySoundAtEntity("foundtainBloodDrip", "16_water_stream_med", "fountain_Heal", 2, true);
+	AddTimer("fountainActivationTimer", 2.0f, "FountainActivationTimer");
+}
+
+void FountainActivationTimer(string &in asTimer) {
+	SetLightVisible("jb_PointLight", true);
+	SetEntityActive("fountain_Heal", true);
+}
+
+void SetFountainIcon(string &in asEntity, int alState)
+{
+	SetEntityCustomFocusCrossHair("fountain_Activate", "Pick");
+}
+
+void SetHealIcon(string &in asEntity, int alState)
+{
+	SetEntityCustomFocusCrossHair("fountain_Heal", "Ladder");
+}
+
+void SetTravelIcon(string &in asEntity, int alState)
+{
+	SetEntityCustomFocusCrossHair(asEntity, "LevelDoor");
+}
+
+void UseFountain(string &in asEntity) {
+	RepositionAndRespawnEnemies();
+	
+	AddPlayerHealth(100);
+	if (GetPlayerSanity() >= 1.5f) {
+		GiveSanityDamage(1, false);
+	}
+	GiveSanityBoost();
+	PlayGuiSound("04_water_puff.snt", 3.0f);
+}
+
+void EnterFastTravelHub(string &in asEntity) {
+	PlayGuiSound("blackbox_start", 2.0f);
+	SetGlobalVarInt("GunEffectsOn", 0);
+	FadeOut(3);
+	FadePlayerFOVMulTo(0.5, 3);
+	AddTimer("teleportPlayerToHub", 4.0f, "TeleportPlayerToHub");
+}
+
+void TeleportPlayerToHub(string &in asTimer) {
+	SetLanternDisabled(true);
+	SetSkyBoxActive(true);
+	TeleportPlayer("PlayerStartArea_FastTravel");
+	FadeIn(2);
+	FastTravelFrom();
+	FadePlayerFOVMulTo(1.5, 1);
+}
+
+void FastTravelFrom() {
+	
+	SetGlobalVarInt("GunEffectsOn", 0);
+	
+	SetPlayerMoveSpeedMul(0);
+	SetPlayerRunSpeedMul(0);
+	SetPlayerLookSpeedMul(0.4f);
+	SetPlayerJumpDisabled(true);
+	SetPlayerCrouching(true);
+	SetPlayerCrouchDisabled(true);
+}
+
+void FastTravel(string &in asEntity) {
+	FadeOut(2);
+	FadePlayerFOVMulTo(2, 2);
+	PlayGuiSound("blackbox_end", 2.0f);
+	FastTravelTo();
+	AddTimer(asEntity, 3.0f, "TeleportPlayerToWorld");
+}
+
+void TeleportPlayerToWorld(string &in asTimer) {
+	string destination = "PS_" + asTimer;  
+	TeleportPlayer(destination);
+	SetSkyBoxActive(false);
+	SetLanternDisabled(false);
+	FadeIn(3);
+	FadePlayerFOVMulTo(1, 2);
+	
+	SetGlobalVarInt("GunEffectsOn", 1);
+	RepositionAndRespawnEnemies();
+}
+
+void FastTravelTo() {
+	SetPlayerMoveSpeedMul(1);
+	SetPlayerRunSpeedMul(1);
+	SetPlayerLookSpeedMul(1);
+	SetPlayerJumpDisabled(false);
+	SetPlayerCrouchDisabled(false);
+}
+
+void BonfireLit(string &in asEntity) {
+	SetLocalVarInt("bonfireLit", 1);
+	SetEntityActive("fountain_Activate", true);
+	PlayGuiSound("ui_use_tinderbox", 1.5f);
+	SetEntityActive(asEntity, false);
+	SetLampLit(asEntity + "_bonfire", true, true);
+	SetEntityActive(asEntity, false);
+	SetLampLit("Teleport_" + asEntity + "_bonfire", true, true);
+	SetEntityActive("TeleportArea_" + asEntity + "_bonfire", true);
+	SetEntityActive("TeleportArea_" + asEntity + "_bonfire_sign", true);
+	if (GetPlayerSanity() >= 1.5f) {
+		GiveSanityDamage(1, false);
+	}
+	GiveSanityBoostSmall();
+}
+
+void SetBonfireIcon(string &in asEntity, int alState)
+{
+	SetEntityCustomFocusCrossHair(asEntity, "Ignite");
+}
+
+//void CheckPoint (string& asName, string& asStartPos, string& asCallback, string& asDeathHintCat, string& asDeathHintEntry);
+void RespawnFountain(string &in asName, int alCount) {
+}
+
+
+/// DISPLAYING MESSAGE SIGNS
+
+string displayMessage = "";
+
+void Message1(string &in asEntity) {
+	RemoveTimer("messageTimer");
+	displayMessage = "TestMessage";
+	ShowMessageBackground(asEntity);
+	AddTimer("messageTimer", 1.0f, "MessageTimer");
+}
+
+void ShowMessageBackground(string &in asEntity) {
+	StopCurrentInsanityEvent();
+	StartInsanityEvent("message_pergament");
+	SetEntityPlayerLookAtCallback(asEntity, "RemoveMessage", true);
+}
+
+void MessageTimer(string &in asTimer) {
+	SetMessage("Message", displayMessage, 8);
+}
+
+void RemoveMessage(string &in asEntity, int alState)
+{
+	if (alState == -1) {
+		SetMessage("Message", "Empty", 1);
+		StopCurrentInsanityEvent();
+		RemoveTimer("messageTimer");
+	}
+}
+
+/// Bestiary Entries
+
+void AddBestiaryEntry(string &in asEnemyName) {
+	AddDiary("BeastSuitor", "journal/diary_page");
+}
+
+void RemoveBestiaryQuest(string &in asTimer) {
+	CompleteQuest("bestiaryQuest", "Bestiary");
+}
+
+// Respawning and setting original positions for enemies
+
+// A pathnode with Spawn_ + pecise monstername is needed in the level,
+// for resetting positions to work properly.
+
+void RepositionAndRespawnEnemies () {
+	SetEntityActive("Enemy_*", false);
+	string enemyIterator;
+	for (int i = 1; i <= Level_EasyEnemyCount; i++) {
+		enemyIterator = GUN_EasyEnemyFormat + i;
+		SetEntityActive(enemyIterator, true);
+		TeleportEnemyToNode(enemyIterator, "Spawn_" + enemyIterator, true);
+	}
+	
+	// medium/hard enemies can also be large, easier to both cases
+	
+	for (int i = 1; i <= Level_MediumEnemyCount; i++) {
+		enemyIterator = GUN_MediumEnemyFormat + i;
+		SetEntityActive(enemyIterator, true);
+		SetEntityActive(GUN_MediumEnemyFormat + "Large_" + i, true);
+		TeleportEnemyToNode(enemyIterator, "Spawn_" + enemyIterator, true);
+		TeleportEnemyToNode(GUN_MediumEnemyFormat + "Large_" + i, "Spawn_" + GUN_MediumEnemyFormat + "Large_" + i, true);
+	}
+	for (int i = 1; i <= Level_HardEnemyCount; i++) {
+		enemyIterator = GUN_HardEnemyFormat + i;
+		SetEntityActive(enemyIterator, true);
+		SetEntityActive(GUN_HardEnemyFormat + "Large_" + i, true);
+		TeleportEnemyToNode(enemyIterator, "Spawn_" + enemyIterator, true);
+		TeleportEnemyToNode(GUN_HardEnemyFormat + "Large_" + i, "Spawn_" + GUN_HardEnemyFormat + "Large_" + i, true);
+	}
+	
+	SetEnemyDisableTriggers("Enemy_*", true);
+	ClearEnemyPatrolNodes("Enemy_*");
+	
+	SetEnemyDisableTriggers("Enemy_*", false);
+}
+
+/////////////// REMODDED CORNER
